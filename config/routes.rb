@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :posts
+  get 'posts/index'
   get 'promo', to: 'promo#index'
   get 'about', to: 'about#index'
 

@@ -5,3 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Post.destroy_all
+
+posts = [
+{
+	name: "New Album",
+	title: "The Bad Seeds",
+	content: "Tracklist"
+},
+{
+	name: "Old Album",
+	title: "The Bad Seeds Old",
+	content: "Some Old Tracklist"
+}
+]
+
+posts.each do |post|
+	postik = Post.create(post)
+	puts "Some magic just create a #{ postik.name } with id #{ postik.id }!"
+end
