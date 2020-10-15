@@ -1,3 +1,69 @@
 // Place all the styles related to the About controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap');
+
+.body {
+  .top_nav {
+    display: flex;
+    text-align: center;
+    margin: 20px;
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      width: 80px;
+      height: 80px;
+      padding: 10px;
+      background: #F6E6DB;
+      border-radius: 50%;
+      border: 1px solid black;
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+  font-family: 'Raleway', sans-serif;
+  .home_about {
+    background: radial-gradient(#E8D2F4, #FFFFFF, #FFFFFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    height: 70vh;
+    span {
+      font-weight: bold;
+      font-style: italic;
+    }
+    h1 {
+      width: 55vw;
+    }
+  }
+  .data_about {
+    margin-top: 12vh;
+    hr {
+      width: 97vw;
+    }
+
+    .item_data {
+      display: flex;
+      justify-content: space-between;
+      margin: 0px 2vw;
+      padding: 10px 0px;
+      h2 {
+        padding: 5px;
+        font-size: 30px;
+        font-style: italic;
+      }
+      p {
+        font-size: 30px;
+        background: radial-gradient(#EF7952, #FFFFFF, #FFFFFF);
+        padding: 30px;
+        width: 800px;
+      }
+    }
+  }
+}
