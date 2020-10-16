@@ -1,30 +1,155 @@
 <!-- <h1>About#index</h1>
 <p>Find me in app/views/about/index.html.erb</p> -->
 
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 <div class="body">
   <div class="top_nav">
     <p>
       <%= link_to promo_path do %> добрые<br />дела<br />на сегодня<br /><% end %>
     </p>
+    <p class="nav_post"><%= link_to posts_path do %> посты <% end %></p>
   </div>
   <div class="home_about">
     <h1>мы&nbsp;&mdash; медиа-сервис, который объединяет <span>российские фонды</span> и&nbsp;<span>волонтерские организации,</span> а&nbsp;также пишет о&nbsp;них. Каждый день появляется какое-то количество дел, которые ты&nbsp;можешь выполнить в&nbsp;волонтерском формате</h1>
   </div>
   <div class="data_about">
-    <hr>
+    <hr noshade color="black">
     <div class="item_data creation_date">
       <h2>дата создания</h2>
       <p>проект создан 4&nbsp;сентября 2020 года</p>
     </div>
-    <hr>
+    <hr noshade color="black">
     <div class="item_data about_creators">
       <h2>о нас</h2>
       <p>мы&nbsp;&mdash; студентки школы дизайна ниу вшэ. этот социальный проект мы&nbsp;будем делать в&nbsp;течение года на&nbsp;2&nbsp;курсе и&nbsp;верим, что получится нечто полезное и&nbsp;нужное людям</p>
     </div>
-    <hr>
+    <hr noshade color="black">
     <div class="item_data mission">
       <h2>миссия</h2>
       <p>нашей миссией является продинуть волонтерское движение и&nbsp;облегчить поиск мероприятий по&nbsp;тематикам</p>
     </div>
-  </div>
+    <hr noshade color="black">
+    <div class="item_data ideas">
+      <h2>цели</h2>
+      <div class="ideas_p">
+        <p>рассказывать о&nbsp;волонтерском движении в&nbsp;стране</p>
+        <p>быть посредником между волонтерами и&nbsp;организаторами</p>
+        <p>объединить сообщества волонтеров и&nbsp;участников фонда в&nbsp;одном пространстве</p>
+        <p>создать удобный поиск волонтерских мероприятий</p>
+      </div>
+    </div>
+    <hr noshade color="black">
+    <div class="item_data plans_year">
+      <h2>планы на&nbsp;год</h2>
+      <ol type="1" start="1">
+        <li>Разработать бренд, айдентику и&nbsp;стилистику проекта</li>
+        <li>реализовать медиа-сервис в&nbsp;коде</li>
+        <li>финализировать проект</li>
+        <li>опубликовать и&nbsp;презентовать проект</li>
+      </ol>
+    </div>
+    <hr noshade color="black">
+    <div class="item_data target_audience">
+      <h2>целевая аудитория</h2>
+      <div class="target_audience_about">
+        <p>нашей миссией является продинуть волонтерское движение и&nbsp;облегчить поиск мероприятий по&nbsp;тематикам:</p>
+        <ol>
+          <li>
+            добровольцы&nbsp;&mdash; физические лица, осуществляющие благотворительную деятельность в&nbsp;форме безвозмездного выполнения работ, оказания услуг (добровольческой деятельности).
+          </li>
+          <li>
+            меценаты&nbsp;&mdash; лица, осуществляющие пожертвования в&nbsp;формах: бескорыстной, безвозмездной передачи имущества, денежных средств и&nbsp;объектов интеллектуальной собственности в&nbsp;собственность учреждений культуры, науки, образования, просвещения; бескорыстного, безвозмездного наделения правами владения, пользования и&nbsp;распоряжения любыми объектами права собственности.
+          </li>
+        </ol>
+      </div>
+    </div>
+    <hr noshade color="black">
+    <div class="item_data summary_audience_analysis">
+      <h2>выводы анализа целевой аудтиории</h2>
+      <ul>
+        <li>волонтерством или благотворительностью хотя&nbsp;бы раз занимались более&nbsp;80%</li>
+        <li>волонтерство считается важным и&nbsp;необходимым</li>
+        <li>40% хотели&nbsp;бы начать&nbsp;/ больше заниматься волонтерством</li>
+        <li>половина считает, что волонтерство ценнее</li>
+        <li>нет единого источника</li>
+      </ul>
+    </div>
+    <hr noshade color="black">
+    <div class="item_data competitors">
+      <h2>конкуренты</h2>
+      <div class="competitors_a">
+        <a href="https://reachvolunteering.org.uk">reachvolunteering.org</a>
+        <a href="https://mosvolonter.ru">mosvolonter.ru</a>
+        <a href="https://dobro.ru">dobro.ru</a>
+        <a href="https://www.unitedway.org">unitedway.org</a>
+        <a href="https://www.catchafire.org">catchafire.org</a>
+        <a href="https://volonter.ru">volonter.ru</a>
+        <a href="https://www.volunteerconnector.org">volunteerconnector.org</a>
+      </div>
+    </div>
+    <hr noshade color="black">
+    <div class="item_data summary_competitors_analysis">
+      <h2>выводы анализа конкурентов</h2>
+      <ul>
+        <li>в&nbsp;интернет-пространстве нет платформ, полностью выполняющих функции нашего медиа-сервиса и&nbsp;решающих те&nbsp;же потребности</li>
+        <li>более близкие нашей концепции сайты англоязычны</li>
+        <li>интерфейс и&nbsp;внешний вид платформы часто недружелюбный</li>
+        <li>многие из&nbsp;них имеют партнёров среди больших компаний</li>
+      </ul>
+    </div>
+    <hr noshade color="black">
+    <div class="item_data content">
+      <h2>контент</h2>
+      <div class="content_blocks">
+        <p>текст</p>
+        <p>видео</p>
+        <p>фотографии</p>
+      </div>
+    </div>
+    <hr noshade color="black">
+    <div class="item_data context">
+      <h2>контекст</h2>
+      <ul>
+        <li>люди, занимающиеся благотворительностью</li>
+        <li>активисты</li>
+        <li>волонтеры</li>
+        <li>в&nbsp;свободное от&nbsp;работы&nbsp;/ учебы время</li>
+        <li>чаще дома</li>
+      </ul>
+    </div>
+    <hr noshade color="black">
+    <div class="item_data format">
+      <h2>формат</h2>
+      <p>по&nbsp;результатам исследования и&nbsp;анализа запросов, формат&nbsp;&mdash; десктоп</p>
+    </div>
+    <hr noshade color="black">
+    <div class="item_data interaction">
+      <h2>контент</h2>
+      <div class="interaction_blocks">
+        <p>закладки</p>
+        <p>поделиться</p>
+        <p>подписка</p>
+      </div>
+    </div>
+    <hr noshade color="black">
+    <div class="item_data pages">
+      <h2>страницы</h2>
+      <ul>
+        <li>на&nbsp;основной публикуются последние новости из&nbsp;мира фондов и&nbsp;волонтерства (как Медуза)</li>
+        <li>cтраница с&nbsp;делами: карточки с&nbsp;заголовками о&nbsp;том, что нужно сделать и&nbsp;тэгами (#медпомощь, #ремонт, #продукты и&nbsp;т.&nbsp;д.), люди, которые организовывают и&nbsp;кто участвует</li>
+        <li>&laquo;как это работает&raquo;</li>
+        <li>личная страница с&nbsp;опытом в&nbsp;волонтерстве, подписки на&nbsp;конкретные темы, какие дела ты&nbsp;сейчас выполняешь, друзья</li>
+      </ul>
+    </div>
+    <hr noshade color="black">
+    <div class="item_data cusdev">
+      <h2>CusDev</h2>
+      <ul>
+        <li>волонтерство&nbsp;&mdash; win-win situation (взаимовыгодное действие): познакомиться, получить опыт, общение, получение грамот, любопытство, доставляет удовольствие...</li>
+        <li>люди читают в&nbsp;основном конкретные новости по&nbsp;своим сферам волонтерства&nbsp;&mdash; нужны теги и&nbsp;фильтры</li>
+        <li>поощрительные бонусы не&nbsp;мотивируют в&nbsp;участии, но&nbsp;были&nbsp;бы приятны</li>
+        <li>удобный поиск волонтерских мероприятий необходим</li>
+      </ul>
+    </div>
+    <hr noshade color="black">
 </div>
