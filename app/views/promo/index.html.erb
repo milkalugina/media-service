@@ -1,7 +1,12 @@
-<h1>Promo#index</h1>
-<p>Find me in app/views/promo/index.html.erb</p>
+<!-- <h1>Promo#index</h1>
+<p>Find me in app/views/promo/index.html.erb</p> -->
+
+<div class="top_nav">
+  <p>
+    <%= link_to promo_path do %> добрые<br />дела<br />на сегодня<br /><% end %>
+  </p>
+  <p class="nav_post"><%= link_to about_path do %> о проекте <% end %></p>
+</div>
 
 <h2>Узнать раньше всех о запуске проекта:</h2>
 <%= render "subscribers/form" %>
-
-<%= link_to "About", about_path %>
