@@ -10,6 +10,8 @@
   <%= @post.title %>
 </p>
 
+<%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
+
 <p>
   <strong>Content:</strong>
   <%= @post.content %>
