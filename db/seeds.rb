@@ -11,12 +11,16 @@ Post.destroy_all
 posts = [
 {
 	name: "New Album",
+	image: File.open(Rails.root.join('public', 'images', 'pic-1.jpg')),
 	title: "The Bad Seeds",
+	date: "20.10.2020",
 	content: "Tracklist"
 },
 {
 	name: "Old Album",
+	image: File.open(Rails.root.join('public', 'images', 'pic-1.jpg')),
 	title: "The Bad Seeds Old",
+	date: "20.10.2020",
 	content: "Some Old Tracklist"
 }
 ]
