@@ -8,5 +8,51 @@
   <p class="nav_post"><%= link_to about_path do %> о проекте <% end %></p>
 </div>
 
-<h2>Узнать раньше всех о запуске проекта:</h2>
-<%= render "subscribers/form" %>
+<div class="body_promo">
+  <div class="circles">
+    <div class="light_blue"></div>
+    <div class="blue"></div>
+    <div class="yellow"></div>
+    <div class="pink"></div>
+    <div class="big_light_blue"></div>
+    <div class="peach"></div>
+    <div class="light_pink"></div>
+    <div class="light_yellow"></div>
+    <div class="big_pink"></div>
+    <div class="light_pink2"></div>
+    <div class="light_blue2"></div>
+    <div class="circles_list">
+        <div class="yellow_list"></div>
+        <div class="peach_list"></div>
+        <div class="blue_list"></div>
+        <div class="pink_list"></div>
+    </div>
+  </div>
+  <div class="main_screen">
+    <h1>Добрые дела на</h1>
+    <div class="list">
+      <h1>сегодня</h1>
+      <h1>завтра</h1>
+      <h1>каждый день</h1>
+    </div>
+  </div>
+  <div class="volunteering_habit">
+    <h1>Волонтерство как <span>привычка</span></h1>
+    <p>Добрые дела на&nbsp;сегодня&nbsp;&mdash; медиа-сервис, который помогает волонтерам и&nbsp;активистам просто найти для себя мероприятие или&nbsp;проект, в&nbsp;котором хотелось&nbsp;бы поучаствовать.</p>
+    <p>Мы&nbsp;связываем фонды, благотворительности и&nbsp;волонтерские организации, пишем о&nbsp;самом важном и&nbsp;помогаем организациям находить волонтеров, а&nbsp;волонтерам&nbsp;&mdash; мероприятия.</p>
+  </div>
+  <div class="volunteering_pleasant">
+    <h1>Волонтерство&nbsp;&mdash; это <span>приятно, <br> просто и&nbsp;удобно</span></h1>
+    <div class="features">
+      <li>личный кабинет волонтера, с&nbsp;друзьями-волонтерами <br> и&nbsp;своими успехами в&nbsp;волонтерстве</li>
+      <li>удобный поиск мероприятий по&nbsp;твоим навыкам <br> и&nbsp;интересующим сферам</li>
+      <li>самые важные новости из&nbsp;мира волонтерства <br> и&nbsp;благотворительности</li>
+      <li>подборка добрых дел на&nbsp;сегодня, <br>ускоренное решение дел</li>
+    </div>
+  </div>
+  <div class="email_subscribe">
+    <h2>Чтобы узнавать первым о новостях — оставьте свой email</h2>
+      <%= render "subscribers/form" %>
+  </div>
+
+</div>
