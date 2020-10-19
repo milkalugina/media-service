@@ -23,7 +23,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.name %></td>
-        <td><%= post.image %></td>
+        <td><%= image_tag post.image.url if post.image? %></td>
         <td><%= post.title %></td>
         <td><%= post.date %></td>
         <td><%= post.content %></td>
