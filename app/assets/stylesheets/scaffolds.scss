@@ -12,9 +12,17 @@ tbody, tr, td {
   display: block;
   font-family: 'Raleway', sans-serif;
 }
-
+//добавила флекс, чтобы блоки с изображениями расстягивались
 td {
   padding: 0 0px 0px;
+  display: flex;
+}
+
+//скрыла отображение редактирования/удаления/просмотра
+td.date {
+  a {
+    display: none;
+  }
 }
 
 .post_show {
@@ -34,10 +42,10 @@ td {
     border-radius: 20px;
   }
   .tag {
-      border: 0.5px solid #5A5A5A;
-      border-radius: 20px;
-      padding: 0px 16px;
-      margin: 14px 0px;
+    border: 0.5px solid #5A5A5A;
+    border-radius: 20px;
+    padding: 0px 16px;
+    margin: 14px 0px;
   }
   .title {
     margin: 0px;
@@ -116,8 +124,10 @@ td {
   width: 400px;
 }
 
+//сделала чтобы изображения расстягивались вместе с блоками «Поста»
 img {
-  border-radius: 20px 20px 0px 0px;
+  flex-grow: 1;
+  border-radius: 19px 19px 0px 0px;
 }
 
 pre {
@@ -130,15 +140,18 @@ a {
   text-decoration: none;
   color: #5A5A5A;
   font-family: 'Raleway', sans-serif;
-
 }
 
+// сделала чтобы блоки расстягивались по ширине экрана и добавила между ними margin-ы
 .post_body {
+  display: flex;
+  flex-grow: 1;
   width: 440px;
-  height: 550px;
+  // height: 550px;
   border: 1px solid #5A5A5A;
   border-radius: 20px;
   padding: 0 0px;
+  margin: 25px;
   margin-bottom: 20px;
   display: block;
   box-sizing: border-box;
@@ -192,4 +205,10 @@ div.actions {
   list-style: square; }
 
 label {
-  display: block; }
+  display: block;
+}
+
+//скрыла возможность "Добавить новый пост"
+.editing {
+  display: none;
+}
