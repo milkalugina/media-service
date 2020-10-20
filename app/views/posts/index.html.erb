@@ -23,27 +23,28 @@
     <% @posts.each do |post| %>
       <tr class="post_body">
         <div class="image">
-          <td><%= image_tag post.image.url if post.image? %></td>
+          <td class="img"><%= image_tag post.image.url if post.image? %></td>
         </div>
         <div class="text_body">
           <div class="tag_body">
-            <td class="tag"><%= post.name %></td>
+            <td class="tag"><a><%= post.name %></a></td>
           </div>
           <td class="title"><%= post.title %></td>
           <td class="content"><%= post.content %></td>
           <div class="date_editing">
-            <td class="date"><%= post.date %></td>
-            <td class="editing"><%= link_to 'show', post %></td>
+            <td class="date"><%= post.date %> <span></span> <%= link_to 'show', post %> <span></span> <%= link_to 'edit', edit_post_path(post) %> <span></span> <%= link_to 'destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <!-- <td class="editing"><%= link_to 'show', post %></td>
             <td class="editing"><%= link_to 'edit', edit_post_path(post) %></td>
-            <td class="editing"><%= link_to 'destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td class="editing"><%= link_to 'destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
           </div>
         </div>
-
       </tr>
     <% end %>
+    <td class="editing"><%= link_to 'New Post', new_post_path %></td>
   </tbody>
 </table>
 
+
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<!-- <td class="editing"><%= link_to 'New Post', new_post_path %></td> -->

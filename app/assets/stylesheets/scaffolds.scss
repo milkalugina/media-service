@@ -10,6 +10,7 @@
 
 tbody, tr, td {
   display: block;
+  font-family: 'Raleway', sans-serif;
 }
 
 td {
@@ -17,7 +18,7 @@ td {
 }
 
 .all_post_body {
-  margin: 0px 40px;
+  margin: 0px 40px 40px 40px;
   font-family: 'Raleway', sans-serif;
   display: flex;
   flex-wrap: wrap;
@@ -37,15 +38,14 @@ td {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
-  text-align: center;
   color: #000000;
-  border: 0.5px solid #5A5A5A;
-  box-sizing: border-box;
-  border-radius: 20px;
-  padding: 0px 16px;
-  width: 100%;
-  width: auto;
   margin: 14px 20px;
+  line-height: 24px;
+  a {
+    border: 0.5px solid #5A5A5A;
+    border-radius: 20px;
+    padding: 0px 16px;
+  }
 }
 
 .title {
@@ -69,16 +69,27 @@ td {
   font-size: 12px;
   color: #5A5A5A;
   text-decoration: none;
+  margin-left: 20px;
+}
+
+.date {
+  position: absolute;
+  bottom: 24px;
+  margin-left: 20px;
+  span {
+    margin-right: 14px;
+  }
 }
 
 .date_editing {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 400px;
 }
 
-.image {
-  border-radius: 20px 0px;
+img {
+  border-radius: 20px 20px 0px 0px;
 }
 
 pre {
@@ -90,6 +101,8 @@ a {
   // color: #000;
   text-decoration: none;
   color: #5A5A5A;
+  font-family: 'Raleway', sans-serif;
+
 }
 
 .post_body {
@@ -99,6 +112,10 @@ a {
   border-radius: 20px;
   padding: 0 0px;
   margin-bottom: 20px;
+  display: block;
+  box-sizing: border-box;
+  padding-bottom: 24px;
+  position: relative;
 }
 
 // a:visited {
