@@ -130,6 +130,16 @@ body {
       z-index: -1;
       animation: rotate 8s ease infinite;
     }
+    .light_peach {
+    position: absolute;
+    width: 196px;
+    height: 196px;
+    left: 600px;
+    top: 150px;
+    border-radius: 100%;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EF7952;
+    animation: rotate 6s ease infinite;
+    }
     .peach {
       position: absolute;
       width: 196px;
