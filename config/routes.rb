@@ -2,10 +2,12 @@ Rails.application.routes.draw do
   resources :categories
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
-  resources :posts
+  resources :posts do
+    resources :favorites
+  end
   resources :subscribers
-  resources :favorites
   get 'posts/index'
+  
   get 'promo', to: 'promo#index'
   get 'about', to: 'about#index'
 

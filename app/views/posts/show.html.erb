@@ -14,8 +14,8 @@
   </p>
 
   <p>
-    <strong>Category:</strong>
-    <%= @post.category.name %>
+  <strong>Category:</strong>
+  <%= @post.category.name %>
   </p>
 
   <p>
@@ -27,17 +27,13 @@
   	<!-- <strong>Date:</strong> -->
   	<%= @post.date %>
   </p>
+</div>
 
+<% if user_signed_in? %>
   <% pre_favorite = @post.favorites.find { |favorite| favorite.user_id == current_user.id} %>
   <% if pre_favorite %>
       <%= button_to 'Remove from Favorite', post_favorite_path(@post, pre_favorite), method: :delete %>
   <% else %>
       <%= button_to 'Add to Favorite', post_favorites_path(@post), method: :post %>
   <% end %>
-
-  <% if user_signed_in? %>
-  <%= render "comments/form" %>
-  <% else %>
-  <p>Please <%= link_to 'login', new_user_session_path %> or <%= link_to 'register', new_user_registration_path %> to comment.</p>
-  <% end %>
-</div>
+<% end %>
