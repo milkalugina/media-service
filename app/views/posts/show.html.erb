@@ -13,9 +13,14 @@
     <%= @post.title %>
   </p>
 
-  <p class="content">
-    <!-- <strong>Content:</strong> -->
-    <%= @post.content %>
+  <p>
+    <strong>Category:</strong>
+    <%= @post.category.name %>
+  </p>
+
+  <p>
+    <strong>Content:</strong>
+    <%= @post.content.html_safe %>
   </p>
 
   <p class="date">
@@ -23,6 +28,9 @@
   	<%= @post.date %>
   </p>
 
-  <p class="editing"><%= link_to 'edit', edit_post_path(@post) %> |
-  <%= link_to 'back', posts_path %></p>
+  <% if user_signed_in? %>
+  <%= render "comments/form" %>
+  <% else %>
+  <p>Please <%= link_to 'login', new_user_session_path %> or <%= link_to 'register', new_user_registration_path %> to comment.</p>
+  <% end %>
 </div>

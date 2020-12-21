@@ -4,8 +4,15 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    if params.has_key?(:category)
+      @category = Category.find_by_name(params[:category])
+      @posts = Post.where(category: @category)
+    else
+      @posts = Post.all
+    end
   end
+
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /posts/1
   # GET /posts/1.json
@@ -24,7 +31,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    @post = Post.new(post_params.merge(user_id: current_user.id))
 
     respond_to do |format|
       if @post.save
@@ -69,6 +76,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:name, :title, :content, :date, :image)
+      params.require(:post).permit(:name, :title, :content, :date, :image, :category_id)
     end
 end

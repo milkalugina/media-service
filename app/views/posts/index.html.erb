@@ -20,6 +20,15 @@
   </thead>
 
   <tbody class="all_post_body">
+    <h2>All Categories</h2>
+    <% Category.all.each do |cat| %>
+    <%= link_to cat.name, posts_path(category: cat.name) %> <br>
+    <% end %>
+
+    <%= link_to 'New Category', new_category_path %>
+
+    <td><%= post.category.name %></td>
+
     <% @posts.each do |post| %>
       <tr class="post_body">
         <div class="image">
@@ -30,7 +39,7 @@
             <td class="tag"><a><%= post.name %></a></td>
           </div>
           <td class="title"><%= post.title %></td>
-          <td class="content"><%= post.content %></td>
+          <td><%= post.content.html_safe %></td>
           <div class="date_editing">
             <td class="date"><%= post.date %> <span></span> <%= link_to 'show', post %> <span></span> <%= link_to 'edit', edit_post_path(post) %> <span></span> <%= link_to 'destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             <!-- <td class="editing"><%= link_to 'show', post %></td>
@@ -43,7 +52,6 @@
     <td class="editing"><%= link_to 'New Post', new_post_path %></td>
   </tbody>
 </table>
-
 
 <br>
 

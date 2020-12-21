@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :categories
+  mount Ckeditor::Engine => '/ckeditor'
+  devise_for :users
   resources :posts
   resources :subscribers
   get 'posts/index'
