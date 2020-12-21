@@ -4,9 +4,14 @@ Rails.application.routes.draw do
   devise_for :users
   resources :posts
   resources :subscribers
+  resources :favorites
   get 'posts/index'
   get 'promo', to: 'promo#index'
   get 'about', to: 'about#index'
+
+  get 'users', to: 'users#index'
+  get 'users/:id' => 'users#show', :as => :user
+  delete 'users/:id', to: 'users#destroy'
 
   root 'promo#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

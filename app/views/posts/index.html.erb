@@ -24,35 +24,46 @@
     <% Category.all.each do |cat| %>
     <%= link_to cat.name, posts_path(category: cat.name) %> <br>
     <% end %>
+    <br>
 
-    <%= link_to 'New Category', new_category_path %>
-
-    <td><%= post.category.name %></td>
-
+    <h2>Posts</h2>
     <% @posts.each do |post| %>
       <tr class="post_body">
+
         <div class="image">
           <td class="img"><%= image_tag post.image.url if post.image? %></td>
         </div>
+
         <div class="text_body">
+
           <div class="tag_body">
             <td class="tag"><a><%= post.name %></a></td>
           </div>
+
+          <td><%= post.category.name %></td>
+
           <td class="title"><%= post.title %></td>
+
           <td><%= post.content.html_safe %></td>
+
           <div class="date_editing">
             <td class="date"><%= post.date %> <span></span> <%= link_to 'show', post %> <span></span> <%= link_to 'edit', edit_post_path(post) %> <span></span> <%= link_to 'destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            <!-- <td class="editing"><%= link_to 'show', post %></td>
-            <td class="editing"><%= link_to 'edit', edit_post_path(post) %></td>
-            <td class="editing"><%= link_to 'destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
           </div>
+
+          <td><%= link_to 'Show', post %></td>
+
+          <td><%= link_to 'Edit', edit_post_path(post) %></td>
+
+          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
         </div>
       </tr>
     <% end %>
-    <td class="editing"><%= link_to 'New Post', new_post_path %></td>
   </tbody>
 </table>
 
 <br>
 
-<!-- <td class="editing"><%= link_to 'New Post', new_post_path %></td> -->
+<%= link_to 'New Post', new_post_path %>
+<br>
+<%= link_to 'New Category', new_category_path %>
