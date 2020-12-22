@@ -29,6 +29,18 @@
   </p>
 </div>
 
+<% if user_signed_in? && current_user.ismoderator == true %>
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<% end %>
+
+<% if user_signed_in? && current_user.isadmin == true %>
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<% end %>
+
+<% if user_signed_in? && current_user.isorganization == true %>
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<% end %>
+
 <% if user_signed_in? %>
   <% pre_favorite = @post.favorites.find { |favorite| favorite.user_id == current_user.id} %>
   <% if pre_favorite %>

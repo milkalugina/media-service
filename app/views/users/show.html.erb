@@ -10,6 +10,16 @@
   <p>Organization <%= @user.isorganization %></p>
 <% end %>
 
+
+<%# Это проверка модераторов %>
+<p>Moderator <%= @user.ismoderator %></p>
+<br>
+<%# Это чтобы статус модератора был виден только у модератора  %>
+<% if user_signed_in? && current_user.ismoderator == true %>
+  <p>Moderator <%= @user.ismoderator %></p>
+<% end %>
+
+<%# Это чтобы статус администратора был виден только у администратора  %>
 <% if user_signed_in? && current_user.isadmin == true %>
   <p>Admin <%= @user.isadmin %></p>
 <% end %>

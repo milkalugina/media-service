@@ -16,13 +16,18 @@
         <td><%= user.id %></td>
         <td><%= link_to user.email, user %></td>
         <td><%= user.username %></td>
-        <% if user_signed_in? && current_user.isorganization == true %>
-          <td>Organization <%= user.isorganization %><td>
-        <% end %>
 
         <% if user_signed_in? && current_user.isadmin == true %>
           <td>Admin <%= user.isadmin %><td>
         <% end %>
+
+        <% if user_signed_in? && current_user.ismoderator == true %>
+          <td>Admin <%= user.ismoderator %><td>
+        <% end %>
+
+        <% if user_signed_in? && current_user.isorganization == true %>
+        <td>Organization <%= user.isorganization %><td>
+          <% end %>
       </tr>
     <% end %>
   </tbody>
