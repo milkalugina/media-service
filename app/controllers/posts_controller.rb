@@ -17,6 +17,11 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @post.destroy
+    respond_to do |format|
+      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   # GET /posts/new

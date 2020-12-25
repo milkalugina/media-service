@@ -14,12 +14,12 @@
   </p>
 
   <p>
-  <strong>Category:</strong>
+  <!-- <strong>Category:</strong> -->
   <%= @post.category.name %>
   </p>
 
   <p>
-    <strong>Content:</strong>
+    <!-- <strong>Content:</strong> -->
     <%= @post.content.html_safe %>
   </p>
 
@@ -30,15 +30,16 @@
 </div>
 
 <% if user_signed_in? && current_user.ismoderator == true %>
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Edit', edit_post_path(@post) %>
 <% end %>
 
 <% if user_signed_in? && current_user.isadmin == true %>
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Edit', edit_post_path(@post) %>
+<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 
 <% if user_signed_in? && current_user.isorganization == true %>
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Edit', edit_post_path(@post) %>
 <% end %>
 
 <% if user_signed_in? %>

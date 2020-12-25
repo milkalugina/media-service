@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<div class="top_nav">
+<!-- <div class="top_nav">
   <p>
     <%= link_to promo_path do %> добрые<br />дела<br />на сегодня<br /><% end %>
   </p>
   <p class="nav_post"><%= link_to about_path do %> о проекте <% end %></p>
-</div>
+</div> -->
 
 <table>
   <thead>
@@ -20,13 +20,13 @@
   </thead>
 
   <tbody class="all_post_body">
-    <h2>All Categories</h2>
+    <h2>Все категории</h2>
     <% Category.all.each do |cat| %>
     <%= link_to cat.name, posts_path(category: cat.name) %> <br>
     <% end %>
     <br>
 
-    <h2>Posts</h2>
+    <h2>Посты</h2>
     <% @posts.each do |post| %>
       <tr class="post_body">
 
@@ -46,13 +46,15 @@
 
           <td><%= post.content.html_safe %></td>
 
-          <div class="date_editing">
-            <td class="date"><%= post.date %> <span></span> <%= link_to 'show', post %> <span></span> <%= link_to 'edit', edit_post_path(post) %> <span></span> <%= link_to 'destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </div>
+          <!-- <div class="date_editing">
+            <td class="date"><%= post.date %> <br> <%= link_to 'show', post %> <br><%= link_to 'edit', edit_post_path(post) %> <br><%= link_to 'destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </div> -->
 
           <td><%= link_to 'Show', post %></td>
+          <br>
 
           <td><%= link_to 'Edit', edit_post_path(post) %></td>
+          <br>
 
           <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
@@ -64,6 +66,6 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'Создать новость', new_post_path %>
 <br>
-<%= link_to 'New Category', new_category_path %>
+<%= link_to 'Добавить категорию', new_category_path %>
