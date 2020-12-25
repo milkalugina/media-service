@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @users = User.all
     @user = User.find(params[:id])
     if @user
       @posts = @user.favorited_posts
@@ -11,6 +12,12 @@ class UsersController < ApplicationController
       @favorites = @user.favorites.all
     else
         render file: 'public/404', status: 404, formats: [:html]
+    end
+    if params.has_key?(:category)
+      @category = Category.find_by_name(params[:category])
+      @posts = Post.where(category: @category)
+    else
+      @posts = Post.all
     end
   end
 

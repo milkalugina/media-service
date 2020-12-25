@@ -1,50 +1,92 @@
-<p>ID <%= @user.id %></p>
+<!-- <p>ID <%= @user.id %></p>
 <p> <%= @user.email %></p>
-<p> <%= @user.username %></p>
+<p> <%= @user.username %></p> -->
 <br>
+<%# Это проверка волонтера  %>
+<% if user_signed_in? == true && current_user.isadmin == false && current_user.isorganization == false && current_user.ismoderator == false  %>
+<div class="account">
+  <h1>Аккаунт волонтера</h1>
+  <h2>Контактная информация</h2>
+  <h2>Анкета волонтера</h2>
+  <h2>Мои добрые дела</h2>
+  <h2>Мои заявки</h2>
+  <h2>Избранное</h2>
+  In favorites <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Post' : 'Posts'%>
+
+  <% @posts.each do |post| %>
+    <br><%= link_to post.title, post %>
+  <% end %>
+  <h2>Подписки</h2>
+  Following <%= link_to @user.followees.count, following_path %>
+  <br>
+  <br>
+
+  <br>
+  <br>
+  <% if user_signed_in? && @user.id == current_user.id %>
+      <%= link_to 'Edit Profile', edit_user_registration_path %>
+  <% elsif user_signed_in? && current_user.followees.include?(@user) %>
+      <h5><%= button_to "Unfollow", unfollow_user_path, method: "POST" %></h5>
+  <% elsif user_signed_in? %>
+      <h5><%= button_to "Follow", follow_user_path, method: "POST"  %></h5>
+  <% else %>
+  <%# можно добавить кнопку для регистрации или что-нибудь ещё  %>
+  <% end%>
+<% end %>
+
+</div>
+
+
 <%# Это проверка организации %>
-<p>Organization <%= @user.isorganization %></p>
-<br>
 <%# Это чтобы статус организатора был виден только у организатора  %>
 <% if user_signed_in? && current_user.isorganization == true %>
-  <p>Organization <%= @user.isorganization %></p>
+<div class="account">
+    <h1>Аккаунт организации</h1>
+    <h2>Контактная информация</h2>
+    <h2>Анкета организатора</h2>
+    <h2>Мои добрые дела</h2>
+    <h2>Мои новости</h2>
+
+</div>
 <% end %>
 
 
 <%# Это проверка модераторов %>
-<p>Moderator <%= @user.ismoderator %></p>
-<br>
 <%# Это чтобы статус модератора был виден только у модератора  %>
 <% if user_signed_in? && current_user.ismoderator == true %>
-  <p>Moderator <%= @user.ismoderator %></p>
+<div class="account">
+    <h1>Аккаунт модератора</h1>
+    <h2>Новости</h2>
+    <h3>Неопубликованные новости</h3>
+    <h3>Опубликованные новости</h3>
+    <h2>Дела</h2>
+    <h3>Неопубликованные дела</h3>
+    <h3>Опубликованные дела</h3>
+    <h2>Проверка организаций</h2>
+    <h3>Непроверенные организации</h3>
+    <h3>Проверенные организации</h3>
+</div>
 <% end %>
+
 
 <%# Это чтобы статус администратора был виден только у администратора  %>
 <% if user_signed_in? && current_user.isadmin == true %>
-  <p>Admin <%= @user.isadmin %></p>
+<div class="account">
+    <h1>Аккаунт администратора</h1>
+    <h2>Пользователи</h2>
+    <%= render "users/users" %>
+
+    <div class="">
+          <h2>Категории и фильтры</h2>
+          <%= render "users/categories" %>
+    </div>
+
+
+
+
+</div>
+
 <% end %>
 
 <br>
 <br>
-
-Followers <%= @user.followers.count %>
-<br>
-Following <%= link_to @user.followees.count, following_path %>
-<br>
-<br>
-In favorites <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Post' : 'Posts'%>
-
-<% @posts.each do |post| %>
-  <br><%= link_to post.title, post %>
-<% end %>
-<br>
-<br>
-<% if user_signed_in? && @user.id == current_user.id %>
-    <%= link_to 'Edit Profile', edit_user_registration_path %>
-<% elsif user_signed_in? && current_user.followees.include?(@user) %>
-    <h5><%= button_to "Unfollow", unfollow_user_path, method: "POST" %></h5>
-<% elsif user_signed_in? %>
-    <h5><%= button_to "Follow", follow_user_path, method: "POST"  %></h5>
-<% else %>
-<%# можно добавить кнопку для регистрации или что-нибудь ещё  %>
-<% end%>

@@ -1,0 +1,40 @@
+
+
+<table class="users">
+  <thead>
+    <h3 id="h3">Пользователи</h3>
+    <tr>
+      <!-- <th>ID</th> -->
+      <th>Имя пользователя</th>
+      <th>Email</th>
+      <th>Роль</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <!-- <td><%= user.id %></td> -->
+        <td><%= user.username %></td>
+        <td><%= link_to user.email, user %></td>
+
+        <% if user_signed_in? && user.isadmin == true %>
+          <td>Администратор<td>
+        <% end %>
+
+        <% if user_signed_in? && user.ismoderator == true %>
+          <td>Модератор<td>
+        <% end %>
+
+        <% if user_signed_in? && user.isorganization == true %>
+        <td>Организация<td>
+        <% end %>
+
+        <% if user_signed_in? == true && user.isadmin == false && user.isorganization == false && user.ismoderator == false  %>
+        <td>Волонтер<td>
+        <% end %>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>

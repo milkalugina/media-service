@@ -14,6 +14,11 @@
  *= require_self
  */
 
+ body {
+   font-family: 'Raleway', sans-serif;
+   -webkit-font-smoothing: antialiased;
+ }
+
  .top_menu {
    display: flex;
    justify-content: flex-end;
@@ -24,6 +29,102 @@
    background: #eee;
    border-bottom: 1px solid #ddd;
  }
+
  .top_menu a {
    margin: 0 20px;
+ }
+
+ .account {
+   margin-left: 60px;
+   margin-right: 60px;
+ }
+
+ h1 {
+   font-size: 40px;
+   font-weight: 700;
+   margin-top: 30px;
+   margin-bottom: 100px;
+ }
+
+ h2 {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 18px;
+   margin-bottom: 50px;
+ }
+
+ .account h2 {
+   position: absolute;
+ }
+
+ .categories a {
+   border: 1px solid #E2E5E6;
+   box-sizing: border-box;
+   border-radius: 10px;
+   padding: 10px 20px;
+   margin-right: 20px;
+   margin-bottom: 20px;
+ }
+
+
+ .users {
+   margin-left: 30vw;
+ }
+
+ .users th {
+   width: 20vw;
+   text-align: left;
+   font-weight: bold;
+   font-size: 16px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   border-radius: 4px;
+ }
+
+ .users td {
+   font-size: 15px;
+   padding-bottom: 20px;
+ }
+
+ h3 {
+   font-weight: bold;
+   font-size: 30px;
+   line-height: 18px;
+   margin-bottom: 50px;
+ }
+
+ .account h3 {
+   /* margin-left: 30vw; */
+ }
+
+ h4 {
+   font-weight: 500;
+   font-size: 20px;
+   margin-top: 50px;
+   margin-bottom: 30px;
+ }
+
+ .categories {
+   margin-left: 30vw;
+ }
+
+ .categories h3 {
+   margin-top: 50px;
+ }
+
+ #h3 {
+   margin-left: 30vw;
+ }
+
+ .newcategory {
+   margin-left: 30vw;
+ }
+
+ .allcategories {
+   display: flex;
+   flex-wrap: wrap;
+ }
+
+ .postform {
+   margin-left: 20px;
  }
