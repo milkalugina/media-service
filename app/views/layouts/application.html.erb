@@ -4,7 +4,6 @@
     <title>Добрые дела</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
   <%= javascript_include_tag Ckeditor.cdn_url %>
@@ -14,6 +13,8 @@
     <p class="alert"><%= alert %></p>
   <% end %>
   <body>
+    <%= react_component 'A_Typekit' %>
+
     <div class="top_menu">
     <% if user_signed_in? %>
       <%= link_to 'Аккаунт', current_user %> | <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
