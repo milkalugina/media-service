@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 class A_Typekit extends React.Component {
   render () {
     return (
-        <h1>
+        <h1 className="A_Typekit">
           A_textblock
         </h1>
     );
