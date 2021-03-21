@@ -4,8 +4,28 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
-  end
+    if params.has_key?(:sphere)
+      @sphere = Sphere.find_by_name(params[:sphere])
+      @events = Event.where(sphere: @sphere)
+    else
+      @events = Event.all
+    end
+    # if params.has_key?(:skill)
+    #   @skill = Skill.find_by_name(params[:skill])
+    #   @events = Event.where(skill: @skill)
+    # else
+    #   @events = Event.all
+    # end
+    # if params.has_key?(:type)
+    #   @type = Type.find_by_name(params[:type])
+    #   @events = Event.where(type: @type)
+    # else
+    #   @events = Event.all
+    # end
+end
+
+
+
 
   # GET /events/1
   # GET /events/1.json
