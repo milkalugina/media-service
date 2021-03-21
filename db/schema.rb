@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_22_110008) do
+ActiveRecord::Schema.define(version: 2021_03_21_114327) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -28,6 +28,18 @@ ActiveRecord::Schema.define(version: 2020_12_22_110008) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["type"], name: "index_ckeditor_assets_on_type"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.string "duration"
+    t.string "description"
+    t.text "details"
+    t.text "plan"
+    t.text "organizer"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "favorites", force: :cascade do |t|

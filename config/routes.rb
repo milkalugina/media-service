@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   resources :follows
   resources :categories
   mount Ckeditor::Engine => '/ckeditor'
