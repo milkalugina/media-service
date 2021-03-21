@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :types
+  resources :skills
+  resources :spheres
   resources :events
   resources :follows
   resources :categories

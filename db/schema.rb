@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_21_114327) do
+ActiveRecord::Schema.define(version: 2021_03_21_153332) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -40,6 +40,12 @@ ActiveRecord::Schema.define(version: 2021_03_21_114327) do
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "sphere_id", null: false
+    t.integer "skill_id", null: false
+    t.integer "type_id", null: false
+    t.index ["skill_id"], name: "index_events_on_skill_id"
+    t.index ["sphere_id"], name: "index_events_on_sphere_id"
+    t.index ["type_id"], name: "index_events_on_type_id"
   end
 
   create_table "favorites", force: :cascade do |t|
@@ -72,8 +78,26 @@ ActiveRecord::Schema.define(version: 2021_03_21_114327) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
+  create_table "skills", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "spheres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "subscribers", force: :cascade do |t|
     t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "types", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -94,6 +118,9 @@ ActiveRecord::Schema.define(version: 2021_03_21_114327) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "events", "skills"
+  add_foreign_key "events", "spheres"
+  add_foreign_key "events", "types"
   add_foreign_key "favorites", "posts"
   add_foreign_key "favorites", "users"
   add_foreign_key "posts", "categories"
