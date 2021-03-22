@@ -11,11 +11,8 @@
   <h2>Мои добрые дела</h2>
   <h2>Мои заявки</h2>
   <h2>Избранное</h2>
-  In favorites <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Post' : 'Posts'%>
 
   <% @posts.each do |post| %>
-    <br><%= link_to post.title, post %>
-  <% end %>
   <h2>Подписки</h2>
   Following <%= link_to @user.followees.count, following_path %>
   <br>
@@ -80,9 +77,6 @@
           <h2>Категории и фильтры</h2>
           <%= render "users/categories" %>
     </div>
-
-
-
 
 </div>
 

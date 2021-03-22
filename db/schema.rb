@@ -48,15 +48,6 @@ ActiveRecord::Schema.define(version: 2021_03_21_153332) do
     t.index ["type_id"], name: "index_events_on_type_id"
   end
 
-  create_table "favorites", force: :cascade do |t|
-    t.integer "post_id", null: false
-    t.integer "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["post_id"], name: "index_favorites_on_post_id"
-    t.index ["user_id"], name: "index_favorites_on_user_id"
-  end
-
   create_table "follows", force: :cascade do |t|
     t.integer "follower_id"
     t.integer "followee_id"
@@ -121,8 +112,6 @@ ActiveRecord::Schema.define(version: 2021_03_21_153332) do
   add_foreign_key "events", "skills"
   add_foreign_key "events", "spheres"
   add_foreign_key "events", "types"
-  add_foreign_key "favorites", "posts"
-  add_foreign_key "favorites", "users"
   add_foreign_key "posts", "categories"
   add_foreign_key "posts", "users"
 end
