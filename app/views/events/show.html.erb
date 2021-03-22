@@ -50,5 +50,12 @@
   <%= @event.image %>
 </p>
 
+<% pre_favorite = @event.favorites.find { |favorite| favorite.user_id == current_user.id} %>
+<% if pre_favorite %>
+    <%= button_to 'Remove from Favorite', event_favorite_path(@event, pre_favorite), method: :delete %>
+<% else %>
+    <%= button_to 'Add to Favorite', event_favorites_path(@event), method: :event %>
+<% end %>
+
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

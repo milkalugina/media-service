@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   resources :types
   resources :skills
   resources :spheres
-  resources :events
+  resources :events do
+    resources :favorites
+  end
   resources :follows
   resources :categories
   mount Ckeditor::Engine => '/ckeditor'

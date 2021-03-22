@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_21_153332) do
+ActiveRecord::Schema.define(version: 2021_03_22_183311) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -46,6 +46,15 @@ ActiveRecord::Schema.define(version: 2021_03_21_153332) do
     t.index ["skill_id"], name: "index_events_on_skill_id"
     t.index ["sphere_id"], name: "index_events_on_sphere_id"
     t.index ["type_id"], name: "index_events_on_type_id"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "event_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["event_id"], name: "index_favorites_on_event_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "follows", force: :cascade do |t|
@@ -112,6 +121,8 @@ ActiveRecord::Schema.define(version: 2021_03_21_153332) do
   add_foreign_key "events", "skills"
   add_foreign_key "events", "spheres"
   add_foreign_key "events", "types"
+  add_foreign_key "favorites", "events"
+  add_foreign_key "favorites", "users"
   add_foreign_key "posts", "categories"
   add_foreign_key "posts", "users"
 end

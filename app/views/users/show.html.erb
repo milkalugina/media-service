@@ -6,16 +6,26 @@
 <% if user_signed_in? == true && current_user.isadmin == false && current_user.isorganization == false && current_user.ismoderator == false  %>
 <div class="account">
   <h1>Аккаунт волонтера</h1>
-  <h2>Контактная информация</h2>
-  <h2>Анкета волонтера</h2>
-  <h2>Мои добрые дела</h2>
-  <h2>Мои заявки</h2>
-  <h2>Избранное</h2>
-
-  <% @posts.each do |post| %>
-  <h2>Подписки</h2>
-  Following <%= link_to @user.followees.count, following_path %>
   <br>
+  <h2>Контактная информация</h2>
+  <br>
+  <h2>Анкета волонтера</h2>
+  <br>
+  <h2>Мои добрые дела</h2>
+  <br>
+  <h2>Мои заявки</h2>
+  <br>
+  <h2>Избранное</h2>
+  <br>
+  In favorites <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Дело' : 'Дел'%>
+  <% @events.each do |event| %>
+    <br><%= link_to event.title, event %>
+  <% end %>
+
+  <br>
+  <h2>Подписки</h2>
+  <br>
+  Following <%= link_to @user.followees.count, following_path %>
   <br>
 
   <br>

@@ -14,6 +14,21 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+    if @user
+      @events = @user.favorited_events
+      render actions: :show
+      @favorites = @user.favorites.all
+    else
+        render file: 'public/404', status: 404, formats: [:html]
+    end
+  end
+
+  def favorited?(event)
+    favorites.find_by(event_id: event.id).present?
+  end
+
   def destroy
     @user = User.find(params[:id])
     @user.destroy
