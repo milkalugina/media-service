@@ -1,0 +1,30 @@
+import React from "react"
+import PropTypes from "prop-types"
+import styled from "styled-components";
+
+const A = styled.a`
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: var(--KindBlue);
+
+  &:hover {
+    color: var(--MidBlue);
+    cursor: pointer;
+    decoration: none;
+    background-color: none;
+  }
+`;
+
+class A_TypekitH4 extends React.Component {
+  render () {
+    return (
+      <A>{this.props.name}</A>
+    );
+  }
+}
+
+export default A_TypekitH4

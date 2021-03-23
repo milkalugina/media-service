@@ -14,6 +14,8 @@
  *= require_self
  */
 
+@import "reset.css";
+
 @font-face {
   font-family:'SteinbeckRegular';
   src:font-url('SteinbeckRegular.eot');
@@ -144,10 +146,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.A_Typekit {
-  font-family:'SteinbeckRegular';
-  font-size: 40px;
-}
 
 .top_menu {
   display: flex;

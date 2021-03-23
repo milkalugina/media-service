@@ -2,263 +2,263 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap');
-
-body {
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased
-}
-
-.body_promo {
-  font-family: 'Raleway', sans-serif;
-  margin-bottom: 50px;
-  margin-left: 90px;
-  h1 {
-    font-size: 80px;
-    font-weight: bold;
-  }
-  p {
-    font-size: 30px;
-    margin-top: 18vh;
-    width: 70vw;
-    line-height: 35.22px;
-  }
-  h2 {
-    font-size: 40px;
-    font-weight: bold;
-  }
-  li {
-    font-size: 25px;
-    font-weight: bold;
-    list-style-type: none;
-  }
-  span {
-    font-style: italic;
-  }
-  .main_screen {
-    margin-top: 25vh;
-    margin-bottom: 40vh;
-    .list {
-      font-style: italic;
-      margin-left: 670px;
-      margin-top: -80px;
-      animation: move 5s ease infinite;
-    }
-  }
-  .volunteering_pleasant {
-    margin-top: 30vh;
-    margin-bottom: 25vh;
-    .features {
-      margin-top: 10vh;
-      li:nth-child(1){
-        margin-left: 150px;
-        margin-bottom: 10vh;
-      }
-      li:nth-child(2){
-        margin-left: 300px;
-        margin-bottom: 10vh;
-      }
-      li:nth-child(3){
-        margin-left: 450px;
-        margin-bottom: 10vh;
-      }
-      li:nth-child(4){
-        margin-left: 600px;
-      }
-    }
-  }
-  .email_subscribe {
-    margin-bottom: 40vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 90vw;
-  }
-  h2 {
-    margin-bottom: 10vh;
-  }
-  .circles {
-    position: relative;
-    .light_blue {
-      position: absolute;
-      width: 196px;
-      height: 196px;
-      left: 209px;
-      top: -389px;
-      border-radius: 100%;
-      background: #99A6FB;
-    }
-    .blue {
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      left: 332px;
-      top: -280px;
-      border-radius: 100%;
-      background: #3741E2;
-    }
-    .yellow {
-      position: absolute;
-      width: 196px;
-      height: 196px;
-      left: 868px;
-      top: -132px;
-      border-radius: 100%;
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FFFD92;
-      animation: rotate 5s ease infinite;
-    }
-    .pink {
-      position: absolute;
-      width: 196px;
-      height: 196px;
-      left: 1194px;
-      top: 57px;
-      border-radius: 100%;
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #E8D2F4;
-      animation: rotate 8s ease infinite;
-    }
-    .big_light_blue {
-      position: absolute;
-      width: 342px;
-      height: 342px;
-      left: -191px;
-      top: 380px;
-      border-radius: 100%;
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #99A6FB;
-      transform: rotate(82deg);
-      z-index: -1;
-      animation: rotate 8s ease infinite;
-    }
-    .light_peach {
-    position: absolute;
-    width: 196px;
-    height: 196px;
-    left: 600px;
-    top: 150px;
-    border-radius: 100%;
-    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EF7952;
-    animation: rotate 6s ease infinite;
-    }
-    .peach {
-      position: absolute;
-      width: 196px;
-      height: 196px;
-      left: 1250px;
-      top: 700px;
-      border-radius: 100%;
-      background: linear-gradient(0deg, #EF7952, #EF7952), #FFFD92;
-      transform: rotate(-39deg);
-    }
-    .light_pink {
-      position: absolute;
-      width: 196px;
-      height: 196px;
-      left: 637px;
-      top: 700px;
-      border-radius: 100%;
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #E8D2F4;
-      transform: rotate(114deg);
-      z-index: -1;
-      animation: rotate 6s ease infinite;
-    }
-    .light_yellow {
-      position: absolute;
-      width: 196px;
-      height: 196px;
-      left: -120px;
-      top: 883px;
-      border-radius: 100%;
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FFFD92;
-      transform: rotate(40deg);
-      z-index: -1;
-      animation: rotate 8s ease infinite;
-    }
-    .big_pink {
-      position: absolute;
-      width: 367px;
-      height: 367px;
-      left: 1165px;
-      top: 1400px;
-      border-radius: 100%;
-      background: #E8D2F4;
-      transform: rotate(-39deg);
-      z-index: -1;
-    }
-    .light_pink2 {
-      position: absolute;
-      width: 330px;
-      height: 330px;
-      left: -150px;
-      top: 2041px;
-      border-radius: 100%;
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #E8D2F4;
-      z-index: -1;
-      animation: rotate 7s ease infinite;
-    }
-    .light_blue2 {
-      position: absolute;
-      width: 304px;
-      height: 304px;
-      left: 1140px;
-      top: 2150px;
-      border-radius: 100%;
-      background: linear-gradient(146.48deg, #B2BCFC 19%, rgba(178, 188, 252, 0) 85%);
-      animation: rotate 6s ease infinite;
-    }
-    .circles_list {
-      .yellow_list {
-        position: absolute;
-        width: 110px;
-        height: 110px;
-        left: 0vw;
-        top: 208vh;
-        border-radius: 100%;
-        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FFFD92;
-        animation: rotate 5s ease infinite;
-      }
-      .peach_list {
-        position: absolute;
-        width: 110px;
-        height: 110px;
-        left: 150px;
-        top: 226vh;
-        border-radius: 100%;
-        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EF7952;
-        animation: rotate 5s ease infinite reverse;
-      }
-      .blue_list {
-        position: absolute;
-        width: 110px;
-        height: 110px;
-        left: 300px;
-        top: 243vh;
-        border-radius: 100%;
-        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #B2BCFC;
-        animation: rotate 5s ease infinite;
-      }
-      .pink_list {
-        position: absolute;
-        width: 110px;
-        height: 110px;
-        left: 450px;
-        top: 260vh;
-        border-radius: 100%;
-        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #E8D2F4;
-        animation: rotate 5s ease infinite reverse;
-      }
-    }
-  }
-}
-
-@keyframes move {
-  50% {
-    transform: translateY(-160px);
-  }
-}
-
-@keyframes rotate {
-  50% {
-    transform: rotate(360deg);
-  }
-}
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap');
+//
+// body {
+//   overflow-x: hidden;
+//   -webkit-font-smoothing: antialiased
+// }
+//
+// .body_promo {
+//   font-family: 'Raleway', sans-serif;
+//   margin-bottom: 50px;
+//   margin-left: 90px;
+//   h1 {
+//     font-size: 80px;
+//     font-weight: bold;
+//   }
+//   p {
+//     font-size: 30px;
+//     margin-top: 18vh;
+//     width: 70vw;
+//     line-height: 35.22px;
+//   }
+//   h2 {
+//     font-size: 40px;
+//     font-weight: bold;
+//   }
+//   li {
+//     font-size: 25px;
+//     font-weight: bold;
+//     list-style-type: none;
+//   }
+//   span {
+//     font-style: italic;
+//   }
+//   .main_screen {
+//     margin-top: 25vh;
+//     margin-bottom: 40vh;
+//     .list {
+//       font-style: italic;
+//       margin-left: 670px;
+//       margin-top: -80px;
+//       animation: move 5s ease infinite;
+//     }
+//   }
+//   .volunteering_pleasant {
+//     margin-top: 30vh;
+//     margin-bottom: 25vh;
+//     .features {
+//       margin-top: 10vh;
+//       li:nth-child(1){
+//         margin-left: 150px;
+//         margin-bottom: 10vh;
+//       }
+//       li:nth-child(2){
+//         margin-left: 300px;
+//         margin-bottom: 10vh;
+//       }
+//       li:nth-child(3){
+//         margin-left: 450px;
+//         margin-bottom: 10vh;
+//       }
+//       li:nth-child(4){
+//         margin-left: 600px;
+//       }
+//     }
+//   }
+//   .email_subscribe {
+//     margin-bottom: 40vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-wrap: wrap;
+//     width: 90vw;
+//   }
+//   h2 {
+//     margin-bottom: 10vh;
+//   }
+//   .circles {
+//     position: relative;
+//     .light_blue {
+//       position: absolute;
+//       width: 196px;
+//       height: 196px;
+//       left: 209px;
+//       top: -389px;
+//       border-radius: 100%;
+//       background: #99A6FB;
+//     }
+//     .blue {
+//       position: absolute;
+//       width: 180px;
+//       height: 180px;
+//       left: 332px;
+//       top: -280px;
+//       border-radius: 100%;
+//       background: #3741E2;
+//     }
+//     .yellow {
+//       position: absolute;
+//       width: 196px;
+//       height: 196px;
+//       left: 868px;
+//       top: -132px;
+//       border-radius: 100%;
+//       background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FFFD92;
+//       animation: rotate 5s ease infinite;
+//     }
+//     .pink {
+//       position: absolute;
+//       width: 196px;
+//       height: 196px;
+//       left: 1194px;
+//       top: 57px;
+//       border-radius: 100%;
+//       background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #E8D2F4;
+//       animation: rotate 8s ease infinite;
+//     }
+//     .big_light_blue {
+//       position: absolute;
+//       width: 342px;
+//       height: 342px;
+//       left: -191px;
+//       top: 380px;
+//       border-radius: 100%;
+//       background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #99A6FB;
+//       transform: rotate(82deg);
+//       z-index: -1;
+//       animation: rotate 8s ease infinite;
+//     }
+//     .light_peach {
+//     position: absolute;
+//     width: 196px;
+//     height: 196px;
+//     left: 600px;
+//     top: 150px;
+//     border-radius: 100%;
+//     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EF7952;
+//     animation: rotate 6s ease infinite;
+//     }
+//     .peach {
+//       position: absolute;
+//       width: 196px;
+//       height: 196px;
+//       left: 1250px;
+//       top: 700px;
+//       border-radius: 100%;
+//       background: linear-gradient(0deg, #EF7952, #EF7952), #FFFD92;
+//       transform: rotate(-39deg);
+//     }
+//     .light_pink {
+//       position: absolute;
+//       width: 196px;
+//       height: 196px;
+//       left: 637px;
+//       top: 700px;
+//       border-radius: 100%;
+//       background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #E8D2F4;
+//       transform: rotate(114deg);
+//       z-index: -1;
+//       animation: rotate 6s ease infinite;
+//     }
+//     .light_yellow {
+//       position: absolute;
+//       width: 196px;
+//       height: 196px;
+//       left: -120px;
+//       top: 883px;
+//       border-radius: 100%;
+//       background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FFFD92;
+//       transform: rotate(40deg);
+//       z-index: -1;
+//       animation: rotate 8s ease infinite;
+//     }
+//     .big_pink {
+//       position: absolute;
+//       width: 367px;
+//       height: 367px;
+//       left: 1165px;
+//       top: 1400px;
+//       border-radius: 100%;
+//       background: #E8D2F4;
+//       transform: rotate(-39deg);
+//       z-index: -1;
+//     }
+//     .light_pink2 {
+//       position: absolute;
+//       width: 330px;
+//       height: 330px;
+//       left: -150px;
+//       top: 2041px;
+//       border-radius: 100%;
+//       background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #E8D2F4;
+//       z-index: -1;
+//       animation: rotate 7s ease infinite;
+//     }
+//     .light_blue2 {
+//       position: absolute;
+//       width: 304px;
+//       height: 304px;
+//       left: 1140px;
+//       top: 2150px;
+//       border-radius: 100%;
+//       background: linear-gradient(146.48deg, #B2BCFC 19%, rgba(178, 188, 252, 0) 85%);
+//       animation: rotate 6s ease infinite;
+//     }
+//     .circles_list {
+//       .yellow_list {
+//         position: absolute;
+//         width: 110px;
+//         height: 110px;
+//         left: 0vw;
+//         top: 208vh;
+//         border-radius: 100%;
+//         background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FFFD92;
+//         animation: rotate 5s ease infinite;
+//       }
+//       .peach_list {
+//         position: absolute;
+//         width: 110px;
+//         height: 110px;
+//         left: 150px;
+//         top: 226vh;
+//         border-radius: 100%;
+//         background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EF7952;
+//         animation: rotate 5s ease infinite reverse;
+//       }
+//       .blue_list {
+//         position: absolute;
+//         width: 110px;
+//         height: 110px;
+//         left: 300px;
+//         top: 243vh;
+//         border-radius: 100%;
+//         background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #B2BCFC;
+//         animation: rotate 5s ease infinite;
+//       }
+//       .pink_list {
+//         position: absolute;
+//         width: 110px;
+//         height: 110px;
+//         left: 450px;
+//         top: 260vh;
+//         border-radius: 100%;
+//         background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #E8D2F4;
+//         animation: rotate 5s ease infinite reverse;
+//       }
+//     }
+//   }
+// }
+//
+// @keyframes move {
+//   50% {
+//     transform: translateY(-160px);
+//   }
+// }
+//
+// @keyframes rotate {
+//   50% {
+//     transform: rotate(360deg);
+//   }
+// }
