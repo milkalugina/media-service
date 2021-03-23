@@ -17,7 +17,10 @@
   <br>
   <h2>Избранное</h2>
   <br>
-  In favorites <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Дело' : 'Дел'%>
+  <br>
+  <h2>Избранное</h2>
+  <br>
+  <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Дело' : 'Дел'%>
   <% @events.each do |event| %>
     <br><%= link_to event.title, event %>
   <% end %>

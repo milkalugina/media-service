@@ -1,0 +1,246 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@font-face {
+  font-family:'SteinbeckRegular';
+  src:font-url('SteinbeckRegular.eot');
+  src:font-url('SteinbeckRegular.eot?#iefix') format('embedded-opentype'),
+  font-url('SteinbeckRegular.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'SteinbeckItalic';
+  src:font-url('SteinbeckItalic.eot');
+  src:font-url('SteinbeckItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('SteinbeckItalic.ttf') format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Black';
+  src:font-url('BasisGrotesquePro-Black.eot');
+  src:font-url('BasisGrotesquePro-Black.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Black.ttf') format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-BlackItalic';
+  src:font-url('BasisGrotesquePro-BlackItalic.eot');
+  src:font-url('BasisGrotesquePro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-BlackItalic.ttf') format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Bold';
+  src:font-url('BasisGrotesquePro-Bold.eot');
+  src:font-url('BasisGrotesquePro-Bold.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Bold.ttf') format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-BoldItalic';
+  src:font-url('BasisGrotesquePro-BoldItalic.eot');
+  src:font-url('BasisGrotesquePro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-BoldItalic.ttf') format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Medium';
+  src:font-url('BasisGrotesquePro-Medium.eot');
+  src:font-url('BasisGrotesquePro-Medium.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Medium.ttf') format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-MediumItalic';
+  src:font-url('BasisGrotesquePro-MediumItalic.eot');
+  src:font-url('BasisGrotesquePro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-MediumItalic.ttf') format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Regular';
+  src:font-url('BasisGrotesquePro-Regular.eot');
+  src:font-url('BasisGrotesquePro-Regular.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Regular.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Italic';
+  src:font-url('BasisGrotesquePro-Italic.eot');
+  src:font-url('BasisGrotesquePro-Italic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Italic.ttf') format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Light';
+  src:font-url('BasisGrotesquePro-Light.eot');
+  src:font-url('BasisGrotesquePro-Light.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Light.ttf') format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-LightItalic';
+  src:font-url('BasisGrotesquePro-LightItalic.eot');
+  src:font-url('BasisGrotesquePro-LightItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-LightItalic.ttf') format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+
+
+body {
+  font-family:'BasisGrotesquePro-Regular';
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.A_Typekit {
+  font-family:'SteinbeckRegular';
+  font-size: 40px;
+}
+
+.top_menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 40px;
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+}
+
+.top_menu a {
+  margin: 0 20px;
+}
+
+.account {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+h1 {
+  font-family:'SteinbeckRegular';
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+
+.account h2 {
+  position: absolute;
+}
+
+.categories a {
+  border: 1px solid #E2E5E6;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+
+.users {
+  margin-left: 30vw;
+}
+
+.users th {
+  width: 20vw;
+  text-align: left;
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 4px;
+}
+
+.users td {
+  font-size: 15px;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 18px;
+  margin-bottom: 50px;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.categories {
+  margin-left: 30vw;
+}
+
+.categories h3 {
+  margin-top: 50px;
+}
+
+#h3 {
+  margin-left: 30vw;
+}
+
+.newcategory {
+  margin-left: 30vw;
+}
+
+.allcategories {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.postform {
+  margin-left: 20px;
+}
+
+.signin {
+  margin-left: 30vw;
+}
