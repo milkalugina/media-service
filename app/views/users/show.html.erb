@@ -3,7 +3,7 @@
 <p> <%= @user.username %></p> -->
 <br>
 <%# Это проверка волонтера  %>
-<% if user_signed_in? == true && current_user.isadmin == false && current_user.isorganization == false && current_user.ismoderator == false  %>
+<% if user_signed_in? == true && current_user.isadmin == false && current_user.ismoderator == false  %>
 <div class="account">
   <h1>Аккаунт волонтера</h1>
   <br>
@@ -45,20 +45,6 @@
 <% end %>
 
 </div>
-
-
-<%# Это проверка организации %>
-<%# Это чтобы статус организатора был виден только у организатора  %>
-<% if user_signed_in? && current_user.isorganization == true %>
-<div class="account">
-    <h1>Аккаунт организации</h1>
-    <h2>Контактная информация</h2>
-    <h2>Анкета организатора</h2>
-    <h2>Мои добрые дела</h2>
-    <h2>Мои новости</h2>
-
-</div>
-<% end %>
 
 
 <%# Это проверка модераторов %>

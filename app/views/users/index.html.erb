@@ -25,9 +25,6 @@
           <td>Admin <%= user.ismoderator %><td>
         <% end %>
 
-        <% if user_signed_in? && current_user.isorganization == true %>
-        <td>Organization <%= user.isorganization %><td>
-          <% end %>
       </tr>
     <% end %>
   </tbody>

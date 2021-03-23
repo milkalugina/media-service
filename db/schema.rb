@@ -112,7 +112,6 @@ ActiveRecord::Schema.define(version: 2021_03_22_183311) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "username"
     t.boolean "isadmin", default: false
-    t.boolean "isorganization", default: false
     t.boolean "ismoderator", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

@@ -57,5 +57,13 @@
     <%= button_to 'Add to Favorite', event_favorites_path(@event), method: :event %>
 <% end %>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
+<% if user_signed_in? && current_user.ismoderator == true %>
+<%= link_to 'Edit', edit_post_path(@post) %>
+<% end %>
+
+<% if user_signed_in? && current_user.isadmin == true %>
+<%= link_to 'Edit', edit_post_path(@post) %>
+<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+
 <%= link_to 'Back', events_path %>
