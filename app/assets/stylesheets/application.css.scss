@@ -146,113 +146,175 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-.top_menu {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  height: 60px;
-  margin-bottom: 40px;
-  background: #eee;
-  border-bottom: 1px solid #ddd;
+// Это стили для A_Toggle, не получилось через styled-components застилизовать
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
 }
 
-.top_menu a {
-  margin: 0 20px;
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-.account {
-  margin-left: 60px;
-  margin-right: 60px;
-}
-
-h1 {
-  font-family:'SteinbeckRegular';
-  font-size: 40px;
-  margin-top: 30px;
-  margin-bottom: 100px;
-}
-
-h2 {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 18px;
-  margin-bottom: 10px;
-}
-
-.account h2 {
+/* The slider */
+.slider {
   position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--LightBlue);
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-.categories a {
-  border: 1px solid #E2E5E6;
-  box-sizing: border-box;
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-
-.users {
-  margin-left: 30vw;
+input:checked + .slider {
+  background-color: var(--KindBlue);
 }
 
-.users th {
-  width: 20vw;
-  text-align: left;
-  font-weight: bold;
-  font-size: 16px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-radius: 4px;
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
 }
 
-.users td {
-  font-size: 15px;
-  padding-bottom: 20px;
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
-h3 {
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 18px;
-  margin-bottom: 50px;
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
 }
 
-h4 {
-  font-weight: 500;
-  font-size: 20px;
-  margin-top: 50px;
-  margin-bottom: 30px;
+.slider.round:before {
+  border-radius: 50%;
 }
 
-.categories {
-  margin-left: 30vw;
-}
-
-.categories h3 {
-  margin-top: 50px;
-}
-
-#h3 {
-  margin-left: 30vw;
-}
-
-.newcategory {
-  margin-left: 30vw;
-}
-
-.allcategories {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.postform {
-  margin-left: 20px;
-}
-
-.signin {
-  margin-left: 30vw;
-}
+// .top_menu {
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: center;
+//   width: 100%;
+//   height: 60px;
+//   margin-bottom: 40px;
+//   background: #eee;
+//   border-bottom: 1px solid #ddd;
+// }
+//
+// .top_menu a {
+//   margin: 0 20px;
+// }
+//
+// .account {
+//   margin-left: 60px;
+//   margin-right: 60px;
+// }
+//
+// h1 {
+//   font-family:'SteinbeckRegular';
+//   font-size: 40px;
+//   margin-top: 30px;
+//   margin-bottom: 100px;
+// }
+//
+// h2 {
+//   font-weight: 500;
+//   font-size: 20px;
+//   line-height: 18px;
+//   margin-bottom: 10px;
+// }
+//
+// .account h2 {
+//   position: absolute;
+// }
+//
+// .categories a {
+//   border: 1px solid #E2E5E6;
+//   box-sizing: border-box;
+//   border-radius: 10px;
+//   padding: 10px 20px;
+//   margin-right: 20px;
+//   margin-bottom: 20px;
+// }
+//
+//
+// .users {
+//   margin-left: 30vw;
+// }
+//
+// .users th {
+//   width: 20vw;
+//   text-align: left;
+//   font-weight: bold;
+//   font-size: 16px;
+//   padding-top: 20px;
+//   padding-bottom: 20px;
+//   border-radius: 4px;
+// }
+//
+// .users td {
+//   font-size: 15px;
+//   padding-bottom: 20px;
+// }
+//
+// h3 {
+//   font-weight: bold;
+//   font-size: 30px;
+//   line-height: 18px;
+//   margin-bottom: 50px;
+// }
+//
+// h4 {
+//   font-weight: 500;
+//   font-size: 20px;
+//   margin-top: 50px;
+//   margin-bottom: 30px;
+// }
+//
+// .categories {
+//   margin-left: 30vw;
+// }
+//
+// .categories h3 {
+//   margin-top: 50px;
+// }
+//
+// #h3 {
+//   margin-left: 30vw;
+// }
+//
+// .newcategory {
+//   margin-left: 30vw;
+// }
+//
+// .allcategories {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+//
+// .postform {
+//   margin-left: 20px;
+// }
+//
+// .signin {
+//   margin-left: 30vw;
+// }
