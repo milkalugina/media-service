@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users, path: 'users'
+  devise_for :organizations, path: 'organizations'
   resources :types
   resources :skills
   resources :spheres
@@ -8,7 +10,6 @@ Rails.application.routes.draw do
   resources :follows
   resources :categories
   mount Ckeditor::Engine => '/ckeditor'
-  devise_for :users
   resources :posts
   resources :subscribers
   get 'posts/index'
