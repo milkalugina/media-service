@@ -273,6 +273,78 @@ input:checked + .slider:before {
   transform: rotate(45deg);
 }
 
+/* Стили для тегов Hobbies */
+
+.hobbies label{
+    display: inline-block;
+    background-color: var(--LightBlue);
+    color: var(--KindBlue);
+    border-radius: 4px;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .2s;
+    padding: 9px 64px;
+    cursor: pointer;
+    margin: 0px 10px;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    font-family: Basis Grotesque Pro;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+.hobbies input[type="checkbox"]:checked + label {
+    background-color: var(--KindBlue);
+    color: var(--White);
+    transition: all .2s;
+}
+
+.hobbies input[type="checkbox"] {
+  display: absolute;
+}
+.hobbies input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Стили для тегов */
+
+.ks-cboxtags label{
+    display: inline-block;
+    background-color: var(--LightBlue);
+    color: var(--KindBlue);
+    border-radius: 8px;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .2s;
+    padding: 6px 16px;
+    cursor: pointer;
+    margin: 0px 10px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-family: Basis Grotesque Pro;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+.ks-cboxtags input[type="checkbox"]:checked + label {
+    background-color: var(--KindBlue);
+    color: var(--White);
+    transition: all .2s;
+}
+
+.ks-cboxtags input[type="checkbox"] {
+  display: absolute;
+}
+.ks-cboxtags input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
 // .top_menu {
 //   display: flex;
 //   justify-content: flex-end;
