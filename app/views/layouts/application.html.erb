@@ -20,10 +20,18 @@
 
     <div class="top_menu">
     <% if user_signed_in? %>
-      <%= link_to 'Аккаунт', current_user %> | <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+      <%= link_to 'Аккаунт', current_user %>
+      <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
     <% else %>
-      <%= link_to 'Войти', new_user_session_path %> <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+      <% if organization_signed_in? %>
+        <%= link_to 'Аккаунт', current_organization %>
+        <%= link_to 'Выйти', destroy_organization_session_path, :method => :delete %>
+      <% else %>
+        <%= link_to 'Войти', sign_in_like_path %>
+        <%= link_to 'Зарегистрироваться', new_path %>
+      <% end %>
     <% end %>
+
 
     <% Category.where(display_in_navbar: true).each do |cat| %>
     <%= link_to cat.name, posts_path(category: cat.name) %>

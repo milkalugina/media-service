@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Email</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @organizations.each do |organization| %>
+      <tr>
+        <td><%= organization.id %></td>
+        <td><%= link_to organization.email, organization %></td>
+        <td><%= organization.organizationname %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
