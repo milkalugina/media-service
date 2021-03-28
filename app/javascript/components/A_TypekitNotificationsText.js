@@ -5,7 +5,7 @@ import styled from "styled-components";
 const P = styled.p`
   font-family: Basis Grotesque Pro;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 12px;
   line-height: 120%;
   color: var(--KindBlue);
