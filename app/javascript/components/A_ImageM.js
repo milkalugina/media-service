@@ -12,7 +12,7 @@ const IMG = styled.img`
 class A_ImageM extends React.Component {
   render () {
     return (
-      <div><IMG src=" "></IMG></div>
+      <div><IMG src="/images/pic-1.jpg"></IMG></div>
     );
   }
 }

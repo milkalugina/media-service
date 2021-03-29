@@ -11,6 +11,7 @@ const BUTTON = styled.button`
   text-align: center;
   letter-spacing: 0.1px;
   color: var(--KindBlue);
+  background: var(--White);
   border: 1px solid #233363;
   box-sizing: border-box;
   border-radius: 10px;
