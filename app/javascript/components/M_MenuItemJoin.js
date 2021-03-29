@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components";
+import A_ButtonBlueJoin from './A_ButtonBlueJoin'
 
 const BUTTON = styled.button`
   font-family: Basis Grotesque Pro;
@@ -30,21 +31,22 @@ const BLUEBUTTON = styled(BUTTON)`
   box-sizing: border-box;
   border-radius: 10px;
   padding: 10px 20px;
+  margin-right: 5px;
 
   &:hover {
     background: var(--MidBlue);
   }
 `;
 
-class A_ButtonBlueJoin extends React.Component {
+class M_MenuItemJoin extends React.Component {
   render () {
     return (
       <div>
-        <BLUEBUTTON>{this.props.text}</BLUEBUTTON>
-        <BUTTON>{this.props.text2}</BUTTON>
+      <BLUEBUTTON>Присоединиться</BLUEBUTTON>
+      <BUTTON>Зайти</BUTTON>
       </div>
     );
   }
 }
 
-export default A_ButtonBlueJoin
+export default M_MenuItemJoin
