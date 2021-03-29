@@ -85,7 +85,7 @@ class M_CardOrg extends React.Component {
             <IMAGE><A_ImageAvatarS></A_ImageAvatarS></IMAGE>
             <A_TypekitCaseH name="МосЭкоВол"></A_TypekitCaseH>
           </ORG>
-          <SECONDARYBUTTON>Вы подписаны</SECONDARYBUTTON>
+          <SECONDARYBUTTON>Подписаться</SECONDARYBUTTON>
         </TEXT>
         <NUMBER>
           <NUMBERNOW><A_TypekitNumbNow name="2 дела сейчас"></A_TypekitNumbNow></NUMBERNOW>

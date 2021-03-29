@@ -16,4 +16,4 @@ class A_IconsShareTwitter extends React.Component {
   }
 }
 
-export default AIconsShareTwitter
+export default A_IconsShareTwitter
