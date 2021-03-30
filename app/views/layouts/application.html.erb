@@ -16,6 +16,7 @@
       <p class="alert"><%= alert %></p>
     <% end %>
 
+    <%= react_component 'O_Notification' %>
 
     <div class="top_menu">
     <% if user_signed_in? %>
@@ -31,7 +32,6 @@
       <% end %>
     <% end %>
 
-    <%= react_component 'M_SelectCases' %> 
     <% Category.where(display_in_navbar: true).each do |cat| %>
     <%= link_to cat.name, posts_path(category: cat.name) %>
     <% end %>
