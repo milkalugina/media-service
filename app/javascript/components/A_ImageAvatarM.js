@@ -12,7 +12,7 @@ const IMG = styled.img`
 class A_ImageAvatarM extends React.Component {
   render () {
     return (
-      <div><IMG src=" "></IMG></div>
+      <div><IMG src="/images/ecology.png"></IMG></div>
     );
   }
 }
