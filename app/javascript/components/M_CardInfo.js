@@ -24,7 +24,7 @@ const H2 = styled.h2`
 `;
 
 const DIV = styled.div`
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/pic-1.jpg);
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/banner.png);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
@@ -37,7 +37,7 @@ const DIV = styled.div`
 
   &:hover {
     cursor: pointer;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(/images/pic-1.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(/images/banner.png);
     -webkit-transition: .4s;
     transition: .4s;
   }

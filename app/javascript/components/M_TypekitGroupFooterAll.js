@@ -6,6 +6,7 @@ import A_TypekitFooterText from './A_TypekitFooterText'
 
 const DIV = styled.div`
   margin-bottom: 20px;
+  width: 340px;
 `;
 
 
