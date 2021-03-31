@@ -372,11 +372,13 @@ input:checked + .slider:before {
     cursor: pointer;
     outline: none;
     border: 1px solid rgba(35, 51, 99, 0.2);
+    background: #FFFFFF;
 
     &:focus {
       & + .select-box__list {
         opacity: 1;
         animation-name: none;
+        background: #FFFFFF;
 
         .select-box__option {
           cursor: pointer;

@@ -11,7 +11,7 @@ const TEXTAREA = styled.textarea`
   line-height: 16px;
   letter-spacing: 0.1px;
   background: none;
-  width: 360px;
+  width: 302px;
   height: 274px;
   border: 1px solid rgba(35, 51, 99, 0.2);
   padding: 13px 29px;

@@ -12,7 +12,7 @@ class M_InputGroupUserAttachPhotoVer extends React.Component {
   render () {
     return (
       <div>
-        <TEXT><A_TypekitFilter name="Документ о регистрации НКО"></A_TypekitFilter></TEXT>
+        <TEXT><A_TypekitFilter name={this.props.text}></A_TypekitFilter></TEXT>
         <A_Attach></A_Attach>
       </div>
     );

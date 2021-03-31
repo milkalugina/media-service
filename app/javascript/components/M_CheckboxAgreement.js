@@ -29,7 +29,7 @@ class M_CheckboxAgreement extends React.Component {
     return (
       <DIV>
         <CHECK><A_Checkbox></A_Checkbox></CHECK>
-        <P>Соглашаюсь на обработку моих персональных данных и с правилами пользования сайтом *</P>
+        <P>{this.props.name}</P>
       </DIV>
     );
   }

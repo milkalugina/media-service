@@ -22,7 +22,6 @@ const INPUT = styled.input`
   &::placeholder {
     color: var(--LightBlue);
   }
-
 `;
 
 class A_InputInfoEmptyS extends React.Component {
