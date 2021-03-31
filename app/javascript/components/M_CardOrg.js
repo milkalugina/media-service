@@ -45,6 +45,11 @@ const DIV = styled.div`
   border-radius: 20px;
   padding: 20px;
   flex-direction: column;
+
+  &:hover {
+    filter: drop-shadow(0px 0px 10px rgba(35, 51, 99, 0.15));
+    cursor: pointer;
+  }
 `;
 
 const IMAGE = styled.div`

@@ -16,8 +16,8 @@ class M_TypekitGroupNewsText extends React.Component {
   render () {
     return (
       <DIV>
-        <H2><A_TypekitH2 name="{Продлен прием заявок на конкурс «Доброволец Москвы — 2020»!}"></A_TypekitH2></H2>
-        <A_TypekitText name="Теперь зарегистрироваться можно до 18 октября (включительно)."></A_TypekitText>
+        <H2><A_TypekitH2 name={this.props.title}></A_TypekitH2></H2>
+        <A_TypekitText name={this.props.text}></A_TypekitText>
       </DIV>
     );
   }

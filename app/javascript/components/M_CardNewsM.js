@@ -7,7 +7,7 @@ import A_TypekitNewsM from './A_TypekitNewsM'
 const DIV = styled.div`
   box-sizing: border-box;
   width: 413px;
-  height: 500px;
+  height: 440px;
   display: flex;
   flex-direction: column;
 `;
