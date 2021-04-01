@@ -27,7 +27,7 @@ class M_NavigationCasesList extends React.Component {
       <DIV>
         <SLIDER>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <CIRCLE cx="8" cy="8" r="7.5" stroke="#233363"/>
+          <CIRCLE cx="8" cy="8" r="7.5" stroke="#233363" filled/>
           </svg>
         </SLIDER>
         <SLIDER>

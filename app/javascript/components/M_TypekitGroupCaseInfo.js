@@ -7,10 +7,15 @@ import A_TypekitH3 from './A_TypekitH3'
 const DIV = styled.div`
   display: flex;
   align-items: center;
+  gap: 10px;
 `;
 
 const SVG = styled.svg`
   transform: ${props => props.down ? "rotate(180deg)" : "none"};
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 class M_TypekitGroupCaseInfo extends React.Component {

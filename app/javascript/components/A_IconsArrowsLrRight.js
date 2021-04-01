@@ -8,14 +8,13 @@ const SVG = styled.svg`
 
   &:hover {
     cursor: pointer;
-    filter: drop-shadow(0px 0px 10px rgba(35, 51, 99, 0.15));
   }
 `;
 
-class A_IconsArrowsLr extends React.Component {
+class A_IconsArrowsLrRight extends React.Component {
   render () {
     return (
-      <SVG width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <SVG width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" right>
       <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#233363"/>
       <path d="M32 12L18 25L32 38" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
       </SVG>
@@ -23,4 +22,4 @@ class A_IconsArrowsLr extends React.Component {
   }
 }
 
-export default A_IconsArrowsLr
+export default A_IconsArrowsLrRight
