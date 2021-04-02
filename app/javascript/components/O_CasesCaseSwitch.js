@@ -17,8 +17,7 @@ const CARDS = styled.div`
 
 const DIV = styled.div`
   width: 1320px;
-  padding: 0px 60px;
-  margin-left: 15px;
+  padding: 0px 60px 0px 0px;
 `;
 
 const ARROWS = styled.div`
@@ -37,8 +36,8 @@ class O_CasesCaseSwitch extends React.Component {
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 4,
-      autoplay: false,
-      autoplaySpeed: 4000,
+      autoplay: true,
+      autoplaySpeed: 3500,
       pauseOnHover: true,
     };
     return (

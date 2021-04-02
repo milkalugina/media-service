@@ -10,6 +10,7 @@ const DIV = styled.div`
   width: 100% - 120px;
   padding: 60px;
   background: var(--KindBlue);
+  margin-top: 80px;
 `;
 
 const CENTER = styled.div`

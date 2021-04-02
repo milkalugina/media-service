@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 	post 'users/:id/unfollow', to: "users#unfollow", as: "unfollow_user"
 
   get 'promo', to: 'promo#index'
+  get 'welcome', to: 'welcome#index'
   get 'about', to: 'about#index'
 
   get 'users', to: 'users#index'

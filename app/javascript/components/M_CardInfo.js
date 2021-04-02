@@ -46,11 +46,13 @@ const DIV = styled.div`
 class M_CardInfo extends React.Component {
   render () {
     return (
+      <div>
       <CARD>
         <DIV>
-          <H2>Добрые дела — медиа-сервис, объединяющий волонтеров и волонтерские организации</H2>
+          <H2>{this.props.name}</H2>
         </DIV>
       </CARD>
+      </div>
     );
   }
 }

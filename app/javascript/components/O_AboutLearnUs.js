@@ -10,7 +10,8 @@ const DIV = styled.div`
   flex-direction: column;
   gap: 40px;
   justify-content: center;
-  padding: 0px 60px;
+  padding: 0px;
+  margin-top: 110px;
 `;
 
 const TEXT = styled.div`
@@ -33,7 +34,7 @@ class O_AboutLearnUs extends React.Component {
         <A_TypekitH1 name="Узнать о нас"></A_TypekitH1>
         <LINK><A_TypekitNavigationLinkRight name="Перейти к делам"></A_TypekitNavigationLinkRight></LINK>
         </TEXT>
-        <M_CardInfo></M_CardInfo>
+        <M_CardInfo name="Добрые дела — медиа-сервис, объединяющий волонтеров и волонтерские организации"></M_CardInfo>
       </DIV>
     );
   }
