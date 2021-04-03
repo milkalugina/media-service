@@ -1,4 +1,12 @@
-<h2>Sign up</h2>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div>
+    <%= react_component 'O_RegistrationsVolReg1' %>
+</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
@@ -21,9 +29,22 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
 <% end %>
 
-<%= render "users/shared/links" %>
+
+<div class="">
+  <h5><%= link_to "Продолжить", user_reg_steps_path %></h5>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div>
+      <%= react_component 'S_Footer' %>
+  </div>

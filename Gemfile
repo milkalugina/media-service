@@ -27,6 +27,8 @@ gem 'ckeditor'
 
 gem 'devise', '~> 4.2'
 
+gem 'wicked'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

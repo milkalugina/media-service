@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :organizations, path: 'organizations'
   resources :types
   resources :skills
+  resources :user_reg_steps
+  resources :org_reg_steps
   resources :spheres
   resources :events do
     resources :favorites
@@ -35,7 +37,6 @@ Rails.application.routes.draw do
 
   get 'new', to: 'welcome#create_acc'
   get 'sign_in_like', to: 'welcome#sign_in_like'
-
 
   root 'promo#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

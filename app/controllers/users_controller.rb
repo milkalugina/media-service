@@ -1,4 +1,18 @@
 class UsersController < ApplicationController
+ def new
+  @users = User.new
+ end
+
+ def create
+   @users = User.new(params[:user])
+   if @user.save
+     session[:user_id] = @user.id
+     redirect_to user_reg_steps_path
+   else
+     render :new
+   end
+ end
+
   def index
     @users = User.all
   end

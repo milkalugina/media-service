@@ -16,26 +16,27 @@
       <p class="alert"><%= alert %></p>
     <% end %>
 
+    <div class="top_menu">
     <div>
     <% if user_signed_in? %>
+      <%= link_to 'Аккаунт', current_user %>
+      <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
     <%= react_component 'O_MenuReg' %>
     <% else %>
       <% if organization_signed_in? %>
+        <%= link_to 'Аккаунт', current_organization %>
+        <%= link_to 'Выйти', destroy_organization_session_path, :method => :delete %>
       <%= react_component 'O_MenuReg' %>
       <% else %>
+        <%= link_to 'Войти', sign_in_like_path %>
+        <%= link_to 'Зарегистрироваться', new_path %>
+      <% end %>
       <%= react_component 'O_Menu' %>
       <% end %>
 
-    <% end %>
     <% Category.where(display_in_navbar: true).each do |cat| %>
     <%= link_to cat.name, posts_path(category: cat.name) %>
     <% end %>
-  </div>
-  <div>
-      <%= react_component 'P_Main' %>
-  </div>
-  <div>
-      <%= react_component 'S_Footer' %>
   </div>
     <%= yield %>
   </body>
