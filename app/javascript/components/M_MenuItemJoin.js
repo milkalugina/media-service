@@ -38,12 +38,17 @@ const BLUEBUTTON = styled(BUTTON)`
   }
 `;
 
+const A = styled.a`
+  text-decoration: none;
+`;
+
+
 class M_MenuItemJoin extends React.Component {
   render () {
     return (
       <div>
-      <BLUEBUTTON>Присоединиться</BLUEBUTTON>
-      <BUTTON>Зайти</BUTTON>
+      <A href="/new"><BLUEBUTTON>Присоединиться</BLUEBUTTON></A>
+      <A href="/sign_in_like"><BUTTON>Зайти</BUTTON></A>
       </div>
     );
   }

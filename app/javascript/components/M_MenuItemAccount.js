@@ -13,12 +13,16 @@ const ITEM = styled.div`
   margin-right: 20px;
 `;
 
+const A = styled.a`
+  text-decoration: none;
+`;
+
 class M_MenuItemAccount extends React.Component {
   render () {
     return (
       <DIV>
         <ITEM><A_IconsNotifications></A_IconsNotifications></ITEM>
-        <A_IconsAvatar></A_IconsAvatar>
+        <A href="/users"><A_IconsAvatar></A_IconsAvatar></A>
       </DIV>
     );
   }

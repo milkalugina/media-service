@@ -4,12 +4,8 @@ import styled from "styled-components";
 import O_NewsL from './O_NewsL'
 import O_NewsM from './O_NewsM'
 import O_NewsS from './O_NewsS'
-import O_CasesCaseSwitch from './O_CasesCaseSwitch'
-import O_AboutLearnUs from './O_AboutLearnUs'
 import A_Lines from './A_Lines'
-import A_TypekitH1 from './A_TypekitH1'
-import A_TypekitNavigationLinkRight from './A_TypekitNavigationLinkRight'
-import M_CardInfoJoin from './M_CardInfoJoin'
+import A_ButtonBlueJoin from './A_ButtonBlueJoin'
 
 const DIV = styled.div`
   display: flex;
@@ -17,6 +13,7 @@ const DIV = styled.div`
   width: 100% - 120px;
   padding: 0px 60px;
   flex-wrap: wrap;
+  margin-top: 60px;
 `;
 
 const HrWhite = styled.div`
@@ -50,14 +47,44 @@ const LINK = styled.div`
   right: 0;
 `;
 
-class P_Main extends React.Component {
+const WRAPPER = styled.div`
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+`;
+
+const BUTTON = styled.button`
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: var(--KindBlue);
+  background: var(--White);
+  border: 1px solid #233363;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 10px 20px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  &:hover {
+    background: var(--LightBlue);
+    cursor: pointer;
+  }
+`;
+
+class P_News extends React.Component {
   render () {
     return (
       <DIV>
-      <TEXT>
-      <A_TypekitH1 name="Новости"></A_TypekitH1>
-      <LINK><A_TypekitNavigationLinkRight name="Перейти к новостям"></A_TypekitNavigationLinkRight></LINK>
-      </TEXT>
         <O_NewsL></O_NewsL>
         <HrWhite></HrWhite>
         <O_NewsM></O_NewsM>
@@ -73,16 +100,24 @@ class P_Main extends React.Component {
         <O_NewsS></O_NewsS>
         <HrWhiteVertS></HrWhiteVertS>
         <O_NewsS></O_NewsS>
-        <TEXT>
-        <A_TypekitH1 name="Дела"></A_TypekitH1>
-        <LINK><A_TypekitNavigationLinkRight name="Перейти к делам"></A_TypekitNavigationLinkRight></LINK>
-        </TEXT>
-        <O_CasesCaseSwitch></O_CasesCaseSwitch>
-        <O_AboutLearnUs></O_AboutLearnUs>
-        <M_CardInfoJoin name="Присоединиться и делать добрые дела вместе — стать волонтером или организатором"></M_CardInfoJoin>
+        <HrWhite></HrWhite>
+        <O_NewsM></O_NewsM>
+        <HrWhiteVert></HrWhiteVert>
+        <O_NewsM></O_NewsM>
+        <HrWhiteVert></HrWhiteVert>
+        <O_NewsM></O_NewsM>
+        <HrWhite></HrWhite>
+        <O_NewsS></O_NewsS>
+        <HrWhiteVertS></HrWhiteVertS>
+        <O_NewsS></O_NewsS>
+        <HrWhiteVertS></HrWhiteVertS>
+        <O_NewsS></O_NewsS>
+        <HrWhiteVertS></HrWhiteVertS>
+        <O_NewsS></O_NewsS>
+        <WRAPPER><BUTTON>Читать дальше</BUTTON></WRAPPER>
       </DIV>
     );
   }
 }
 
-export default P_Main
+export default P_News

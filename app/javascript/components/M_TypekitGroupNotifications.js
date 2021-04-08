@@ -8,6 +8,8 @@ import A_TypekitFilter from './A_TypekitFilter'
 const DIV = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 472px;
 `;
 
 const TEXT = styled.div`
@@ -15,7 +17,6 @@ const TEXT = styled.div`
 `;
 
 const TEXTDIV = styled.div`
-  margin-right: 90px;
 `;
 
 class M_TypekitGroupNotifications extends React.Component {
@@ -23,8 +24,8 @@ class M_TypekitGroupNotifications extends React.Component {
     return (
       <DIV>
         <TEXTDIV>
-          <TEXT><A_TypekitSettingsM name="Новый проект / новость"></A_TypekitSettingsM></TEXT>
-          <A_TypekitFilter name="Опубликован новый проект или мероприятие"></A_TypekitFilter>
+          <TEXT><A_TypekitSettingsM name={this.props.text}></A_TypekitSettingsM></TEXT>
+          <A_TypekitFilter name={this.props.text2}></A_TypekitFilter>
         </TEXTDIV>
         <A_Toggle></A_Toggle>
       </DIV>

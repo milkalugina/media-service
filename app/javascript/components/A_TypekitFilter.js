@@ -7,7 +7,7 @@ const P = styled.p`
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 21px;
   color: var(--KindBlue);
 `;
 

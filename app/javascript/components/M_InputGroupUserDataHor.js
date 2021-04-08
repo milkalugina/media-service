@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components";
 import A_TypekitFilter from './A_TypekitFilter'
 import A_InputInfoEmptyS from './A_InputInfoEmptyS'
+import A_ButtonBlueMain from './A_ButtonBlueMain'
 
 const DIV = styled.div`
   display: flex;

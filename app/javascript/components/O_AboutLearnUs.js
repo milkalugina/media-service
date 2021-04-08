@@ -32,7 +32,7 @@ class O_AboutLearnUs extends React.Component {
       <DIV>
         <TEXT>
         <A_TypekitH1 name="Узнать о нас"></A_TypekitH1>
-        <LINK><A_TypekitNavigationLinkRight name="Перейти к делам"></A_TypekitNavigationLinkRight></LINK>
+        <LINK><A_TypekitNavigationLinkRight name="О нас"></A_TypekitNavigationLinkRight></LINK>
         </TEXT>
         <M_CardInfo name="Добрые дела — медиа-сервис, объединяющий волонтеров и волонтерские организации"></M_CardInfo>
       </DIV>

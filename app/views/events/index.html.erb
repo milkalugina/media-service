@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
+<div>
+    <%= react_component 'P_Cases' %>
+</div>
+<div>
+    <%= react_component 'S_Footer' %>
+</div> -->
 
-<h1>Добрые дела</h1>
+<div class="events">
 <h2>Все сферы</h2>
 
 <% Sphere.all.each do |sphere| %>
@@ -70,3 +76,4 @@
 <br>
 
 <%= link_to 'Новое доброе дело', new_event_path %>
+</div>
