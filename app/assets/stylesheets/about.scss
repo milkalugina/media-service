@@ -21,6 +21,56 @@ h1 {
   line-height: 60px;
 }
 
+.CTA {
+  width: 166px;
+  margin-top: 45px;
+}
+
+.choice .CTA {
+  margin-left: 10vw;
+  margin-top: 90px;
+}
+
+.call_to_action .CTA {
+  margin-left: 10vw;
+}
+
+.about_org .CTA {
+  margin-left: 10vw;
+  width: 239px;
+}
+
+.CTA a {
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #233363;
+  padding: 10px 20px;
+  background: #FAF19D;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.CTA:hover {
+  cursor: pointer;
+  animation: shake 0.3s ease infinite;
+}
+
+@keyframes shake {
+
+  0% {transform: translateX(0px);}
+  25% {transform: translateX(-1px);}
+  50% {transform: translateX(0px);}
+  75% {transform: translateX(1px);}
+  100% {transform: translateX(0px);}
+
+}
+
 /* Изображения */
 .objects {
   position: relative;
@@ -116,7 +166,7 @@ h1 {
   position: absolute;
   height: 200px;
   left: 78vw;
-  top: 770vh;
+  top: 710vh;
   transform: rotate(40deg);
 }
 
@@ -233,7 +283,7 @@ h1 {
 }
 
 .main .features {
-  display: flex;
+  margin-top: 30vh;
   margin-left: 10vw;
   height: 80vh;
 }
@@ -329,7 +379,7 @@ h1 {
 }
 
 .limits–volunteering{
-  margin-bottom: 250px;
+  margin-bottom: 200px;
 }
 
 .limits–volunteering_about {
@@ -823,7 +873,6 @@ h1 {
 .about_org h1 {
   margin-left: 10vw;
   padding-right: 20vw;
-  margin-bottom: 100px;
   color: #233363;
   font-family: 'SteinbeckRegular';
   font-style: normal;
@@ -867,7 +916,7 @@ h1 {
 .call_to_action h1 {
   color: #FAF19D;
   margin-left: 10vw;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   width: 700px;
   font-family: 'SteinbeckRegular';
   font-style: normal;
@@ -882,7 +931,6 @@ h1 {
   font-style: normal;
   font-weight: normal;
   margin-left: 10vw;
-  margin-bottom: 100px;
   width: 700px;
   font-size: 25px;
   line-height: 105%;
@@ -1125,7 +1173,7 @@ footer .footer_data p {
   }
 
   .objects img:nth-child(11) {
-    top: 783vh;
+    top: 839vh;
   }
   .objects img:nth-child(13) {
     top: 1210vh;
@@ -1136,11 +1184,7 @@ footer .footer_data p {
   }
 
   .objects img:nth-child(15) {
-    top: 1471vh;
-  }
-
-  .objects img:nth-child(15) {
-    top: 1559vh;
+    top: 1427vh;
   }
 
   .objects img:nth-child(16) {
@@ -1148,19 +1192,20 @@ footer .footer_data p {
   }
 
   .objects img:nth-child(17) {
-    top: 1559vh;
+    top: 1493vh;
   }
 
   .objects img:nth-child(18) {
-    top: 1528vh;
+    top: 1455vh;
   }
 
   .objects img:nth-child(19) {
-    top: 1629vh;
+    top: 1537vh;
   }
 
   .objects img:nth-child(21) {
-    top: 1601vh;
+    top: 1516vh;
+    transform: rotate(-10deg);
   }
 
   .first_service {
