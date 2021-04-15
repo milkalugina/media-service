@@ -1,0 +1,935 @@
+// Place all the styles related to the aboutorg controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+html {
+  overflow-x: hidden !important;
+}
+
+body {
+  overflow-x: hidden !important;
+  min-width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: 'Steinbeck';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.org_objects {
+  position: relative;
+  box-sizing: border-box;
+  height: 0 !important;
+}
+
+.org_objects img {
+  overflow-x: hidden !important;
+}
+
+.org_objects img:nth-child(1) {
+  position: relative;
+  height: 600px;
+  left: 70vw;
+  top: 15vh;
+}
+
+.org_objects img:nth-child(2) {
+  position: absolute;
+  height: 400px;
+  left: 10vw;
+  top: 75vh;
+}
+
+.org_objects img:nth-child(3) {
+  position: absolute;
+  height: 200px;
+  left: 71vw;
+  top: 15vh;
+}
+
+.org_objects img:nth-child(4) {
+  position: absolute;
+  height: 400px;
+  left: 63vw;
+  top: 53vh;
+}
+
+.org_objects img:nth-child(5) {
+  position: absolute;
+  height: 150px;
+  left: 70vw;
+  top: 140vh;
+}
+
+.org_objects img:nth-child(6) {
+  position: absolute;
+  height: 400px;
+  left: -11vw;
+  top: 83vh;
+}
+
+.org_objects img:nth-child(7) {
+  position: absolute;
+  height: 300px;
+  left: -7vw;
+  top: 158vh;
+}
+
+.org_objects img:nth-child(8) {
+  position: absolute;
+  height: 400px;
+  left: -10vw;
+  top: 382vh;
+}
+
+.org_objects img:nth-child(9) {
+  position: absolute;
+  height: 300px;
+  left: 86vw;
+  top: 418vh;
+}
+
+.org_objects img:nth-child(10) {
+  position: absolute;
+  height: 600px;
+  left: 54vw;
+  top: 524vh;
+}
+
+.org_objects img:nth-child(11) {
+  position: absolute;
+  height: 600px;
+  left: -10vw;
+  top: 481vh;
+}
+
+.org_objects img:nth-child(12) {
+  position: absolute;
+  height: 300px;
+  left: 82vw;
+  top: 525vh;
+}
+
+.org_objects img:nth-child(13) {
+  position: absolute;
+  height: 250px;
+  left: 81vw;
+  top: 576vh;
+}
+
+.org_objects img:nth-child(14) {
+  position: absolute;
+  height: 600px;
+  left: -10vw;
+  top: 562vh;
+}
+
+.org_main {
+  padding: 0px, 60px;
+  background: #CACC4E;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  padding: 60px 50px 0px 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navbar p a img {
+  height: 70px;
+}
+
+.navbar .cta_button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.navbar .cta_button a {
+  font-family: Steinbeck;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 12px;
+  border: 1px solid #233363;
+  border-radius: 40px;
+  color: #233363;
+  margin: 0px 20px;
+}
+
+.org_main .org_features {
+  display: flex;
+  margin-left: 10vw;
+  height: 80vh;
+}
+
+.org_main .org_features h1 {
+  color: #233363;
+  width: 973px;
+  align-self: center;
+  font-family: 'Steinbeck';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 60px;
+}
+
+/* Возможности организаций */
+.org_capabilities {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  background: #233363;
+  padding-bottom: 130px;
+}
+
+.org_capabilities h1 {
+  font-family: 'Steinbeck';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 70px;
+  line-height: 70px;
+  color: #FAF19D;
+  margin-top: 150px;
+  margin-left: 10vw;
+  margin-bottom: 40px;
+}
+
+.org_capabilities p {
+  font-family: 'Basis Grotesque Pro';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 105%;
+  color: #FAF19D;
+  margin-left: 10vw;
+  width: 50vw;
+  margin-bottom: 60px;
+}
+
+.org_capabilities .we_logo_icn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 10vh;
+  margin-left: 10vw;
+}
+
+.org_capabilities .we_logo_icn div img {
+  vertical-align: middle;
+}
+
+.org_capabilities .we_logo_icn div img:nth-child(2), .capabilities .we_logo_icn div img:nth-child(3) {
+  padding-left: 70px;
+}
+
+/* Что нужно сделать? */
+.what_to_do {
+  display: flex;
+  flex-direction: column;
+  height: 250vh;
+  background: #F68E5F;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+
+.what_to_do p:nth-child(1) {
+  font-family: 'Basis Grotesque Pro';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  margin-left: 10vw;
+  line-height: 105%;
+  color: #233363;
+  margin-top: 150px;
+  margin-bottom: 60px;
+}
+
+.what_to_do .registration, .what_to_do .publish, .what_to_do .candidates {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 180px;
+}
+
+.what_to_do .registration .registration_about h1, .what_to_do .publish .publish_about h1, .what_to_do .candidates .candidates_about h1 {
+  font-family: 'Steinbeck';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 70px;
+  line-height: 70px;
+  color: #233363;
+  margin-left: 10vw;
+  padding-bottom: 40px;
+  width: 40vw;
+}
+
+.what_to_do .registration .registration_about p, .what_to_do .publish .publish_about p, .what_to_do .candidates .candidates_about p {
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 105%;
+  color: #233363;
+  margin-left: 10vw;
+  width: 40vw;
+}
+
+
+.what_to_do img {
+  height: 450px;
+  margin-left: 10vw;
+}
+
+.what_to_do .publish img {
+  margin-left: -50vw;
+}
+
+/* Членство */
+
+.membership {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 80vh;
+  background: #FAF19D;
+  padding-bottom: 50px;
+  align-items: center;
+}
+
+.membership .price {
+  background: #233363;
+  border-radius: 20px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: 10vw;
+  margin-right: 80px;
+}
+
+.membership .price h1 {
+  font-family: 'Steinbeck';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 70px;
+  line-height: 70px;
+  color: #FAF19D;
+  text-align: center;
+  padding: 50px;
+}
+
+.membership .what_get {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+.membership .what_get .what_get_about p:nth-child(1) {
+  margin-bottom: 60px;
+  width: 30vw;
+}
+
+.membership .what_get .what_get_about p {
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 105%;
+  color: #233363;
+  margin-bottom: 25px;
+}
+
+.membership .what_get .ready_btn {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-right: 20vw;
+}
+
+.membership .what_get .ready_btn a {
+  font-family: 'Steinbeck';
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 12px;
+  border: 1px solid #233363;
+  border-radius: 40px;
+  color: #233363;
+  margin: 0px 20px;
+}
+
+
+/* CTA */
+.call_to_action {
+  background: #233363;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.call_to_action h1 {
+  color: #FAF19D;
+  margin-left: 10vw;
+  margin-bottom: 100px;
+  width: 700px;
+}
+
+.call_to_action p {
+  color: #FAF19D;
+  font-family: 'Basis Grotesque Pro';
+  font-style: normal;
+  font-weight: normal;
+  margin-left: 10vw;
+  margin-bottom: 100px;
+  width: 700px;
+  font-size: 25px;
+  line-height: 105%;
+}
+
+.call_to_action .cta_button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-right: 20vw;
+}
+
+.call_to_action .cta_button a {
+  font-family: 'Steinbeck';
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 12px;
+  border: 1px solid #FAF19D;
+  border-radius: 40px;
+  color: #FAF19D;
+  margin: 0px 20px;
+}
+
+/* Футер */
+footer {
+  background: #233363;
+  height: 95vh;
+  padding: 0px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer .write_us {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+footer .write_us p {
+  color: #FAF19D;
+  font-family: 'Basis Grotesque Pro';
+  font-style: normal;
+  font-weight: normal;
+  width: 700px;
+  font-size: 25px;
+  line-height: 105%;
+}
+
+footer .write_us a {
+  font-family: 'Steinbeck';
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 12px;
+  border: 1px solid #FAF19D;
+  border-radius: 40px;
+  color: #FAF19D;
+  margin: 0px 20px;
+}
+
+footer .main_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer .main_links .navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60vw;
+}
+footer .main_links .navigation .service_navigation, footer .main_links .navigation .navigation_contacts, footer .main_links .navigation .navigation_s_network {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .main_links .navigation p {
+  font-family: 'Basis Grotesque Pro';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 105%;
+  color: rgba(250, 241, 157, 0.6);
+}
+
+footer .main_links .navigation a {
+  padding-top: 20px;
+  font-family: 'Basis Grotesque Pro';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 105%;
+  color: #FAF19D;
+  text-decoration: none;
+}
+
+footer .main_links .contact_form {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .main_links .contact_form h3 {
+  font-family: 'Basis Grotesque Pro';
+  width: 427px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 105%;
+  color: #FAF19D;
+  margin-bottom: 40px;
+}
+
+footer .main_links .contact_form .contact_form_email {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  background: #FAF19D;
+  border: 1px solid #FAF19D;
+  border-radius: 40px;
+}
+
+footer .main_links .contact_form .contact_form_email p input {
+  background: #FAF19D;
+  font-family: Steinbeck;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: rgba(35, 51, 99, 0.5);
+  border: none;
+}
+
+footer .main_links .contact_form .contact_form_email p #subscriber_email:focus {
+  outline: none;
+}
+
+footer .footer_data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+footer .footer_data p {
+  font-family: 'Basis Grotesque Pro';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 105%;
+  color: rgba(250, 241, 157, 0.6);
+}
+
+.ob:hover {
+  -webkit-animation: swing 0.6s ease;
+  animation: swing 0.6s ease;
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;
+}
+
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateX(9px);
+    transform: translateX(9px);
+  }
+  30% {
+    -webkit-transform: translateX(-9px);
+    transform: translateX(-9px);
+  }
+  40% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  65% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+}
+
+}
+
+
+@media (max-width: 1450px) {
+
+  .org_objects img:nth-child(1) {
+    height: 500px;
+    left: 77vw;
+  }
+
+  .org_objects img:nth-child(2) {
+    left: 1vw;
+    top: 67vh;
+  }
+
+  .org_objects img:nth-child(3) {
+    left: 73vw;
+    top: 19vh;
+  }
+
+  .org_objects img:nth-child(4) {
+    height: 350px;
+    left: 70vw;
+    top: 53vh;
+  }
+
+  .org_objects img:nth-child(5) {
+    height: 200px;
+    left: 82.5vw;
+  }
+
+  .org_objects img:nth-child(6) {
+    height: 300px;
+    top: 187vh;
+  }
+
+  .org_objects img:nth-child(7) {
+    top: 453vh;
+  }
+
+  .org_objects img:nth-child(8) {
+    height: 350px;
+    left: -10vw;
+    top: 495vh;
+  }
+
+  .org_objects img:nth-child(9) {
+    opacity: 0;
+  }
+
+  .org_objects img:nth-child(10) {
+    height: 500px;
+    left: 58vw;
+    top: 601vh;
+  }
+
+  .org_objects img:nth-child(11) {
+    height: 500px;
+    left: -10vw;
+    top: 551vh;
+  }
+
+  .org_objects img:nth-child(12) {
+    top: 593vh;
+  }
+
+  .org_objects img:nth-child(14) {
+    height: 500px;
+    left: -6vw;
+    top: 634vh;
+  }
+
+  .org_objects img:nth-child(13) {
+    height: 200px;
+    top: 658vh;
+  }
+
+  .first_service {
+    height: 180vh;
+  }
+
+  .org_capabilities {
+    height: 80vh;
+  }
+
+  .what_to_do .publish img {
+    margin-left: -70vw;
+  }
+
+  .what_to_do {
+    height: 300vh;
+  }
+
+  footer {
+    height: 110vh;
+  }
+}
+
+@media (max-width: 768px) {
+  h1, .org_capabilities h1, .what_to_do .registration .registration_about h1, .what_to_do .publish .publish_about h1, .what_to_do .candidates .candidates_about h1, .membership .price h1 {
+      font-family: 'Steinbeck';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 40px;
+      line-height: 40px;
+  }
+
+  .org_objects img:nth-child(5) {
+    opacity: 0;
+  }
+
+  .org_objects img:nth-child(4) {
+    left: 59.5vw;
+  }
+
+  .org_objects img:nth-child(6) {
+    height: 300px;
+    top: 283vh;
+    left: 76vw;
+  }
+
+  .org_objects img:nth-child(7) {
+    opacity: 0;
+  }
+
+  .org_objects img:nth-child(8) {
+    height: 350px;
+    left: -46vw;
+    top: 375vh;
+  }
+
+  .org_objects img:nth-child(10) {
+    height: 400px;
+    left: 2vw;
+    top: 538vh;
+  }
+
+  .org_objects img:nth-child(11) {
+    height: 400px;
+    left: -10vw;
+    top: 453vh;
+  }
+
+  .org_objects img:nth-child(13) {
+    height: 200px;
+    left: 81vw;
+    top: 551vh;
+  }
+
+  .org_objects img:nth-child(14) {
+    opacity: 0;
+  }
+
+  .first_service {
+    padding-top: 100px;
+    height: 130vh;
+  }
+
+  .org_main .org_features h1 {
+    width: 500px;
+  }
+
+  .what_to_do .publish img {
+    margin-left: -170vw;
+  }
+
+  .what_to_do .registration .registration_about p, .what_to_do .publish .publish_about p, .what_to_do .candidates .candidates_about p {
+    width: 50vw;
+  }
+
+  .what_to_do {
+    height: 210vh;
+  }
+
+  .membership {
+    flex-direction: column;
+  }
+
+  .membership .price {
+    height: 100px;
+    margin-bottom: 50px;
+  }
+
+  .membership .what_get .what_get_about p:nth-child(1) {
+    width: 50vw;
+  }
+
+  .call_to_action {
+    height: 100vh;
+  }
+
+  .call_to_action h1 {
+    width: 500px;
+  }
+
+  .call_to_action .cta_button {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .call_to_action .cta_button a {
+    margin-bottom: 20px;
+    align-self: flex-end;
+  }
+
+  footer {
+    height: 105vh;
+  }
+
+  footer .main_links .navigation {
+    width: 80vw;
+  }
+
+  footer .write_us {
+    flex-direction: column;
+    padding-right: 20vw;
+  }
+
+  footer .write_us p {
+    margin-bottom: 30px;
+  }
+
+  footer .write_us a {
+    align-self: flex-end;
+    margin: 0px;
+  }
+
+  footer .main_links {
+    flex-direction: column;
+  }
+
+  footer .main_links .navigation {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  footer .footer_data {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  footer .footer_data p {
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+
+
+  .org_objects {
+    display: none;
+  }
+
+  .navbar {
+    padding: 30px 20px 0px 30px;
+  }
+
+  .navbar p a img {
+    height: 40px;
+  }
+
+  .navbar .cta_button {
+    display: none;
+  }
+
+  h1, .org_capabilities h1, .what_to_do .registration .registration_about h1, .what_to_do .publish .publish_about h1, .what_to_do .candidates .candidates_about h1, .membership .price h1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  p, .org_capabilities p, .what_to_do .registration .registration_about p, .what_to_do .publish .publish_about p, .what_to_do .candidates .candidates_about p, .what_to_do p:nth-child(1), .membership .what_get .what_get_about p {
+    font-size: 20px;
+    line-height: 105%;
+  }
+
+  .first_service {
+    height: 130vh;
+    padding-bottom: 50px;
+  }
+
+  .first_service .about_categories h1, .choice .choice_about h1, .limits–volunteering_about h1, .personal_account .account_info h1, .security .security_about p, .community .community_about h1, .community .community_about p, .call_to_action p, .call_to_action h1, footer .write_us p {
+    width: 80vw;
+  }
+
+  footer .main_links .contact_form h3 {
+    width: 80vw;
+  }
+
+  .first_service .categories {
+    margin: 0px 30px;
+  }
+
+  .first_service .categories h3 {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .capabilities {
+    height: 100vh;
+  }
+
+  .what_to_do {
+    height: 270vh;
+  }
+
+  .what_to_do img,  .what_to_do .publish img, .what_to_do img {
+    height: 300px;
+  }
+
+  .what_to_do .publish img {
+    margin-left: -260vw;
+  }
+
+  .membership {
+    height: 140vh;
+  }
+
+  .membership .what_get .ready_btn {
+    padding-right: 0px;
+  }
+
+  .membership .what_get .ready_btn a, .call_to_action .cta_button a, footer .write_us a {
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+  footer {
+    height: 300vh;
+  }
+
+  footer .main_links .navigation {
+    flex-direction: column;
+  }
+
+  footer .main_links .navigation div {
+    margin-bottom: 30px;
+  }
+  footer .main_links .contact_form .contact_form_email p input {
+    font-size: 15px;
+  }
+
+}

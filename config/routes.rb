@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'aboutorg/index'
   devise_for :users, path: 'users'
   devise_for :organizations, path: 'organizations'
   resources :types
@@ -25,6 +26,7 @@ Rails.application.routes.draw do
   get 'promo', to: 'promo#index'
   get 'welcome', to: 'welcome#index'
   get 'about', to: 'about#index'
+  get 'aboutorg', to: 'aboutorg#index'
 
   get 'users', to: 'users#index'
   get 'users/:id' => 'users#show'
