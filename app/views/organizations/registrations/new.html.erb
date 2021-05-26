@@ -17,6 +17,17 @@
   </div>
 
   <div class="field">
+  <%= f.label :firstname %><br />
+  <%= f.firstname_field :firstname, autofocus: true, autocomplete: "firstname" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lastname %><br />
+    <%= f.lastname_field :lastname, autofocus: true, autocomplete: "lastname" %>
+  </div>
+
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
