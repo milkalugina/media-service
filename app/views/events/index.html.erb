@@ -9,19 +9,24 @@
 <div class="events">
 <h2>Все сферы</h2>
 
+<%= link_to "Reset", events_path %>
+<br>
+<br>
+
 <% Sphere.all.each do |sphere| %>
-  <%= link_to sphere.name, events_path(sphere: sphere.name) %> <br>
-<% end %>
+  <%= link_to sphere.name, request.params.merge(sphere: sphere.id)  %>
+<% end %> <br>
 
 <h2>Все навыки</h2>
 <% Skill.all.each do |skill| %>
-  <%= link_to skill.name, events_path(skill: skill.name) %> <br>
+  <%= link_to skill.name, request.params.merge(skill: skill.id)  %>
 <% end %>
 
 <h2>Все типы</h2>
 <% Type.all.each do |type| %>
-  <%= link_to type.name, events_path(type: type.name) %> <br>
+  <%= link_to type.name, request.params.merge(type: type.id)  %>
 <% end %>
+
 
 <table>
   <thead>

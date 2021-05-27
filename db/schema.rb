@@ -159,6 +159,18 @@ ActiveRecord::Schema.define(version: 2021_03_27_085753) do
     t.string "country"
     t.string "city"
 
+    t.string "volinterests"
+
+    t.string "volexperience"
+    t.string "education"
+    t.string "interests"
+    t.string "vk"
+    t.string "facebook"
+    t.string "instagram"
+    t.string "emptype"
+    t.string "workplace"
+    t.string "position"
+
     t.boolean "isadmin", default: false
     t.boolean "isorganization", default: false
     t.boolean "ismoderator", default: false

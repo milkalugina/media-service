@@ -1,16 +1,42 @@
-<p>ID <%= @organization.id %></p>
-<p>Email <%= @organization.email %></p>
-<%# <!-- <p>Username <%= @organization.organizationname %></p> --> %>
+<div class="">
+  Сведения об аккаунте
 
-<% if organization_signed_in? && @organization.id == current_organization.id %>
-	<p><%= link_to 'Настройки профиля', edit_organization_registration_path %></p>
-<% end %>
+  <p>ID <%= @organization.id %></p>
+  <p>Имя <%= @organization.firstname %></p>
+  <p>Фамилия <%= @organization.lastname %></p>
+  <p>Отчество <%= @organization.middlename %></p>
+  <p>Email <%= @organization.email %></p>
+  <p>Номер телефона для связи <%= @organization.phonenumb %></p>
+  <p>Страна <%= @organization.country %></p>
+  <p>Город <%= @organization.city %></p>
 
-<div class="account">
-    <h1>Аккаунт организации</h1>
-    <h2>Контактная информация</h2>
-    <h2>Анкета организатора</h2>
-    <h2>Мои добрые дела</h2>
-    <h2>Мои новости</h2>
+  Организация
+  <p>Название организации <%= @organization.orgname %></p>
+  <p>Вид организации <%= @organization.orgtype %></p>
+  <p>Дата создания организации <%= @organization.datecreation %></p>
+  <p>Номер телефона <%= @organization.phonenumber %></p>
+  <p>Website <%= @organization.website %></p>
+  <p>Вконтакте <%= @organization.vk %></p>
+  <p>Facebook <%= @organization.facebook %></p>
+  <p>Instagram <%= @organization.instagram %></p>
+  <p>Одноклассники <%= @organization.ok %></p>
+
+  <p>Роли и приоритеты</p>
+  <p>Интересная тема волонтерства <%= @organization.role %></p>
+
+  <p>Цели и миссия <%= @organization.mission %></p>
+
+  <p>Официальные документы</p>
+  <p>Документ о регистрации НКО <%= @organization.registrationdoc %></p>
+  <p>Сведения об учредителях — копии паспортов и ИНН <%= @organization.foundersdoc %></p>
+  <p>Учредительные документы некоммерческой организации <%= @organization.nonprofdoc %></p>
 
 </div>
+
+<% if organization_signed_in? && @organization.id == current_organization.id %>
+  <p><%= link_to 'Настройки профиля', edit_organization_registration_path %></p>
+<% end %>
+
+<%= link_to 'Выйти', destroy_organization_session_path, :method => :delete %>
+
+<%= link_to "Cancel my account", registration_path(current_organization), data: { confirm: "Are you sure?" }, method: :delete %>

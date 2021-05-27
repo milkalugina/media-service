@@ -4,12 +4,21 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    if params.has_key?(:sphere)
-      @sphere = Sphere.find_by_name(params[:sphere])
-      @events = Event.where(sphere: @sphere)
-    else
-      @events = Event.all
-    end
+    @events = Event.where(nil)
+  filtering_params(params).each do |key, value|
+    @events = @events.public_send("filter_by_#{key}", value) if value.present?
+  end
+
+    # @events = Event.where(nil)
+    # @events = @events.filter_by_sphere(params[:sphere]) if params[:sphere].present?
+    # @events = @events.filter_by_skill(params[:skill]) if params[:skill].present?
+    # @events = @events.filter_by_type(params[:type]) if params[:type].present?
+    # if params.has_key?(:sphere)
+    #   @sphere = Sphere.find_by_name(params[:sphere])
+    #   @events = Event.where(sphere: @sphere)
+    # else
+    #   @events = Event.all
+    # end
     # if params.has_key?(:skill)
     #   @skill = Skill.find_by_name(params[:skill])
     #   @events = Event.where(skill: @skill)
@@ -82,6 +91,9 @@ end
   end
 
   private
+  def filtering_params(params)
+      params.slice(:sphere, :type, :skill)
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
