@@ -1,13 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  def devise_parameter_sanitizer
-    if resource_class == User
-      User::ParameterSanitizer.new(User, :user, params)
-    else resource_class == Organization
-      Organization::ParameterSanitizer.new(Organization, :organization, params)
-    end
-  end
 
     protected
 

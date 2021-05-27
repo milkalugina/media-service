@@ -1,9 +1,16 @@
 <table>
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Email</th>
-      <th>Username</th>
+      <th>Номер организации</th>
+      <th>E-mail организации</th>
+      <th>Имя</th>
+      <th>Фамилия</th>
+      <th>Отчество</th>
+      <th>Номер телефона для связи</th>
+      <th>Страна</th>
+      <th>Город</th>
+      <th>Название организации</th>
+      <th>Номер телефона для связи</th>
     </tr>
   </thead>
 
@@ -12,7 +19,31 @@
       <tr>
         <td><%= organization.id %></td>
         <td><%= link_to organization.email, organization %></td>
-        <td><%= organization.organizationname %></td>
+        <td><%= organization.firstname %></td>
+        <td><%= organization.lastname %></td>
+        <td><%= organization.middlename %></td>
+        <td><%= organization.phonenumb %></td>
+        <td><%= organization.country %></td>
+        <td><%= organization.city %></td>
+        <p></p>
+        <td><%= organization.orgname %></td>
+        <td><%= organization.orgtype %></td>
+        <td><%= organization.datecreation %></td>
+        <td><%= organization.phonenumber %></td>
+        <td><%= organization.website %></td>
+        <td><%= organization.vk %></td>
+        <td><%= organization.facebook %></td>
+        <td><%= organization.instagram %></td>
+        <td><%= organization.youtube %></td>
+        <td><%= organization.ok %></td>
+
+        <td><%= organization.role %></td>
+
+        <td><%= organization.mission %></td>
+
+        <td><%= organization.registrationdoc %></td>
+        <td><%= organization.foundersdoc %></td>
+        <td><%= organization.nonprofdoc %></td>
       </tr>
     <% end %>
   </tbody>

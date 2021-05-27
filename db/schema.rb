@@ -68,8 +68,33 @@ ActiveRecord::Schema.define(version: 2021_03_27_085753) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
+# Регистрация главного лица
     t.string "firstname"
     t.string "lastname"
+    t.string "middlename"
+    t.string "phonenumb"
+    t.string "country"
+    t.string "city"
+# Регистрация организации
+    t.string "orgname"
+    t.string "orgtype"
+    t.string "datecreation"
+    t.string "phonenumber"
+    t.string "website"
+    t.string "vk"
+    t.string "facebook"
+    t.string "instagram"
+    t.string "youtube"
+    t.string "ok"
+# Роли и приоритеты
+    t.string "role"
+# Цели и миссия
+    t.text "mission"
+# Официальные документы
+    t.text "registrationdoc"
+    t.text "foundersdoc"
+    t.text "nonprofdoc"
+
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
@@ -124,7 +149,16 @@ ActiveRecord::Schema.define(version: 2021_03_27_085753) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "username"
+
+    t.string "phonenumber"
+
+    t.string "regcode"
+
+    t.string "firstname"
+    t.string "lastname"
+    t.string "country"
+    t.string "city"
+
     t.boolean "isadmin", default: false
     t.boolean "isorganization", default: false
     t.boolean "ismoderator", default: false

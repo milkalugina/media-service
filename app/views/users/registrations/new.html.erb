@@ -8,27 +8,118 @@
     <%= react_component 'O_RegistrationsVolReg1' %>
 </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f_user| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
+  <h1>Введите номер телефона и придумайте пароль</h1>
+
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f_user.label "Номер телефона" %><br />
+    <%= f_user.text_field :phonenumber, autofocus: true, autocomplete: "phonenumber" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f_user.label "Пароль" %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f_user.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f_user.label "Повторить пароль" %><br />
+    <%= f_user.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <h1>Введите код из СМС</h1>
+
+    <div class="field">
+      <%= f_user.label "Проверочный код" %><br />
+      <%= f_user.text_field :regcode, autofocus: true, autocomplete: "regcode" %>
+    </div>
+
+  <h1>Введите самые важные данные</h1>
+
+    <div class="field">
+      <%= f_user.label "Имя" %><br />
+      <%= f_user.text_field :firstname, autofocus: true, autocomplete: "firstname" %>
+    </div>
+
+    <div class="field">
+      <%= f_user.label "Фамилия" %><br />
+      <%= f_user.text_field :lastname, autofocus: true, autocomplete: "lastname" %>
+    </div>
+
+    <div class="field">
+      <%= f_user.label "E-mail" %><br />
+      <%= f_user.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <%= f_user.label "Страна" %><br />
+      <%= f_user.text_field :country, autofocus: true, autocomplete: "country" %>
+    </div>
+
+    <div class="field">
+      <%= f_user.label "Город" %><br />
+      <%= f_user.text_field :city, autofocus: true, autocomplete: "city" %>
+    </div>
+
+  <h1>Интересы в волонтерстве</h1>
+
+    <div class="field">
+      <%= f_user.label "Выберите хотя бы один вид волонтерства, который вам интересен" %><br />
+      <%= f_user.text_field :volinterests, autofocus: true, autocomplete: "volinterests" %>
+    </div>
+
+  <h1>Немного подробнее о вас</h1>
+
+    <div class="field">
+      <%= f_user.label "Волонтерский опыт" %><br />
+      <%= f_user.text_field :volexperience, autofocus: true, autocomplete: "volexperience" %>
+    </div>
+
+    <div class="field">
+      <%= f_user.label "Образование" %><br />
+      <%= f_user.text_field :education, autofocus: true, autocomplete: "education" %>
+    </div>
+
+    <div class="field">
+      <%= f_user.label "Интересы" %><br />
+      <%= f_user.text_field :interests, autofocus: true, autocomplete: "interests" %>
+    </div>
+
+    <div class="field">
+      <%= f_user.label "Вконтакте" %><br />
+      <%= f_user.text_field :vk, autofocus: true, autocomplete: "vk" %>
+    </div>
+
+    <div class="field">
+      <%= f_user.label "Facebook" %><br />
+      <%= f_user.text_field :facebook, autofocus: true, autocomplete: "facebook" %>
+    </div>
+
+    <div class="field">
+      <%= f_user.label "Instagram" %><br />
+      <%= f_user.text_field :instagram, autofocus: true, autocomplete: "instagram" %>
+    </div>
+
+    <div class="field">
+      <%= f_user.label "Тип занятости" %><br />
+      <%= f_user.text_field :emptype, autofocus: true, autocomplete: "emptype" %>
+    </div>
+
+    <div class="field">
+      <%= f_user.label "Место работы" %><br />
+      <%= f_user.text_field :workplace, autofocus: true, autocomplete: "workplace" %>
+    </div>
+
+    <div class="field">
+      <%= f_user.label "Должность" %><br />
+      <%= f_user.text_field :position, autofocus: true, autocomplete: "position" %>
+    </div>
+
+  <button>Присоедениться</button>
 <% end %>
 
 
