@@ -36,6 +36,7 @@ h1 {
   height: 600px;
   left: 70vw;
   top: 15vh;
+  visibility: hidden;
 }
 
 .org_objects img:nth-child(2) {
@@ -43,6 +44,7 @@ h1 {
   height: 400px;
   left: 10vw;
   top: 75vh;
+  visibility: hidden;
 }
 
 .org_objects img:nth-child(3) {
@@ -55,8 +57,9 @@ h1 {
 .org_objects img:nth-child(4) {
   position: absolute;
   height: 400px;
-  left: 63vw;
-  top: 53vh;
+  left: 75vw;
+  top: 0vh;
+  transform: rotate(140deg);
 }
 
 .org_objects img:nth-child(5) {
@@ -78,6 +81,7 @@ h1 {
   height: 300px;
   left: -7vw;
   top: 158vh;
+  visibility: hidden;
 }
 
 .org_objects img:nth-child(8) {
@@ -85,6 +89,7 @@ h1 {
   height: 400px;
   left: -10vw;
   top: 382vh;
+  visibility: hidden;
 }
 
 .org_objects img:nth-child(9) {
@@ -99,6 +104,7 @@ h1 {
   height: 600px;
   left: 54vw;
   top: 524vh;
+  visibility: hidden;
 }
 
 .org_objects img:nth-child(11) {
@@ -106,6 +112,7 @@ h1 {
   height: 600px;
   left: -10vw;
   top: 481vh;
+  visibility: hidden;
 }
 
 .org_objects img:nth-child(12) {
@@ -113,6 +120,7 @@ h1 {
   height: 300px;
   left: 82vw;
   top: 525vh;
+  visibility: hidden;
 }
 
 .org_objects img:nth-child(13) {
@@ -120,6 +128,7 @@ h1 {
   height: 250px;
   left: 81vw;
   top: 576vh;
+  visibility: hidden;
 }
 
 .org_objects img:nth-child(14) {
@@ -127,7 +136,70 @@ h1 {
   height: 600px;
   left: -10vw;
   top: 562vh;
+  visibility: hidden;
 }
+
+  .org_objects img:nth-child(15) {
+    position: absolute;
+    width: 30vw;
+    top: 20vh;
+    right: 3vw;
+  }
+
+  .org_objects img:nth-child(16) {
+    position: absolute;
+    top: 490vh;
+    left: -20vw;
+  }
+
+  .org_objects img:nth-child(17) {
+    position: absolute;
+    top: 560vh;
+    right: -10vw;
+  }
+
+  .org_objects img:nth-child(18) {
+    position: absolute;
+    top: 650vh;
+    left: -2vw;
+  }
+
+  .org_objects img:nth-child(19) {
+    position: absolute;
+    top: 680vh;
+    left: -2vw;
+  }
+
+  .org_objects img:nth-child(20) {
+    position: absolute;
+    top: 650vh;
+    right: -2vw;
+  }
+
+  .org_objects img:nth-child(21) {
+    position: absolute;
+    top: 680vh;
+    right: 4vw;
+  }
+
+  .org_objects img:nth-child(22) {
+    position: absolute;
+    top: 690vh;
+    right: -1vw;
+  }
+
+  .org_objects img:nth-child(23) {
+    position: absolute;
+    top: 710vh;
+    right: -1vw;
+  }
+
+  .org_objects img:nth-child(24) {
+    position: absolute;
+    top: 655vh;
+    right: 10vw;
+    width: 30vw;
+  }
 
 .org_main {
   padding: 0px, 60px;
@@ -177,6 +249,25 @@ h1 {
 .org_main .CTA {
   position: absolute;
   top: 65vh;
+}
+
+.org_main .CTA a {
+  color: var(--White);
+  background-color: var(--KindBlue);
+}
+
+.org_main .arrow {
+  animation: arrow 2s ease infinite;
+  position: absolute;
+  top: 82vh;
+  margin-left: 40vw;
+}
+
+@keyframes arrow {
+
+  50% {
+    transform: translateY(4vh);
+  }
 }
 
 .org_main .org_features h1 {
@@ -244,7 +335,7 @@ h1 {
   display: flex;
   flex-direction: column;
   height: 250vh;
-  background: #F68E5F;
+  background: var(--White);
   padding-bottom: 50px;
   overflow-x: hidden;
 }
@@ -306,7 +397,7 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 80vh;
+  height: 110vh;
   background: #FAF19D;
   padding-bottom: 50px;
   align-items: center;
@@ -344,6 +435,25 @@ h1 {
   margin-bottom: 60px;
   width: 30vw;
 }
+
+.membership .what_get .what_get_about p:nth-child(2) {
+  border-bottom: solid 1px var(--KindBlue);
+  width: 35vw;
+  padding-bottom: 20px;
+}
+
+.membership .what_get .what_get_about p:nth-child(3) {
+  border-bottom: solid 1px var(--KindBlue);
+  width: 35vw;
+  padding-bottom: 20px;
+}
+
+.membership .what_get .what_get_about p:nth-child(4) {
+  border-bottom: solid 1px var(--KindBlue);
+  width: 35vw;
+  padding-bottom: 20px;
+}
+
 
 .membership .what_get .what_get_about p {
   font-family: Basis Grotesque Pro;
@@ -610,14 +720,14 @@ footer .footer_data p {
   }
 
   .org_objects img:nth-child(3) {
-    left: 78vw;
-    top: 15vh;
+    left: 85vw;
+    top: 67vh;
   }
 
   .org_objects img:nth-child(4) {
-    height: 350px;
-    left: 70vw;
-    top: 58vh;
+    height: 20vw;
+    left: 75vw;
+    top: 0vh;
   }
 
   .org_objects img:nth-child(5) {
@@ -631,7 +741,7 @@ footer .footer_data p {
   }
 
   .org_objects img:nth-child(7) {
-    top: 453vh;
+    top: 475vh;
   }
 
   .org_objects img:nth-child(8) {
