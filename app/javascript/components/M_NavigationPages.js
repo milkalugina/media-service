@@ -16,7 +16,7 @@ const P = styled.a`
 `;
 
 const PageOpen = styled(P)`
-  border: 1px solid #233363;
+  border: 1px solid #03195A;
   border-radius: 10px;
   padding: 10px 20px;
   box-sizing: border-box;

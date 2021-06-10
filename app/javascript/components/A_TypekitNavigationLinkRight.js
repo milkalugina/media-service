@@ -31,7 +31,7 @@ class A_TypekitNavigationLinkRight extends React.Component {
       <DIV>
         <A>{this.props.name}</A>
         <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 1L8 7.5L1 14" stroke="#233363" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1 1L8 7.5L1 14" stroke="#03195A" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
       </DIV>
     );

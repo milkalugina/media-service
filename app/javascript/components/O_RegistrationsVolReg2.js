@@ -69,7 +69,7 @@ const PRIMARYBUTTON = styled.button`
   letter-spacing: 0.1px;
   color: var(--White);
   background: var(--KindBlue);
-  border: 1px solid #233363;
+  border: 1px solid #03195A;
   box-sizing: border-box;
   border-radius: 10px;
   padding: 10px 20px;
@@ -108,10 +108,10 @@ class O_RegistrationsVolReg2 extends React.Component {
         <A_TypekitH2 name="Введите код из СМС"></A_TypekitH2>
         <SLIDER>
           <SVG><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <CIRCLE cx="10.5" cy="10.5" r="10.5" fill="#233363" fill-opacity="0.2" filled/>
+          <CIRCLE cx="10.5" cy="10.5" r="10.5" fill="#03195A" fill-opacity="0.2" filled/>
           </svg></SVG>
           <SVG><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <CIRCLE cx="10.5" cy="10.5" r="10.5" fill="#233363" fill-opacity="0.2"/>
+          <CIRCLE cx="10.5" cy="10.5" r="10.5" fill="#03195A" fill-opacity="0.2"/>
           </svg></SVG>
         </SLIDER>
         <SUBTITLE><A_TypekitSubtitle name="На ваш номер мобильного телефона отправлен проверочный код. Введите полученный код, чтобы подтвердить аккаунт 😊"></A_TypekitSubtitle></SUBTITLE>

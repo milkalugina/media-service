@@ -64,7 +64,7 @@ const BUTTON = styled.button`
   letter-spacing: 0.1px;
   color: var(--KindBlue);
   background: var(--White);
-  border: 1px solid #233363;
+  border: 1px solid #03195A;
   box-sizing: border-box;
   border-radius: 10px;
   padding: 10px 20px;
