@@ -86,7 +86,7 @@ h1 {
   position: relative;
   height: 600px;
   left: 70vw;
-  top: 15vh;
+  top: 12vh;
 }
 
 .objects img:nth-child(2) {
@@ -94,6 +94,7 @@ h1 {
   height: 400px;
   left: -5vw;
   top: 69vh;
+  visibility: hidden;
 }
 
 .objects img:nth-child(3) {
@@ -114,7 +115,7 @@ h1 {
   position: absolute;
   height: 300px;
   left: 74vw;
-  top: 87vh;
+  top: 85vh;
 }
 
 .objects img:nth-child(6) {
@@ -191,6 +192,7 @@ h1 {
   height: 300px;
   left: -12vw;
   top: 1200vh;
+  visibility: hidden;
   transform: rotate(80deg);
 }
 
@@ -208,6 +210,7 @@ h1 {
   left: 60vw;
   top: 1267vh;
   transform: rotate(10deg);
+  visibility: hidden;
 }
 
 .objects img:nth-child(18) {
@@ -216,6 +219,7 @@ h1 {
   left: 77vw;
   top: 1247vh;
   transform: rotate(10deg);
+  visibility: hidden;
 }
 
 .objects img:nth-child(19) {
@@ -224,13 +228,14 @@ h1 {
   left: 91vw;
   top: 1346vh;
   transform: rotate(10deg);
+  visibility: hidden;
 }
 
 .objects img:nth-child(20) {
   position: absolute;
   height: 250px;
   left: 80vw;
-  top: 1216vh;
+  top: 1365vh;
   transform: rotate(10deg);
 }
 
@@ -240,6 +245,50 @@ h1 {
   left: -10vw;
   top: 1293vh;
   transform: rotate(10deg);
+  visibility: hidden;
+}
+
+.objects img:nth-child(22) {
+  position: absolute;
+  left: -2vw;
+  top: 1460vh;
+}
+
+.objects img:nth-child(23) {
+  position: absolute;
+  left: -2vw;
+  top: 1490vh;
+}
+
+.objects img:nth-child(24) {
+  position: absolute;
+  right: -2vw;
+  top: 1460vh;
+}
+
+.objects img:nth-child(25) {
+  position: absolute;
+  right: 4vw;
+  top: 1490vh;
+}
+
+.objects img:nth-child(26) {
+  position: absolute;
+  right: -1vw;
+  top: 1500vh;
+}
+
+.objects img:nth-child(27) {
+  position: absolute;
+  right: -1vw;
+  top: 1522vh;
+}
+
+.objects img:nth-child(28) {
+  position: absolute;
+  right: 10vw;
+  top: 1465vh;
+  width: 30vw;
 }
 
 /* 1 блок */
@@ -282,14 +331,18 @@ h1 {
   margin: 0px 20px;
 }
 
+.main {
+  background-color: var(--White);
+}
+
 .main .features {
-  margin-top: 30vh;
+  margin-top: 25vh;
   margin-left: 10vw;
   height: 80vh;
 }
 
 .main .features h1 {
-  color: #FAF19D;
+  color: var(--KindBlue);
   width: 973px;
   align-self: center;
   font-family: 'SteinbeckRegular';
@@ -297,6 +350,24 @@ h1 {
   font-weight: normal;
   font-size: 60px;
   line-height: 60px;
+}
+
+.main .CTA a {
+  background-color: var(--KindBlue);
+  color: var(--White);
+}
+
+.main .arrow {
+  margin-top: 10vh;
+  margin-left: 40vw;
+  animation: arrow 2s ease infinite;
+}
+
+@keyframes arrow {
+
+  50% {
+    margin-top: 13vh;
+  }
 }
 
 /* Про сервис */
@@ -762,9 +833,8 @@ h1 {
   padding: 20px;
   display: flex;
   align-items: center;
-  color: #03195A;
+  color: var(--SocialYellow);
   height: 100px;
-  background: #FAF19D;
   border-radius: 40px;
 }
 
@@ -822,7 +892,7 @@ h1 {
 
 /* Комьюнити */
 .community {
-  background: #FAF19D;
+  background: var(--White);
   height: 120vh;
   display: flex;
   flex-direction: column;
@@ -831,7 +901,7 @@ h1 {
 }
 
 .community .community_about h1 {
-  color: #03195A;
+  color: var(--KindBlue);
   width: 973px;
   margin-left: 10vw;
   margin-bottom: 50px;
@@ -864,7 +934,7 @@ h1 {
 /* Об органиазциях */
 .about_org {
   background: #CACC4E;
-  height: 60vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -907,7 +977,7 @@ h1 {
 /* CTA */
 .call_to_action {
   background: #03195A;
-  height: 110vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1137,13 +1207,13 @@ footer .footer_data p {
 
   .objects img:nth-child(3) {
     left: 76vw;
-    top: 11vh;
+    top: 8vh;
   }
 
   .objects img:nth-child(4) {
     height: 350px;
     left: 70vw;
-    top: 54vh;
+    top: 52vh;
   }
 
   .objects img:nth-child(5) {
@@ -1154,13 +1224,13 @@ footer .footer_data p {
   .objects img:nth-child(6) {
     height: 200px;
     left: -25vw;
-    top: 260vh;
+    top: 232vh;
   }
 
   .objects img:nth-child(7) {
     height: 350px;
     left: 85vw;
-    top: 298vh;
+    top: 270vh;
   }
 
   .objects img:nth-child(8) {
@@ -1169,14 +1239,14 @@ footer .footer_data p {
   }
 
   .objects img:nth-child(9) {
-    top: 531vh;
+    top: 500vh;
   }
 
   .objects img:nth-child(11) {
-    top: 839vh;
+    top: 800vh;
   }
   .objects img:nth-child(13) {
-    top: 1210vh;
+    top: 1170vh;
   }
 
   .objects img:nth-child(14) {
@@ -1208,16 +1278,12 @@ footer .footer_data p {
     transform: rotate(-10deg);
   }
 
-  .first_service {
-    height: 180vh;
-  }
-
   .freedom_volunteer {
     height: 270vh;
   }
 
   .about_possibilities {
-    height: 160vh;
+    height: 150vh;
   }
 
   .about_possibilities .options div {
