@@ -161,6 +161,7 @@ h1 {
   left: -8vw;
   top: 580vh;
   transform: rotate(40deg);
+  visibility: hidden;
 }
 
 .objects img:nth-child(12) {
@@ -366,7 +367,7 @@ h1 {
 @keyframes arrow {
 
   50% {
-    
+
   }
 }
 
@@ -666,7 +667,7 @@ h1 {
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 28.75px;
   color: #03195A;
   text-decoration: none;
 }
@@ -715,7 +716,7 @@ h1 {
 
 /* Безопасность */
 .security {
-  background: #CACC4E;
+  background: var(--SocialYellow);
   height: 130vh;
   display: flex;
   flex-direction: column;
@@ -747,7 +748,7 @@ h1 {
   margin-bottom: 100px;
   width: 700px;
   font-size: 25px;
-  line-height: 105%;
+  line-height: 115%;
 }
 .security .security_posts {
   margin-bottom: 150px;
@@ -791,7 +792,7 @@ h1 {
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
-  line-height: 105%;
+  line-height: 115%;
   color: #FAF19D;
   width: 50vw;
 }
@@ -922,7 +923,7 @@ h1 {
   margin-bottom: 100px;
   width: 700px;
   font-size: 25px;
-  line-height: 105%;
+  line-height: 115%;
 }
 
 .community .community_posts img {
@@ -933,7 +934,7 @@ h1 {
 
 /* Об органиазциях */
 .about_org {
-  background: #CACC4E;
+  background: var(--SocialYellow);
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -958,6 +959,11 @@ h1 {
   align-items: flex-start;
   justify-content: flex-end;
   padding-right: 20vw;
+}
+
+.about_org .CTA a {
+  background-color: var(--KindBlue);
+  color: var(--SocialYellow);
 }
 
 .about_org .read_about_button a {
