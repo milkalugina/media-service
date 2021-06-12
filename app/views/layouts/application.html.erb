@@ -8,11 +8,7 @@
   </head>
 
   <body>
-    <% if notice %>
-      <p class="notice"><%= notice %></p>
-    <% elsif alert %>
-      <p class="alert"><%= alert %></p>
-    <% end %>
+
 
     <div>
     <% if user_signed_in? %>
@@ -27,6 +23,12 @@
     <% end %>
   </div>
     <%= yield %>
+
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% elsif alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
   </body>
 </html>
 

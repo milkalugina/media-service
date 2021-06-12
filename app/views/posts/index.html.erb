@@ -3,6 +3,12 @@
 
 <p id="notice"><%= notice %></p>
 
+<div class="newsobjects">
+<img src="/images/news1.svg" alt="" class="newsobject"></img>
+<img src="/images/news2.svg" alt="" class="newsobject"></img>
+<img src="/images/news3.svg" alt="" class="newsobject"></img>
+</div>
+
 
 <div class="category">
   <% Category.all.each do |cat| %>
@@ -10,49 +16,40 @@
   <%= link_to "Сбросить", posts_path, class: "resetlink" %>
 </div>
 
+<div class="allnews">
+<% @posts.each do |post| %>
+  <div class="NewsL">
+    <div class="IMAGE"><%= image_tag post.image.url if post.image?%></div>
+    <div class="TEXT">
+    <h2><%= link_to post.title, post, class: "postlink" %></h2>
+    <div>
+      <div class="FILTER">
+        <span class="catlink"><%= post.category.name %></span>
+      </div>
+    <span class="data"><%= post.created_at.strftime("%d/%m/%Y") %></span>
+    </div>
+    </div>
 
-<table>
-    <% @posts.each do |post| %>
-      <tr class="post_body">
-
-        <div class="image">
-          <td class="img"><%= image_tag post.image.url if post.image? %></td>
-        </div>
-
-        <div class="text_body">
-
-          <div class="tag_body">
-            <td class="tag"><a><%= post.name %></a></td>
-          </div>
-
-          <td><%= post.category.name %></td>
-
-          <td class="title"><%= post.title %></td>
-
-          <td><%= post.content.html_safe %></td>
-
-          <div class="date_editing">
-            <td class="date"><%= post.date %> <br> <%= link_to 'show', post %> <br><%= link_to 'edit', edit_post_path(post) %> <br><%= link_to 'destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </div>
-
-          <td><%= link_to 'Show', post %></td>
-          <br>
-
-          <td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <br>
-
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
-        </div>
-      </tr>
+    <% if user_signed_in? && current_user.isadmin == true %>
+    <div><%= link_to 'Редактировать', edit_post_path(post) %></div>
+    <div><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены?' } %></div>
     <% end %>
-</table>
 
-<br>
+  </div>
+  <% end %>
+</div>
 
+
+
+
+
+<%= link_to 'Создать новость', new_post_path %>
+
+<% if user_signed_in? && current_user.isadmin == true %>
 <%= link_to 'Создать новость', new_post_path %>
 <br>
 <%= link_to 'Добавить категорию', new_category_path %>
+<% end %>
 
 <div>
     <%= react_component 'S_Footer' %>
