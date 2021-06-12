@@ -28,13 +28,23 @@ const TEXT = styled.div`
   justify-content: space-between;
 `;
 
+const H2 = styled.h2`
+  font-family: Steinbeck;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 120%;
+  letter-spacing: 0.1px;
+  color: var(--KindBlue);
+`;
+
 class O_NewsL extends React.Component {
   render () {
     return (
       <DIV>
         <IMAGE><A_ImageM></A_ImageM></IMAGE>
         <TEXT>
-        <A_TypekitH2 name="В Москве пройдет одиннадцатый Международный благотворительный фестиваль «Белая трость»"></A_TypekitH2>
+        <H2>{this.props.post.title}</H2>
         <M_TypekitGroupNewsData></M_TypekitGroupNewsData>
         </TEXT>
       </DIV>

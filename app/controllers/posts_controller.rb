@@ -4,12 +4,10 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    if params.has_key?(:category)
-      @category = Category.find_by_name(params[:category])
-      @posts = Post.where(category: @category)
-    else
-      @posts = Post.all
-    end
+    @posts = Post.where(nil)
+    filtering_params(params).each do |key, value|
+  @posts = @posts.public_send("filter_by_#{key}", value) if value.present?
+end
   end
 
   before_action :authenticate_user!, except: [:index, :show]
@@ -17,11 +15,6 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @post.destroy
-    respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
-      format.json { head :no_content }
-    end
   end
 
   # GET /posts/new
@@ -73,6 +66,7 @@ class PostsController < ApplicationController
     end
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
@@ -82,5 +76,9 @@ class PostsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def post_params
       params.require(:post).permit(:name, :title, :content, :date, :image, :category_id)
+    end
+
+    def filtering_params(params)
+      params.slice(:category)
     end
 end

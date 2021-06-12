@@ -1,45 +1,17 @@
 <% set_meta_tags title: 'Новости', description: 'Последние новости Добрых дел — актуальное из мира волонтерства'%>
 <% set_meta_tags og: {title: ['Новости']}  %>
 
-<div>
-    <%= react_component 'P_News' %>
-</div>
-<div>
-    <%= react_component 'S_Footer' %>
-</div>
-
 <p id="notice"><%= notice %></p>
 
-<!-- <div class="top_nav">
-  <p>
-    <%= link_to promo_path do %> добрые<br />дела<br />на сегодня<br /><% end %>
-  </p>
-  <p class="nav_post"><%= link_to about_path do %> о проекте <% end %></p>
-</div> -->
+
+<div class="category">
+  <% Category.all.each do |cat| %>
+  <%= link_to cat.name, request.params.merge(category: cat.id), class: "catlink" %><% end %>
+  <%= link_to "Сбросить", posts_path, class: "resetlink" %>
+</div>
+
 
 <table>
-  <thead>
-    <tr>
-      <!-- <th>Name</th>
-      <th>Image</th>
-      <th>Title</th>
-      <th>Date</th>
-      <th>Content</th>
-      <th colspan="3"></th> -->
-    </tr>
-  </thead>
-
-  <tbody class="all_post_body">
-    <h2>Все категории</h2>
-    <% Category.all.each do |cat| %>
-    <%= link_to cat.name, posts_path(category: cat.name) %> <br>
-    <% end %>
-    <br>
-
-    <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
-
-
-    <h2>Новости</h2>
     <% @posts.each do |post| %>
       <tr class="post_body">
 
@@ -74,7 +46,6 @@
         </div>
       </tr>
     <% end %>
-  </tbody>
 </table>
 
 <br>
@@ -82,3 +53,7 @@
 <%= link_to 'Создать новость', new_post_path %>
 <br>
 <%= link_to 'Добавить категорию', new_category_path %>
+
+<div>
+    <%= react_component 'S_Footer' %>
+</div>

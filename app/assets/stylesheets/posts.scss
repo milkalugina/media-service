@@ -1,34 +1,222 @@
-// @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap');
-//
-// .top_nav {
-//   font-family: 'Raleway', sans-serif;
-//   display: flex;
-//   justify-content: space-between;
-//   text-align: center;
-//   align-items: center;
-//   margin: 20px;
-//   p {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     font-size: 14px;
-//     width: 80px;
-//     height: 80px;
-//     padding: 10px;
-//     background: #F6E6DB;
-//     border-radius: 50%;
-//     border: 1px solid black;
-//     a {
-//       color: black;
-//       text-decoration: none;
-//     }
-//   }
-//   .nav_post {
-//     font-size: 20px;
-//     height: 50px;
-//     width: 130px;
-//     border-radius: 40px;
-//     background: linear-gradient(0deg, rgba(255,253,146,1) 0%, rgba(255,255,255,1) 100%);
-//     padding: 5px;
-//   }
-// }
+
+@import "reset.css";
+@import "slick-theme.scss";
+@import "slick.scss";
+
+@font-face {
+  font-family:'SteinbeckRegular';
+  src:font-url('SteinbeckRegular.eot');
+  src:font-url('SteinbeckRegular.eot?#iefix') format('embedded-opentype'),
+  font-url('SteinbeckRegular.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'SteinbeckItalic';
+  src:font-url('SteinbeckItalic.eot');
+  src:font-url('SteinbeckItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('SteinbeckItalic.ttf') format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Black';
+  src:font-url('BasisGrotesquePro-Black.eot');
+  src:font-url('BasisGrotesquePro-Black.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Black.ttf') format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-BlackItalic';
+  src:font-url('BasisGrotesquePro-BlackItalic.eot');
+  src:font-url('BasisGrotesquePro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-BlackItalic.ttf') format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Bold';
+  src:font-url('BasisGrotesquePro-Bold.eot');
+  src:font-url('BasisGrotesquePro-Bold.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Bold.ttf') format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-BoldItalic';
+  src:font-url('BasisGrotesquePro-BoldItalic.eot');
+  src:font-url('BasisGrotesquePro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-BoldItalic.ttf') format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Medium';
+  src:font-url('BasisGrotesquePro-Medium.eot');
+  src:font-url('BasisGrotesquePro-Medium.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Medium.ttf') format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-MediumItalic';
+  src:font-url('BasisGrotesquePro-MediumItalic.eot');
+  src:font-url('BasisGrotesquePro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-MediumItalic.ttf') format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Regular';
+  src:font-url('BasisGrotesquePro-Regular.eot');
+  src:font-url('BasisGrotesquePro-Regular.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Regular.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Italic';
+  src:font-url('BasisGrotesquePro-Italic.eot');
+  src:font-url('BasisGrotesquePro-Italic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Italic.ttf') format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Light';
+  src:font-url('BasisGrotesquePro-Light.eot');
+  src:font-url('BasisGrotesquePro-Light.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Light.ttf') format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-LightItalic';
+  src:font-url('BasisGrotesquePro-LightItalic.eot');
+  src:font-url('BasisGrotesquePro-LightItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-LightItalic.ttf') format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+:root {
+  --White: #FFFFFF;
+  --LightRed: #FFCFCF;
+  --LightBlue: rgba(35, 51, 99, 0.2);
+  --MidBlue: rgba(35, 51, 99, 0.8);
+  --LightGreen: #D9FED6;
+  --WhiteBlue: #F7F7F9;
+  --EcologicalGreen: #CACC4E;
+  --CulturalBlue: #88E5DA;
+  --CivilianRed: #E85A5A;
+  --SocialYellow: #FAF19D;
+  --SportsOrange: #F68E5F;
+  --KindBlue: #03195A;
+}
+
+
+body {
+  font-family:'BasisGrotesquePro-Regular';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  // background: var(--KindBlue);
+}
+
+/* Стили для тегов */
+
+.ks-cboxtags label a{
+    display: inline-block;
+    background-color: var(--LightBlue);
+    color: var(--KindBlue);
+    border-radius: 8px;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .2s;
+    padding: 6px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-family: Basis Grotesque Pro;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+}
+
+.ks-cboxtags input[type="checkbox"]:checked + label a {
+    background-color: var(--KindBlue);
+    color: var(--White);
+    transition: all .2s;
+}
+
+.ks-cboxtags input[type="checkbox"] {
+  display: absolute;
+}
+.ks-cboxtags input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.category {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-left: 60px;
+  margin-top: 40px;
+}
+
+.category .catlink {
+  display: inline;
+  background-color: var(--LightBlue);
+  color: var(--KindBlue);
+  border-radius: 8px;
+  transition: all .2s;
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+}
+
+.category .catlink:hover {
+  background-color: var(--KindBlue);
+  color: var(--White);
+}
+
+.resetlink {
+  background: #FFFFFF;
+  border: 1px solid rgba(35, 51, 99, 0.2);
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--KindBlue);
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+}
