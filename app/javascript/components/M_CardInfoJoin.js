@@ -17,7 +17,7 @@ const H2 = styled.h2`
   font-family: Steinbeck;
   font-style: normal;
   font-weight: normal;
-  font-size: 42px;
+  font-size: 36px;
   line-height: 120%;
   letter-spacing: 0.1px;
   color: var(--White);
@@ -25,7 +25,7 @@ const H2 = styled.h2`
 `;
 
 const DIV = styled.div`
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/ImageM.png);
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/CardInfo.png);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
@@ -38,10 +38,14 @@ const DIV = styled.div`
 
   &:hover {
     cursor: pointer;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(/images/ImageM.png);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(/images/CardInfo.png);
     -webkit-transition: .4s;
     transition: .4s;
   }
+`;
+
+const LINK = styled.a`
+  text-decoration: none;
 `;
 
 class M_CardInfoJoin extends React.Component {
@@ -50,7 +54,7 @@ class M_CardInfoJoin extends React.Component {
       <div>
       <CARD>
         <DIV>
-          <H2>{this.props.name}</H2>
+          <LINK href="/about"><H2>{this.props.name}</H2></LINK>
         </DIV>
       </CARD>
       </div>

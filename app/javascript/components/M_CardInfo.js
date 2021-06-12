@@ -12,11 +12,15 @@ const CARD = styled.div`
   text-align: center;
 `;
 
+const LINK = styled.a`
+  text-decoration: none;
+`;
+
 const H2 = styled.h2`
   font-family: Steinbeck;
   font-style: normal;
   font-weight: normal;
-  font-size: 42px;
+  font-size: 36px;
   line-height: 120%;
   letter-spacing: 0.1px;
   color: var(--White);
@@ -49,7 +53,7 @@ class M_CardInfo extends React.Component {
       <div>
       <CARD>
         <DIV>
-          <H2>{this.props.name}</H2>
+          <LINK href="/about"><H2>{this.props.name}</H2></LINK>
         </DIV>
       </CARD>
       </div>

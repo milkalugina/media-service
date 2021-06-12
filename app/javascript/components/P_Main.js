@@ -10,6 +10,9 @@ import A_Lines from './A_Lines'
 import A_TypekitH1 from './A_TypekitH1'
 import A_TypekitNavigationLinkRight from './A_TypekitNavigationLinkRight'
 import M_CardInfoJoin from './M_CardInfoJoin'
+import A_ImageInst from './A_ImageInst'
+import A_ImageInstVert from './A_ImageInstVert'
+import S_SubscribeCard from './S_SubscribeCard'
 
 const DIV = styled.div`
   display: flex;
@@ -45,18 +48,44 @@ const TEXT = styled.div`
   margin-top: 60px;
 `;
 
-const LINK = styled.div`
+const LINK = styled.a`
   position: absolute;
   right: 0;
+  text-decoration: none;
+`;
+
+const IMG = styled.img`
+  position: absolute;
+  z-index: -1;
+
+  &:nth-child(1) {
+    left: -10vw;
+  }
+
+  &:nth-child(2) {
+    right: -2vw;
+    top: 15vh;
+  }
+
+  &:nth-child(3) {
+    right: -5vw;
+    top: 70vh;
+  }
+
+
+
 `;
 
 class P_Main extends React.Component {
   render () {
     return (
       <DIV>
+      <IMG src="/images/ob1.svg"></IMG>
+      <IMG src="/images/ob2.svg"></IMG>
+      <IMG src="/images/ob3.svg"></IMG>
       <TEXT>
       <A_TypekitH1 name="Новости"></A_TypekitH1>
-      <LINK><A_TypekitNavigationLinkRight name="Перейти к новостям"></A_TypekitNavigationLinkRight></LINK>
+      <LINK href="/posts"><A_TypekitNavigationLinkRight name="Перейти к новостям"></A_TypekitNavigationLinkRight></LINK>
       </TEXT>
         <O_NewsL></O_NewsL>
         <HrWhite></HrWhite>
@@ -64,6 +93,12 @@ class P_Main extends React.Component {
         <HrWhiteVert></HrWhiteVert>
         <O_NewsM></O_NewsM>
         <HrWhiteVert></HrWhiteVert>
+        <S_SubscribeCard></S_SubscribeCard>
+        <HrWhite></HrWhite>
+        <A_ImageInstVert name="/images/EventVert.png"></A_ImageInstVert>
+        <HrWhiteVert></HrWhiteVert>
+        <O_NewsM></O_NewsM>
+        <HrWhiteVert></HrWhiteVert>
         <O_NewsM></O_NewsM>
         <HrWhite></HrWhite>
         <O_NewsS></O_NewsS>
@@ -73,13 +108,26 @@ class P_Main extends React.Component {
         <O_NewsS></O_NewsS>
         <HrWhiteVertS></HrWhiteVertS>
         <O_NewsS></O_NewsS>
+        <HrWhite></HrWhite>
+        <O_NewsM></O_NewsM>
+        <HrWhiteVert></HrWhiteVert>
+        <O_NewsM></O_NewsM>
+        <HrWhiteVert></HrWhiteVert>
+        <A_ImageInstVert name="/images/ImageInstVert.png"></A_ImageInstVert>
         <TEXT>
         <A_TypekitH1 name="Дела"></A_TypekitH1>
-        <LINK><A_TypekitNavigationLinkRight name="Перейти к делам"></A_TypekitNavigationLinkRight></LINK>
+        <LINK  href="/events"><A_TypekitNavigationLinkRight name="Перейти к делам"></A_TypekitNavigationLinkRight></LINK>
         </TEXT>
         <O_CasesCaseSwitch></O_CasesCaseSwitch>
         <O_AboutLearnUs></O_AboutLearnUs>
         <M_CardInfoJoin name="Присоединиться и делать добрые дела вместе — стать волонтером или организатором"></M_CardInfoJoin>
+        <TEXT>
+        <A_TypekitH1 name="Мы в инстаграм"></A_TypekitH1>
+        </TEXT>
+        <A_ImageInst name="/images/inst1.png"></A_ImageInst>
+        <A_ImageInst name="/images/inst2.png"></A_ImageInst>
+        <A_ImageInst name="/images/inst3.png"></A_ImageInst>
+        <A_ImageInst name="/images/inst4.png"></A_ImageInst>
       </DIV>
     );
   }

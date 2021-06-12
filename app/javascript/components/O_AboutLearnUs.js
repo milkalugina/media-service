@@ -21,9 +21,10 @@ const TEXT = styled.div`
   position: relative;
 `;
 
-const LINK = styled.div`
+const LINK = styled.a`
   position: absolute;
   right: 0;
+  text-decoration: none;
 `;
 
 class O_AboutLearnUs extends React.Component {
@@ -32,7 +33,7 @@ class O_AboutLearnUs extends React.Component {
       <DIV>
         <TEXT>
         <A_TypekitH1 name="Узнать о нас"></A_TypekitH1>
-        <LINK><A_TypekitNavigationLinkRight name="О нас"></A_TypekitNavigationLinkRight></LINK>
+        <LINK  href="/about"><A_TypekitNavigationLinkRight name="О нас"></A_TypekitNavigationLinkRight></LINK>
         </TEXT>
         <M_CardInfo name="Добрые дела — медиа-сервис, объединяющий волонтеров и волонтерские организации"></M_CardInfo>
       </DIV>
