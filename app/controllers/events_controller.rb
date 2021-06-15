@@ -7,6 +7,7 @@ class EventsController < ApplicationController
     @events = Event.where(nil)
   filtering_params(params).each do |key, value|
     @events = @events.public_send("filter_by_#{key}", value) if value.present?
+
   end
 
     # @events = Event.where(nil)
@@ -39,6 +40,8 @@ end
   # GET /events/1
   # GET /events/1.json
   def show
+    @event = Event.find(params[:id])
+    @events = Event.all
   end
 
   # GET /events/new
@@ -101,6 +104,6 @@ end
 
     # Only allow a list of trusted parameters through.
     def event_params
-      params.require(:event).permit(:title, :duration, :description, :details, :plan, :organizer, :image, :sphere_id, :skill_id, :type_id)
+      params.require(:event).permit(:title, :name, :duration, :description, :details, :plan, :organizer, :image, :sphere_id, :skill_id, :type_id)
     end
 end

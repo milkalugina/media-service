@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_27_085753) do
+ActiveRecord::Schema.define(version: 2021_06_15_165903) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2021_03_27_085753) do
     t.integer "sphere_id", null: false
     t.integer "skill_id", null: false
     t.integer "type_id", null: false
+    t.string "name"
     t.index ["skill_id"], name: "index_events_on_skill_id"
     t.index ["sphere_id"], name: "index_events_on_sphere_id"
     t.index ["type_id"], name: "index_events_on_type_id"
@@ -68,16 +69,17 @@ ActiveRecord::Schema.define(version: 2021_03_27_085753) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
-# Регистрация главного лица
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "firstname"
     t.string "lastname"
     t.string "middlename"
     t.string "phonenumb"
     t.string "country"
     t.string "city"
-# Регистрация организации
-    t.string "orgname"
-    t.string "orgtype"
+    t.string "type"
     t.string "datecreation"
     t.string "phonenumber"
     t.string "website"
@@ -86,19 +88,14 @@ ActiveRecord::Schema.define(version: 2021_03_27_085753) do
     t.string "instagram"
     t.string "youtube"
     t.string "ok"
-# Роли и приоритеты
-    t.string "role"
-# Цели и миссия
     t.text "mission"
-# Официальные документы
-    t.text "registrationdoc"
-    t.text "foundersdoc"
-    t.text "nonprofdoc"
-
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "role"
+    t.string "registrationdo"
+    t.string "foundersdoc"
+    t.string "nonprofdoc"
+    t.string "orgtype"
+    t.string "orgname"
+    t.string "registrationdoc"
     t.index ["email"], name: "index_organizations_on_email", unique: true
     t.index ["reset_password_token"], name: "index_organizations_on_reset_password_token", unique: true
   end
@@ -149,18 +146,17 @@ ActiveRecord::Schema.define(version: 2021_03_27_085753) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-
+    t.string "username"
+    t.boolean "isadmin", default: false
+    t.boolean "isorganization", default: false
+    t.boolean "ismoderator", default: false
     t.string "phonenumber"
-
     t.string "regcode"
-
     t.string "firstname"
     t.string "lastname"
     t.string "country"
     t.string "city"
-
     t.string "volinterests"
-
     t.string "volexperience"
     t.string "education"
     t.string "interests"
@@ -170,10 +166,6 @@ ActiveRecord::Schema.define(version: 2021_03_27_085753) do
     t.string "emptype"
     t.string "workplace"
     t.string "position"
-
-    t.boolean "isadmin", default: false
-    t.boolean "isorganization", default: false
-    t.boolean "ismoderator", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

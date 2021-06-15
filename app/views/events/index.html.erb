@@ -1,59 +1,97 @@
 <% set_meta_tags title: 'Дела', description: 'Дела и проекты для волонтеров Добрых дел'%>
 <% set_meta_tags og: {title: ['Дела']}  %>
 
-
 <p id="notice"><%= notice %></p>
-<div>
-    <%= react_component 'P_Cases' %>
+
+<div class="category">
+  <p class="filtername">Темы</p>
+  <% Sphere.all.each do |sphere| %>
+    <%= link_to sphere.name, request.params.merge(sphere: sphere.id), class: "catlink"  %>
+  <% end %>
 </div>
-<div>
-    <%= react_component 'S_Footer' %>
-</div> -->
 
-<div class="events">
-<h2>Все сферы</h2>
+<div class="skill">
+  <p class="filtername">Навыки</p>
+  <% Skill.all.each do |skill| %>
+    <%= link_to skill.name, request.params.merge(skill: skill.id), class: "catlink"   %>
+  <% end %>
+</div>
 
-<%= link_to "Reset", events_path %>
-<br>
-<br>
+<div class="type">
+  <p class="filtername">Тип</p>
+  <% Type.all.each do |type| %>
+    <%= link_to type.name, request.params.merge(type: type.id), class: "catlink"    %>
+  <% end %>
+  <%= link_to "Сбросить", events_path, class: "resetlink" %>
+</div>
 
-<% Sphere.all.each do |sphere| %>
-  <%= link_to sphere.name, request.params.merge(sphere: sphere.id)  %>
-<% end %> <br>
 
-<h2>Все навыки</h2>
-<% Skill.all.each do |skill| %>
-  <%= link_to skill.name, request.params.merge(skill: skill.id)  %>
+<div class="allcases">
+  <% @events.each do |event| %>
+
+  <div class="cardcase">
+    <div class="image">
+      <%= image_tag event.image.url if event.image?%>
+    </div>
+    <div class="name">
+      <div class="casename">
+        <h2><%= event.title %></h2>
+      </div>
+      <p><%= event.name %></p>
+    </div>
+    <div class="type">
+      <div class="typetext">
+        <div class="filter">
+          <span><%= event.sphere.name %></span>
+        </div>
+        <div class="timetype">
+          <p><%= event.type.name %>&nbsp;&nbsp;·&nbsp;&nbsp; </p>
+          <p><%= event.duration %></p>
+        </div>
+      </div>
+      <div class="icon">
+
+        <% pre_favorite = event.favorites.find { |favorite| favorite.user_id == current_user.id} %>
+        <% if pre_favorite %>
+        <%= link_to 'Rem', event_favorite_path(event, pre_favorite), method: :delete, class: "favouriteremove" %>
+        <svg width="21" height="27" viewBox="0 0 21 27" fill="#03195A" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 0.999999L20 1V24.8998L11.7607 18.2093C11.0261 17.6127 9.9739 17.6127 9.23925 18.2093L1 24.8998L1 0.999999Z" stroke="#03195A" stroke-width="2"/></svg>
+
+
+        <% else %>
+        <%= link_to 'Add', event_favorites_path(event), method: :event, class: "favouriteadd" %>
+
+        <svg width="21" height="27" viewBox="0 0 21 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 0.999999L20 1V24.8998L11.7607 18.2093C11.0261 17.6127 9.9739 17.6127 9.23925 18.2093L1 24.8998L1 0.999999Z" stroke="#03195A" stroke-width="2"/></svg>
+
+        <% end %>
+
+
+
+      </div>
+    </div>
+
+    <% if user_signed_in? && current_user.isadmin == true %>
+    <%= link_to 'Показать', event %>
+    <%= link_to 'Редактировать', edit_event_path(event) %>
+    <%= link_to 'Удалить', event, method: :delete, data: { confirm: 'Вы уверены?' } %>
+    <% end %>
+
+
+  </div>
+  <% end %>
+
+</div>
+
+
+<% if user_signed_in? && current_user.isadmin == true %>
+<%= link_to 'Показать', event %>
+<%= link_to 'Редактировать', edit_event_path(event) %>
+<%= link_to 'Удалить', event, method: :delete, data: { confirm: 'Вы уверены?' } %>
 <% end %>
 
-<h2>Все типы</h2>
-<% Type.all.each do |type| %>
-  <%= link_to type.name, request.params.merge(type: type.id)  %>
-<% end %>
 
-
-<table>
-  <thead>
-    <tr>
-      <th>Название</th>
-      <th>Сфера</th>
-      <th>Навык</th>
-      <th>Тип дела</th>
-      <th>Длительность</th>
-      <th>Краткое описание</th>
-      <th>Детали</th>
-      <th>План</th>
-      <th>Об организаторе</th>
-      <th>Фотография</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-
-    <br>
-    <br>
-
+<% if user_signed_in? && current_user.isadmin == true %>
     <%= link_to 'Новая сфера', new_sphere_path %>
     <br>
     <%= link_to 'Новый навык', new_skill_path %>
@@ -61,28 +99,10 @@
     <%= link_to 'Новый тип дела', new_type_path %>
     <br>
     <br>
+    <%= link_to 'Новое доброе дело', new_event_path %>
+<% end %>
 
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.title %></td>
-        <td><%= event.sphere.name %></td>
-        <td><%= event.skill.name %></td>
-        <td><%= event.type.name %></td>
-        <td><%= event.duration %></td>
-        <td><%= event.description %></td>
-        <td><%= event.details %></td>
-        <td><%= event.plan %></td>
-        <td><%= event.organizer %></td>
-        <td><%= event.image %></td>
-        <td><%= link_to 'Показать', event %></td>
-        <td><%= link_to 'Редактировать', edit_event_path(event) %></td>
-        <td><%= link_to 'Удалить', event, method: :delete, data: { confirm: 'Вы уверенны?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'Новое доброе дело', new_event_path %>
+<div>
+    <%= react_component 'S_Footer' %>
 </div>

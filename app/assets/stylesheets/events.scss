@@ -1,3 +1,298 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import "reset.css";
+@import "slick-theme.scss";
+@import "slick.scss";
+
+@font-face {
+  font-family:'SteinbeckRegular';
+  src:font-url('SteinbeckRegular.eot');
+  src:font-url('SteinbeckRegular.eot?#iefix') format('embedded-opentype'),
+  font-url('SteinbeckRegular.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'SteinbeckItalic';
+  src:font-url('SteinbeckItalic.eot');
+  src:font-url('SteinbeckItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('SteinbeckItalic.ttf') format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Black';
+  src:font-url('BasisGrotesquePro-Black.eot');
+  src:font-url('BasisGrotesquePro-Black.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Black.ttf') format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-BlackItalic';
+  src:font-url('BasisGrotesquePro-BlackItalic.eot');
+  src:font-url('BasisGrotesquePro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-BlackItalic.ttf') format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Bold';
+  src:font-url('BasisGrotesquePro-Bold.eot');
+  src:font-url('BasisGrotesquePro-Bold.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Bold.ttf') format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-BoldItalic';
+  src:font-url('BasisGrotesquePro-BoldItalic.eot');
+  src:font-url('BasisGrotesquePro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-BoldItalic.ttf') format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Medium';
+  src:font-url('BasisGrotesquePro-Medium.eot');
+  src:font-url('BasisGrotesquePro-Medium.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Medium.ttf') format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-MediumItalic';
+  src:font-url('BasisGrotesquePro-MediumItalic.eot');
+  src:font-url('BasisGrotesquePro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-MediumItalic.ttf') format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Regular';
+  src:font-url('BasisGrotesquePro-Regular.eot');
+  src:font-url('BasisGrotesquePro-Regular.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Regular.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Italic';
+  src:font-url('BasisGrotesquePro-Italic.eot');
+  src:font-url('BasisGrotesquePro-Italic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Italic.ttf') format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Light';
+  src:font-url('BasisGrotesquePro-Light.eot');
+  src:font-url('BasisGrotesquePro-Light.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Light.ttf') format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-LightItalic';
+  src:font-url('BasisGrotesquePro-LightItalic.eot');
+  src:font-url('BasisGrotesquePro-LightItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-LightItalic.ttf') format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+:root {
+  --White: #FFFFFF;
+  --LightRed: #FFCFCF;
+  --LightBlue: rgba(35, 51, 99, 0.2);
+  --MidBlue: rgba(35, 51, 99, 0.8);
+  --LightGreen: #D9FED6;
+  --WhiteBlue: #F7F7F9;
+  --EcologicalGreen: #CACC4E;
+  --CulturalBlue: #88E5DA;
+  --CivilianRed: #E85A5A;
+  --SocialYellow: #FAF19D;
+  --SportsOrange: #F68E5F;
+  --KindBlue: #03195A;
+}
+
+
+body {
+  font-family:'BasisGrotesquePro-Regular';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  // background: var(--KindBlue);
+}
+
+.skill, .type {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+
+.skill .catlink {
+  background: rgba(246, 142, 95, 0.3);
+}
+
+.skill .catlink:hover {
+  background: var(--SportsOrange);
+}
+
+.type .catlink {
+  background: rgba(136, 229, 218, 0.3);
+}
+
+.type .catlink:hover {
+  background: var(--CulturalBlue);
+}
+
+.filtername {
+  font-family: Basis Grotesque Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 18px;
+letter-spacing: 0.2px;
+color: #03195A;
+width: 100px;
+}
+
+.cardcase {
+  width: 300px;
+  height: 417px;
+  background: var(--White);
+  border: 1px solid rgba(35, 51, 99, 0.2);
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.cardcase:hover {
+  filter: drop-shadow(0px 0px 10px rgba(35, 51, 99, 0.15));
+  cursor:pointer;
+}
+
+.cardcase .image {
+  margin-bottom: 20px;
+}
+
+.cardcase .image img {
+  border-radius: 20px;
+  width: 300px;
+  height: 184px;
+  object-fit: cover;
+}
+
+.cardcase .name {
+  margin-left: 20px;
+}
+
+.cardcase .casename {
+  margin-bottom: 10px;
+}
+
+.casename h2 {
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 19px;
+  color: var(--KindBlue);
+}
+
+.cardcase .name p {
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--KindBlue);
+}
+
+.cardcase .type {
+  margin-left: 20px;
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 20px;
+}
+
+.cardcase .filter {
+  margin-bottom: 10px;
+}
+
+.cardcase .filter span {
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  color: var(--KindBlue);
+  text-align: center;
+  background-color: var(--LightBlue);
+  padding: 0px 14px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.cardcase .typetext {
+  width: 220px;
+}
+
+.cardcase .timetype {
+  display: flex;
+}
+
+.cardcase .timetype p {
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--KindBlue);
+}
+
+.cardcase .icon path {
+  color: var(--KindBlue);
+}
+
+.cardcase .icon path:hover {
+  fill: var(--MidBlue);
+  cursor: pointer;
+}
+
+.allcases a {
+  text-decoration: none;
+}
+
+.allcases {
+  display: flex;
+  width: 1320px;
+  padding: 0px 60px;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.favouriteadd, .favouriteremove {
+  width: 20px;
+  position: absolute;
+  opacity: 0;
+}

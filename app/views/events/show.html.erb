@@ -7,6 +7,12 @@
   <%= @event.title %>
 </p>
 
+
+<p>
+  <strong>Name:</strong>
+  <%= @event.name %>
+</p>
+
 <p>
   <strong>Сфера волонтерства:</strong>
   <%= @event.sphere.name %>
@@ -34,22 +40,22 @@
 
 <p>
   <strong>Details:</strong>
-  <%= @event.details %>
+  <%= @event.details.html_safe %>
 </p>
 
 <p>
   <strong>Plan:</strong>
-  <%= @event.plan %>
+  <%= @event.plan.html_safe %>
 </p>
 
 <p>
   <strong>Organizer:</strong>
-  <%= @event.organizer %>
+  <%= @event.organizer.html_safe %>
 </p>
 
 <p>
   <strong>Image:</strong>
-  <%= @event.image %>
+  <%= image_tag(@event.image.url, alt: 'Image') if @event.image? %>
 </p>
 
 <% pre_favorite = @event.favorites.find { |favorite| favorite.user_id == current_user.id} %>
