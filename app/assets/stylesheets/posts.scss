@@ -397,3 +397,151 @@ body {
   left: 0vw;
   top: -2vh;
 }
+
+// .line {
+//   width: 1320px;
+//   border-bottom: 1px solid rgba(35, 51, 99, 0.2);
+// }
+//
+// .line:nth-child(1), .line:nth-child(2), .line:nth-child(3){
+//   display: none;
+// }
+
+.navigationlink {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 60px;
+  margin-bottom: 40px;
+}
+
+.navigationlink a {
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.3px;
+  color: var(--MidBlue);
+  margin-left: 8px;
+  text-decoration: none;
+}
+
+.navigationlink a:hover {
+  color: var(--KindBlue);
+  cursor: pointer;
+  decoration: none;
+  background-color: none;
+}
+
+.postshow .postview {
+  box-sizing: border-box;
+  width: 1093px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10vw;
+  gap: 60px;
+}
+
+.postshow .postview .card {
+  display: flex;
+  gap: 40px;
+}
+
+.postshow .postview .card img {
+  border-radius: 20px;
+  width: 640px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.postshow .postview .card .org {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.postshow .postview .card .org .cardorg {
+  width: 413px;
+  display: flex;
+  background: var(--White);
+  border: 1px solid rgba(35, 51, 99, 0.2);
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 20px;
+  flex-direction: column;
+
+}
+.postshow .postview .card .org .cardorg p {
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 19px;
+  color: var(--KindBlue);
+}
+
+.postshow .data {
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+  color: var(--KindBlue);
+}
+
+.postshow .FILTER {
+    margin-bottom: 10px;
+}
+
+.newstext h2 {
+  font-family: Steinbeck;
+font-style: normal;
+font-weight: normal;
+font-size: 42px;
+line-height: 120%;
+letter-spacing: 0.2px;
+color: var(--KindBlue);
+margin-bottom: 30px;
+}
+
+.newstext p {
+  font-family: Basis Grotesque Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 23px;
+letter-spacing: 0.1px;
+color: var(--KindBlue);
+}
+
+.socialshare {
+  display: flex;
+}
+
+.socialshare img {
+  margin-right: 20px;
+  width: 30px;
+}
+
+.anotherposts .NewsL:nth-child(2), .anotherposts .NewsL:nth-child(3), .anotherposts .NewsL:nth-child(4){
+  display: block;
+}
+
+.anotherposts .NewsL {
+  display: none;
+}
+
+.another{
+  font-family: Steinbeck;
+font-style: normal;
+font-weight: normal;
+font-size: 42px;
+line-height: 120%;
+letter-spacing: 0.2px;
+color: var(--KindBlue);
+margin-bottom: 30px;
+margin-top: 80px;
+text-align: center;
+}

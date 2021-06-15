@@ -35,15 +35,12 @@
     <div><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены?' } %></div>
     <% end %>
 
+    <div class="line"></div>
   </div>
   <% end %>
 </div>
 
 
-
-
-
-<%= link_to 'Создать новость', new_post_path %>
 
 <% if user_signed_in? && current_user.isadmin == true %>
 <%= link_to 'Создать новость', new_post_path %>

@@ -1,34 +1,42 @@
-<% set_meta_tags title: @post.name, description: @post.category.name%>
+<% set_meta_tags title: @post.title, description: @post.category.name%>
 
 <p id="notice"><%= notice %></p>
 
+<div class="postshow">
+  <div class="navigationlink">
+    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 1L1 7.5L8 14" stroke="#03195A" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <a href="/posts">Назад к новостям</a>
+  </div>
 
-<div class="post_show">
-  <%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
-  <p class="tag">
-    <!-- <strong>Name:</strong> -->
-    <%= @post.name %>
-  </p>
-
-  <p class="title">
-    <!-- <strong>Title:</strong> -->
-    <%= @post.title %>
-  </p>
-
-  <p>
-  <!-- <strong>Category:</strong> -->
-  <%= @post.category.name %>
-  </p>
-
-  <p>
-    <!-- <strong>Content:</strong> -->
-    <%= @post.content.html_safe %>
-  </p>
-
-  <p class="date">
-  	<!-- <strong>Date:</strong> -->
-  	<%= @post.date %>
-  </p>
+  <div class="postview">
+    <div class="card">
+      <div class="img"><%= image_tag(@post.image.url, alt: 'Image') if @post.image? %></div>
+      <div class="org">
+        <div class="cardorg">
+          <p><%= @post.name if @post.name? %></p>
+        </div>
+        <div class="groupnewsdata">
+          <div class="FILTER">
+            <span class="catlink"><%= @post.category.name %></span>
+          </div>
+          <span class="data"><%= @post.created_at.strftime("%d/%m/%Y") %></span>
+        </div>
+      </div>
+    </div>
+    <div class="newstext">
+      <h2><%= @post.title %></h2>
+      <p><%= @post.content.html_safe %></p>
+    </div>
+    <div class="socialshare">
+      <img src="/images/A_Icons-ShareFacebook.png" alt="">
+      <img src="/images/A_Icons-ShareVk.png" alt="">
+      <img src="/images/A_Icons-ShareOdnoklassniki.png" alt="">
+      <img src="/images/A_Icons-ShareTelegram.png" alt="">
+      <img src="/images/A_Icons-ShareTwitter.png" alt="">
+    </div>
+  </div>
 </div>
 
 <% if user_signed_in? && current_user.ismoderator == true %>
@@ -43,3 +51,12 @@
 <% if user_signed_in? && current_user.isorganization == true %>
 <%= link_to 'Edit', edit_post_path(@post) %>
 <% end %>
+
+<div class="anotherposts">
+  <h2 class="another">Еще новости</h2>
+  <%= render 'otherposts', post: @post %>
+</div>
+
+<div>
+    <%= react_component 'S_Footer' %>
+</div>
