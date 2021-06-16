@@ -6,6 +6,9 @@
 <% if user_signed_in? == true && current_user.isadmin == false && current_user.ismoderator == false  %>
 <div class="account">
   <h1>Аккаунт волонтера</h1>
+  <div class="image me-3">
+     <%= image_tag(@user.image.url, alt: 'Image', :size => "180x180", :crop => :fill) if @user.image? %>
+  </div>
   <br>
   <h2>Контактная информация</h2>
   <br>
@@ -43,6 +46,7 @@
   <%# можно добавить кнопку для регистрации или что-нибудь ещё  %>
   <% end%>
 <% end %>
+<%= link_to 'Выйти', destroy_organization_session_path, :method => :delete %>
 
 </div>
 

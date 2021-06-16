@@ -1,6 +1,8 @@
 <div class="">
   Сведения об аккаунте
-
+  <div class="image me-3">
+     <%= image_tag(@organization.image.url, alt: 'Image', :size => "180x180", :crop => :fill) if @organization.image? %>
+  </div>
   <p>ID <%= @organization.id %></p>
   <p>Имя <%= @organization.firstname %></p>
   <p>Фамилия <%= @organization.lastname %></p>
