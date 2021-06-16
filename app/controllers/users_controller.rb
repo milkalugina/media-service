@@ -26,7 +26,6 @@ class UsersController < ApplicationController
     else
       @posts = Post.all
     end
-
     if @user
       @events = @user.favorited_events
       render actions: :show
