@@ -52,6 +52,8 @@
       </div>
       <div class="icon">
 
+        <% if user_signed_in? == true %>
+
         <% pre_favorite = event.favorites.find { |favorite| favorite.user_id == current_user.id} %>
         <% if pre_favorite %>
         <%= link_to 'Rem', event_favorite_path(event, pre_favorite), method: :delete, class: "favouriteremove" %>
@@ -67,6 +69,7 @@
 
         <% end %>
 
+        <% end %>
 
 
       </div>
@@ -78,18 +81,12 @@
     <%= link_to 'Удалить', event, method: :delete, data: { confirm: 'Вы уверены?' } %>
     <% end %>
 
-
-  </div>
   <% end %>
+  </div>
   <% end %>
 </div>
 
 
-<% if user_signed_in? && current_user.isadmin == true %>
-<%= link_to 'Показать', event %>
-<%= link_to 'Редактировать', edit_event_path(event) %>
-<%= link_to 'Удалить', event, method: :delete, data: { confirm: 'Вы уверены?' } %>
-<% end %>
 
 
 <% if user_signed_in? && current_user.isadmin == true %>
