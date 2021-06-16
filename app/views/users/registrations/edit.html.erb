@@ -1,11 +1,29 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<%= link_to "Back", :back %>
+<h1>Настройки профиля</h1>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
+  <h2>Редактирование профиля волонтера</h2>
+
   <div class="field">
-    <%= f.label :image %>
+    <%= f.label "Аватар" %>
     <%= f.file_field :image, class: "form-control border_color rounded" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Имя" %><br />
+    <%= f.text_field :firstname, autofocus: true, autocomplete: "firstname" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Фамилия" %><br />
+    <%= f.text_field :lastname, autofocus: true, autocomplete: "lastname" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "E-mail" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
@@ -18,7 +36,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label "Новый пароль" %> <i></i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br />
@@ -27,22 +45,90 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label "Номер телефона" %><br />
+    <%= f.text_field :phonenumber, autofocus: true, autocomplete: "phonenumber" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Повторите новый пароль" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label "Страна" %><br />
+    <%= f.text_field :country, autofocus: true, autocomplete: "country" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Город" %><br />
+    <%= f.text_field :city, autofocus: true, autocomplete: "city" %>
+  </div>
+
+  <h2>Интересы в волонтерстве</h2>
+
+  <div class="field">
+    <%= f.label " " %><br />
+    <%= f.text_field :volinterests, autofocus: true, autocomplete: "volinterests" %>
+  </div>
+
+  <h2>Подробная информация</h2>
+
+  <div class="field">
+    <%= f.label "Волонтерский опыт" %><br />
+    <%= f.text_field :volexperience, autofocus: true, autocomplete: "volexperience" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Образование" %><br />
+    <%= f.text_field :education, autofocus: true, autocomplete: "education" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Интересы" %><br />
+    <%= f.text_field :interests, autofocus: true, autocomplete: "interests" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Вконтакте" %><br />
+    <%= f.text_field :vk, autofocus: true, autocomplete: "vk" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Facebook" %><br />
+    <%= f.text_field :facebook, autofocus: true, autocomplete: "facebook" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Instagram" %><br />
+    <%= f.text_field :instagram, autofocus: true, autocomplete: "instagram" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Тип занятости" %><br />
+    <%= f.text_field :emptype, autofocus: true, autocomplete: "emptype" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Место работы" %><br />
+    <%= f.text_field :workplace, autofocus: true, autocomplete: "workplace" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Должность" %><br />
+    <%= f.text_field :position, autofocus: true, autocomplete: "position" %>
+  </div>
+
+  <h2>Подтвердите изменения, используя пароль</h2>
+
+  <div class="field">
+    <%= f.label :current_password %> <br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
+
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Изменить" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+<h2>Управление уведомлениями</h2>

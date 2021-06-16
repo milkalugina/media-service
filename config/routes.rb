@@ -19,7 +19,6 @@ Rails.application.routes.draw do
 
   get 'users/:id/following', :to => "users#following", :as => :following
 
-  resources :users
   post 'users/:id/follow', to: "users#follow", as: "follow_user"
 	post 'users/:id/unfollow', to: "users#unfollow", as: "unfollow_user"
 
@@ -29,7 +28,7 @@ Rails.application.routes.draw do
   get 'aboutorg', to: 'aboutorg#index'
 
   get 'users', to: 'users#index'
-  get 'users/:id' => 'users#show'
+  get 'users/:id' => 'users#show', :as => :user
   delete 'users/:id', to: 'users#destroy'
 
   get 'organizations', to: 'organizations#index'

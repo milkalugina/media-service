@@ -126,6 +126,16 @@
   font-style: italic;
 }
 
+.img-circular {
+ width: 200px;
+ height: 200px;
+ background-size: cover;
+ border-radius: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+}
+
+
 :root {
   --White: #FFFFFF;
   --LightRed: #FFCFCF;

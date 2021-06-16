@@ -15,7 +15,7 @@
     <%= react_component 'O_MenuReg' %>
     <% else %>
       <% if organization_signed_in? %>
-      <%= react_component 'O_MenuReg' %>
+      <%= react_component 'O_MenuRegOrg' %>
       <% else %>
       <%= react_component 'O_Menu' %>
       <% end %>

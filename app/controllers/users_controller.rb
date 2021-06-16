@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
  def new
   @users = User.new
  end
@@ -18,7 +19,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @users = User.all
     @user = User.find(params[:id])
     if params.has_key?(:category)
       @category = Category.find_by_name(params[:category])
@@ -26,10 +26,7 @@ class UsersController < ApplicationController
     else
       @posts = Post.all
     end
-  end
 
-  def show
-    @user = User.find(params[:id])
     if @user
       @events = @user.favorited_events
       render actions: :show
@@ -41,12 +38,6 @@ class UsersController < ApplicationController
 
   def favorited?(event)
     favorites.find_by(event_id: event.id).present?
-  end
-
-  def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-    redirect_to users_path, notice: 'User deleted.'
   end
 
   def follow
@@ -68,6 +59,12 @@ class UsersController < ApplicationController
       render actions: :show
       @following = @user.followees.all
     end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to users_path, notice: 'User deleted.'
   end
 
 end

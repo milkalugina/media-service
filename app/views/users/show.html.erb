@@ -1,16 +1,11 @@
-<!-- <p>ID <%= @user.id %></p>
-<p> <%= @user.email %></p>
-<p> <%= @user.username %></p> -->
-<br>
-<%# Это проверка волонтера  %>
 <% if user_signed_in? == true && current_user.isadmin == false && current_user.ismoderator == false  %>
 <div class="account">
-  <h1>Аккаунт волонтера</h1>
   <div class="image me-3">
-     <%= image_tag(@user.image.url, alt: 'Image', :size => "180x180", :crop => :fill) if @user.image? %>
+     <%= image_tag(@user.image.url, alt: 'Image', :class=> "img-circular") if @user.image? %>
   </div>
+  <h1><%= @user.firstname %> <%= @user.lastname %></h1>
   <br>
-  <h2>Контактная информация</h2>
+
   <br>
   <h2>Анкета волонтера</h2>
   <br>
@@ -37,16 +32,18 @@
   <br>
   <br>
   <% if user_signed_in? && @user.id == current_user.id %>
-      <%= link_to 'Edit Profile', edit_user_registration_path %>
+      <%= link_to 'Настройки профиля', edit_user_registration_path %>
   <% elsif user_signed_in? && current_user.followees.include?(@user) %>
-      <h5><%= button_to "Unfollow", unfollow_user_path, method: "POST" %></h5>
+      <h5><%= button_to "Отписаться", unfollow_user_path, method: "POST" %></h5>
   <% elsif user_signed_in? %>
-      <h5><%= button_to "Follow", follow_user_path, method: "POST"  %></h5>
+      <h5><%= button_to "Подписатья", follow_user_path, method: "POST"  %></h5>
   <% else %>
   <%# можно добавить кнопку для регистрации или что-нибудь ещё  %>
   <% end%>
 <% end %>
-<%= link_to 'Выйти', destroy_organization_session_path, :method => :delete %>
+
+<p> <%= button_to "Удалить аккаунт", registration_path("user"), data: { confirm: "Вы уверены, что хотите удалить аккаунт? Вы больше не сможете пользоваться всеми возможностями «Добрых дел».?" }, method: :delete %></p>
+<p><%= button_to 'Выйти', destroy_organization_session_path, :method => :delete %></p>
 
 </div>
 
