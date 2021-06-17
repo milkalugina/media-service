@@ -1,44 +1,33 @@
 <div class="">
-  Сведения об аккаунте
   <div class="image me-3">
      <%= image_tag(@organization.image.url, alt: 'Image', :size => "180x180", :crop => :fill) if @organization.image? %>
   </div>
-  <p>ID <%= @organization.id %></p>
-  <p>Имя <%= @organization.firstname %></p>
-  <p>Фамилия <%= @organization.lastname %></p>
-  <p>Отчество <%= @organization.middlename %></p>
-  <p>Email <%= @organization.email %></p>
-  <p>Номер телефона для связи <%= @organization.phonenumb %></p>
-  <p>Страна <%= @organization.country %></p>
-  <p>Город <%= @organization.city %></p>
+  <h1><%= @organization.orgname %></h1>
+  <p><%= @organization.role %></p>
 
-  Организация
-  <p>Название организации <%= @organization.orgname %></p>
-  <p>Вид организации <%= @organization.orgtype %></p>
-  <p>Дата создания организации <%= @organization.datecreation %></p>
-  <p>Номер телефона <%= @organization.phonenumber %></p>
-  <p>Website <%= @organization.website %></p>
-  <p>Вконтакте <%= @organization.vk %></p>
-  <p>Facebook <%= @organization.facebook %></p>
-  <p>Instagram <%= @organization.instagram %></p>
-  <p>Одноклассники <%= @organization.ok %></p>
-
-  <p>Роли и приоритеты</p>
-  <p>Интересная тема волонтерства <%= @organization.role %></p>
-
-  <p>Цели и миссия <%= @organization.mission %></p>
-
-  <p>Официальные документы</p>
-  <p>Документ о регистрации НКО <%= @organization.registrationdoc %></p>
-  <p>Сведения об учредителях — копии паспортов и ИНН <%= @organization.foundersdoc %></p>
-  <p>Учредительные документы некоммерческой организации <%= @organization.nonprofdoc %></p>
-
+  <p><%= @organization.email %></p>
+  <p><%= @organization.phonenumb %></p>
+  <p><%= @organization.country %>, г. <%= @organization.city %></p>
+  <br>
+  <p><%= @organization.mission %></p>
+  <p><%= @organization.website %></p>
+  <p><%= @organization.vk %></p>
+  <p><%= @organization.facebook %></p>
+  <p><%= @organization.instagram %></p>
+  <p><%= @organization.ok %></p>
 </div>
-
+<br>
+<h2>Новости от организатора</h2>
+<%= link_to 'Разместить новость', new_post_path %>
+<br>
+<br>
+<h2>Дела от организатора</h2>
+<%= link_to 'Разместить дело', new_event_path %>
+<br>
+<br>
 <% if organization_signed_in? && @organization.id == current_organization.id %>
-  <p><%= link_to 'Настройки профиля', edit_organization_registration_path %></p>
+<p><%= link_to 'Настройки профиля', edit_organization_registration_path %></p>
 <% end %>
 
-<%= link_to 'Выйти', destroy_organization_session_path, :method => :delete %>
-
-<%= link_to "Cancel my account", registration_path(current_organization), data: { confirm: "Are you sure?" }, method: :delete %>
+<p> <%= button_to "Удалить аккаунт", registration_path(current_organization), data: { confirm: "Вы уверены, что хотите удалить аккаунт? Вы больше не сможете пользоваться всеми возможностями «Добрых дел».?" }, method: :delete %></p>
+<p><%= button_to 'Выйти', destroy_organization_session_path, :method => :delete %></p>
