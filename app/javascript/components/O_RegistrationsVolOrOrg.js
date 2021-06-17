@@ -7,6 +7,7 @@ import M_CardJoinV from './M_CardJoinV'
 import M_CardJoinO from './M_CardJoinO'
 
 const DIV = styled.div`
+margin-top: 80px;
   text-align: center;
 `;
 
@@ -21,6 +22,10 @@ const H2 = styled.div`
   margin-bottom: 30px;
 `;
 
+const A = styled.a`
+  text-decoration: none;
+`;
+
 class O_RegistrationsVolOrOrg extends React.Component {
   render () {
     return (
@@ -28,8 +33,8 @@ class O_RegistrationsVolOrOrg extends React.Component {
         <H2><A_TypekitH2 name="Создайте аккаунт — начните делать добро"></A_TypekitH2></H2>
         <A_TypekitSubtitle name="Какой аккаунт вы хотите создать?"></A_TypekitSubtitle>
         <CARDS>
-          <M_CardJoinV></M_CardJoinV>
-          <M_CardJoinO></M_CardJoinO>
+          <A href="/users/sign_up"><M_CardJoinV></M_CardJoinV></A>
+          <A href="/organizations/sign_up"><M_CardJoinO></M_CardJoinO></A>
         </CARDS>
       </DIV>
     );

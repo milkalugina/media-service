@@ -1,17 +1,11 @@
-<table>
-  <tbody>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-    <div>
-        <%= react_component 'O_RegistrationsVolOrOrg' %>
-    </div>
-    <%= link_to 'Зарегистрироваться как волонтер', new_user_registration_path %>
-    <br>
-    <br>
-    <%= link_to 'Зарегистрироваться как организатор', new_organization_registration_path %>
-  </tbody>
-</table>
+<div class="registration">
+  <img src="/images/registration.png" alt="">
+</div>
+
+<div>
+    <%= react_component 'O_RegistrationsVolOrOrg' %>
+</div>
+
+<div>
+    <%= react_component 'S_Footer' %>
+</div>
