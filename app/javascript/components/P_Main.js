@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components";
-import O_NewsL from './O_NewsL'
 import O_NewsM from './O_NewsM'
 import O_NewsS from './O_NewsS'
 import O_CasesCaseSwitch from './O_CasesCaseSwitch'
@@ -60,6 +59,7 @@ const IMG = styled.img`
 
   &:nth-child(1) {
     left: -10vw;
+    top: 10vh;
   }
 
   &:nth-child(2) {
@@ -83,42 +83,6 @@ class P_Main extends React.Component {
       <IMG src="/images/ob1.svg"></IMG>
       <IMG src="/images/ob2.svg"></IMG>
       <IMG src="/images/ob3.svg"></IMG>
-      <TEXT>
-      <A_TypekitH1 name="Новости"></A_TypekitH1>
-      <LINK href="/posts"><A_TypekitNavigationLinkRight name="Перейти к новостям"></A_TypekitNavigationLinkRight></LINK>
-      </TEXT>
-        <O_NewsL></O_NewsL>
-        <HrWhite></HrWhite>
-        <O_NewsM></O_NewsM>
-        <HrWhiteVert></HrWhiteVert>
-        <O_NewsM></O_NewsM>
-        <HrWhiteVert></HrWhiteVert>
-        <S_SubscribeCard></S_SubscribeCard>
-        <HrWhite></HrWhite>
-        <A_ImageInstVert name="/images/EventVert.png"></A_ImageInstVert>
-        <HrWhiteVert></HrWhiteVert>
-        <O_NewsM></O_NewsM>
-        <HrWhiteVert></HrWhiteVert>
-        <O_NewsM></O_NewsM>
-        <HrWhite></HrWhite>
-        <O_NewsS></O_NewsS>
-        <HrWhiteVertS></HrWhiteVertS>
-        <O_NewsS></O_NewsS>
-        <HrWhiteVertS></HrWhiteVertS>
-        <O_NewsS></O_NewsS>
-        <HrWhiteVertS></HrWhiteVertS>
-        <O_NewsS></O_NewsS>
-        <HrWhite></HrWhite>
-        <O_NewsM></O_NewsM>
-        <HrWhiteVert></HrWhiteVert>
-        <O_NewsM></O_NewsM>
-        <HrWhiteVert></HrWhiteVert>
-        <A_ImageInstVert name="/images/ImageInstVert.png"></A_ImageInstVert>
-        <TEXT>
-        <A_TypekitH1 name="Дела"></A_TypekitH1>
-        <LINK  href="/events"><A_TypekitNavigationLinkRight name="Перейти к делам"></A_TypekitNavigationLinkRight></LINK>
-        </TEXT>
-        <O_CasesCaseSwitch></O_CasesCaseSwitch>
         <O_AboutLearnUs></O_AboutLearnUs>
         <M_CardInfoJoin name="Присоединиться и делать добрые дела вместе — стать волонтером или организатором"></M_CardInfoJoin>
         <TEXT>

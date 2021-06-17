@@ -24,14 +24,12 @@
   </div>
     <%= yield %>
 
+    <% if user_signed_in? && current_user.isadmin == true %>
     <% if notice %>
       <p class="notice"><%= notice %></p>
     <% elsif alert %>
       <p class="alert"><%= alert %></p>
     <% end %>
+    <% end %>
   </body>
 </html>
-
-<% if notice %>
-  <%= notice %>
-<% end %>

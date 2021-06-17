@@ -1,5 +1,29 @@
-<% @subscriber = Subscriber.new %>
-<%= form_for @subscriber do |f| %>
-  <%= f.email_field :email, placeholder: "email" %>
-  <%= f.submit "сообщайте"%>
+
+
+<div class="subscribecard">
+  <% @subscriber = Subscriber.new %>
+  <%= form_for @subscriber do |f| %>
+  <div class="first">
+    <% if notice %>
+      <h1><%= notice %><h1>
+      <% else %>
+        <h1>Подпишитесь <br> на еженедельную <br> рассылку лучших дел <br>и новостей<h1>
+    <div class="second">
+      <%= f.email_field :email, placeholder: "email" %>
+      <%= f.submit "→"%>
+    </div>
+    <% end %>
+  </div>
+  <div class="third">
+    <h1>Следите за нами<br>в соцсетях</h1>
+    <div class="socialsubscribe">
+      <a href="#"><img src="/images/VK.svg" alt=""></a>
+      <a href="#"><img src="/images/Telegram.svg" alt=""></a>
+      <a href="#"><img src="/images/Facebook.svg" alt=""></a>
+      <a href="#"><img src="/images/Instagram.svg" alt=""></a>
+    </div>
+  </div>
+
+
 <% end %>
+</div>

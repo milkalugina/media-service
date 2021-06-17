@@ -1,3 +1,115 @@
+<div class="subscribeform">
+    <%= render "subscribers/form" %>
+</div>
+
+<div class="news">
+  <div class="navigationlink">
+    <a href="/posts">Перейти к новостям</a>
+    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 1L8 7.5L1 14" stroke="#03195A" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <h1>Новости</h1>
+
+  <div class="allnews">
+  <% @posts.each do |post| %>
+    <div class="NewsL">
+      <div class="IMAGE"><%= image_tag post.image.url if post.image?%></div>
+      <div class="TEXT">
+      <h2><%= link_to post.title, post, class: "postlink" %></h2>
+      <div>
+        <div class="FILTER">
+          <span class="catlink"><%= post.category.name %></span>
+        </div>
+      <span class="data"><%= post.created_at.strftime("%d/%m/%Y") %></span>
+      </div>
+      </div>
+
+      <% if user_signed_in? && current_user.isadmin == true %>
+      <div><%= link_to 'Редактировать', edit_post_path(post) %></div>
+      <div><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены?' } %></div>
+      <% end %>
+
+      <div class="line"></div>
+    </div>
+    <% end %>
+  </div>
+
+</div>
+
+
+<div class="events">
+  <div class="navigationlink">
+    <a href="/events">Перейти к делам</a>
+    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 1L8 7.5L1 14" stroke="#03195A" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <h1>Дела</h1>
+
+  <div class="allcases">
+    <% @events.each do |event| %>
+
+    <div class="cardcase">
+      <%= link_to event do %>
+      <div class="image">
+        <%= image_tag event.image.url if event.image?%>
+      </div>
+      <div class="name">
+        <div class="casename">
+          <h2><%= event.title %></h2>
+        </div>
+        <p><%= event.name %></p>
+      </div>
+      <div class="type">
+        <div class="typetext">
+          <div class="filter">
+            <span><%= event.sphere.name %></span>
+          </div>
+          <div class="timetype">
+            <p><%= event.type.name %>&nbsp;&nbsp;·&nbsp;&nbsp; </p>
+            <p><%= event.duration %></p>
+          </div>
+        </div>
+        <div class="icon">
+
+          <% if user_signed_in? == true %>
+
+          <% pre_favorite = event.favorites.find { |favorite| favorite.user_id == current_user.id} %>
+          <% if pre_favorite %>
+          <%= link_to 'Rem', event_favorite_path(event, pre_favorite), method: :delete, class: "favouriteremove" %>
+          <svg width="21" height="27" viewBox="0 0 21 27" fill="#03195A" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 0.999999L20 1V24.8998L11.7607 18.2093C11.0261 17.6127 9.9739 17.6127 9.23925 18.2093L1 24.8998L1 0.999999Z" stroke="#03195A" stroke-width="2"/></svg>
+
+
+          <% else %>
+          <%= link_to 'Add', event_favorites_path(event), method: :event, class: "favouriteadd" %>
+
+          <svg width="21" height="27" viewBox="0 0 21 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 0.999999L20 1V24.8998L11.7607 18.2093C11.0261 17.6127 9.9739 17.6127 9.23925 18.2093L1 24.8998L1 0.999999Z" stroke="#03195A" stroke-width="2"/></svg>
+
+          <% end %>
+
+          <% end %>
+
+
+        </div>
+      </div>
+
+      <% if user_signed_in? && current_user.isadmin == true %>
+      <%= link_to 'Показать', event %>
+      <%= link_to 'Редактировать', edit_event_path(event) %>
+      <%= link_to 'Удалить', event, method: :delete, data: { confirm: 'Вы уверены?' } %>
+      <% end %>
+
+    <% end %>
+    </div>
+    <% end %>
+  </div>
+
+</div>
 
 <div>
     <%= react_component 'P_Main' %>
@@ -7,6 +119,8 @@
 <div>
     <%= react_component 'S_Footer' %>
 </div>
+
+
 <!-- <div class="top_nav">
   <p>
     <%= link_to promo_path do %> добрые<br />дела<br />на сегодня<br /><% end %>

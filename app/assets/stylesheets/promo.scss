@@ -1,3 +1,180 @@
+@import "reset.css";
+@import "slick-theme.scss";
+@import "slick.scss";
+
+@font-face {
+  font-family:'SteinbeckRegular';
+  src:font-url('SteinbeckRegular.eot');
+  src:font-url('SteinbeckRegular.eot?#iefix') format('embedded-opentype'),
+  font-url('SteinbeckRegular.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'SteinbeckItalic';
+  src:font-url('SteinbeckItalic.eot');
+  src:font-url('SteinbeckItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('SteinbeckItalic.ttf') format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Black';
+  src:font-url('BasisGrotesquePro-Black.eot');
+  src:font-url('BasisGrotesquePro-Black.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Black.ttf') format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-BlackItalic';
+  src:font-url('BasisGrotesquePro-BlackItalic.eot');
+  src:font-url('BasisGrotesquePro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-BlackItalic.ttf') format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Bold';
+  src:font-url('BasisGrotesquePro-Bold.eot');
+  src:font-url('BasisGrotesquePro-Bold.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Bold.ttf') format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-BoldItalic';
+  src:font-url('BasisGrotesquePro-BoldItalic.eot');
+  src:font-url('BasisGrotesquePro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-BoldItalic.ttf') format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Medium';
+  src:font-url('BasisGrotesquePro-Medium.eot');
+  src:font-url('BasisGrotesquePro-Medium.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Medium.ttf') format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-MediumItalic';
+  src:font-url('BasisGrotesquePro-MediumItalic.eot');
+  src:font-url('BasisGrotesquePro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-MediumItalic.ttf') format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Regular';
+  src:font-url('BasisGrotesquePro-Regular.eot');
+  src:font-url('BasisGrotesquePro-Regular.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Regular.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Italic';
+  src:font-url('BasisGrotesquePro-Italic.eot');
+  src:font-url('BasisGrotesquePro-Italic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Italic.ttf') format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-Light';
+  src:font-url('BasisGrotesquePro-Light.eot');
+  src:font-url('BasisGrotesquePro-Light.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-Light.ttf') format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'BasisGrotesquePro-LightItalic';
+  src:font-url('BasisGrotesquePro-LightItalic.eot');
+  src:font-url('BasisGrotesquePro-LightItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('BasisGrotesquePro-LightItalic.ttf') format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+:root {
+  --White: #FFFFFF;
+  --LightRed: #FFCFCF;
+  --LightBlue: rgba(35, 51, 99, 0.2);
+  --MidBlue: rgba(35, 51, 99, 0.8);
+  --LightGreen: #D9FED6;
+  --WhiteBlue: #F7F7F9;
+  --EcologicalGreen: #CACC4E;
+  --CulturalBlue: #88E5DA;
+  --CivilianRed: #E85A5A;
+  --SocialYellow: #FAF19D;
+  --SportsOrange: #F68E5F;
+  --KindBlue: #03195A;
+}
+
+
+body {
+  font-family:'BasisGrotesquePro-Regular';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  // background: var(--KindBlue);
+}
+
+.news h1, .events h1 {
+  font-family: Steinbeck;
+font-style: normal;
+font-weight: normal;
+font-size: 60px;
+line-height: 60px;
+text-align: center;
+letter-spacing: 0.1px;
+color: var(--KindBlue);
+margin-top: 80px;
+}
+
+.events .cardcase {
+  display: none;
+}
+
+.events .cardcase:nth-child(1), .events .cardcase:nth-child(2), .events .cardcase:nth-child(3), .events .cardcase:nth-child(4)  {
+  display: block;
+}
+
+.news .allnews .NewsL:nth-child(4) {
+  visibility: hidden;
+}
+
+.subscribeform {
+  position: absolute;
+  right: 60px;
+  top: 910px;
+}
+
+.news .navigationlink a, .events .navigationlink a  {
+  margin-right: 8px;
+}
+
+.news .navigationlink, .events .navigationlink {
+  position: absolute;
+  right: 60px;
+  margin-top: 30px;
+}
+
+
 // Place all the styles related to the Promo controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
