@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
   margin-top: 100px;
   margin-bottom: 200px;
 }
@@ -99,4 +99,49 @@
   color: var(--KindBlue);
   border: none;
   cursor: not-allowed;
+}
+
+.forward button {
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: var(--White);
+  background: var(--KindBlue);
+  border: 1px solid #03195A;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 360px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.forward button:hover {
+  background: var(--MidBlue);
+  cursor: pointer;
+}
+
+.forward button:disabled {
+  background: var(--LightBlue);
+  color: var(--KindBlue);
+  border: none;
+  cursor: not-allowed;
+}
+
+.join {
+  display: none;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.volreg2, .volreg3, .volreg4 {
+  display: none;
+}
+
+.volreg4 .accountlogin {
+  margin-bottom: 30px;
 }

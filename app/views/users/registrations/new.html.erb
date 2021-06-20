@@ -1,141 +1,131 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div>
-    <%= react_component 'O_RegistrationsVolReg1' %>
-</div>
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f_user| %>
   <%= render "users/shared/error_messages", resource: resource %>
+<div class="volreg1">
+  <div class="accountlogin">
+    <h2>Введите номер телефона и придумайте пароль</h2>
+    <div class="subtitle">
+      <h3>Нам нужен ваш номер телефона, чтобы связаться с вами оперативно, если вы будете выбраны волонтером для доброго дела ✌️</h3>
+    </div>
+    <div class="field">
+      <%= f_user.label "Номер телефона" %>
+      <%= f_user.text_field :phonenumber, autofocus: true, autocomplete: "phonenumber", placeholder: "Номер телефона" %>
+    </div>
+    <div class="field">
+      <%= f_user.label "Пароль" %>
+      <%= f_user.password_field :password, autocomplete: "new-password", placeholder: "Пароль" %>
+    </div>
+    <div class="forward">
+      <button type="button" name="button" onclick="document.querySelector('.volreg1').style.display = 'none';document.querySelector('.volreg2').style.display = 'block';">Продолжить</button>
+    </div>
+  </div>
+</div>
 
-  <h1>Введите номер телефона и придумайте пароль</h1>
+<div class="volreg2">
+  <div class="accountlogin">
+    <h2>Введите самые важные данные</h2>
+    <div class="subtitle">
+      <h3>Заполнив данные, вы сможете полноценно пользоваться «Добрыми делами»</h3>
+    </div>
+    <div class="field">
+      <%= f_user.label "Имя" %>
+      <%= f_user.text_field :firstname, autofocus: true, autocomplete: "firstname", placeholder: "Имя" %>
+    </div>
+    <div class="field">
+      <%= f_user.label "Фамилия" %>
+      <%= f_user.text_field :lastname, autofocus: true, autocomplete: "lastname", placeholder: "Фамилия"  %>
+    </div>
+    <div class="field">
+      <%= f_user.label "E-mail" %>
+      <%= f_user.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail" %>
+    </div>
+    <div class="field">
+      <%= f_user.label "Страна" %>
+      <%= f_user.text_field :country, autofocus: true, autocomplete: "country", placeholder: "Страна"  %>
+    </div>
+    <div class="field">
+      <%= f_user.label "Город" %>
+      <%= f_user.text_field :city, autofocus: true, autocomplete: "city", placeholder: "Город"  %>
+    </div>
+    <div class="forward">
+      <button type="button" name="button" onclick="document.querySelector('.volreg2').style.display = 'none';document.querySelector('.volreg3').style.display = 'block';">Продолжить</button>
+    </div>
+  </div>
+</div>
 
-  <div class="field">
-    <%= f_user.label "Номер телефона" %><br />
-    <%= f_user.text_field :phonenumber, autofocus: true, autocomplete: "phonenumber" %>
+<div class="volreg3">
+  <div class="accountlogin">
+    <h2>Интересы в волонтерстве</h2>
+    <div class="subtitle">
+      <h3>Напишите хотя бы один вид волонтерства, который вам интересен</h3>
+    </div>
+    <div class="field">
+      <%= f_user.label "Напишите хотя бы один вид волонтерства, который вам интересен" %><br />
+      <%= f_user.text_field :volinterests, autofocus: true, autocomplete: "volinterests", placeholder: "Интерес в волонтерстве"  %>
+    </div>
+    <div class="forward">
+      <button type="button" name="button" onclick="document.querySelector('.volreg3').style.display = 'none';document.querySelector('.volreg4').style.display = 'block'; document.querySelector('.join').style.display = 'flex';">Продолжить</button>
+    </div>
+  </div>
+</div>
+
+<div class="volreg4">
+  <div class="accountlogin">
+    <h2>Немного подробнее о вас</h2>
+    <div class="subtitle">
+      <h3>Расскажите еще больше о вашей жизни и волонтерской деятельности нашим организациям</h3>
+    </div>
+    <div class="field">
+      <%= f_user.label "Волонтерский опыт" %>
+      <%= f_user.text_field :volexperience, autofocus: true, autocomplete: "volexperience", placeholder: "Волонтерский опыт" %>
+    </div>
+    <div class="field">
+      <%= f_user.label "Образование" %>
+      <%= f_user.text_field :education, autofocus: true, autocomplete: "education", placeholder: "Образование" %>
+    </div>
+    <div class="field">
+      <%= f_user.label "Интересы" %>
+      <%= f_user.text_field :interests, autofocus: true, autocomplete: "interests", placeholder: "Интересы" %>
+    </div>
+    <div class="field">
+      <%= f_user.label "Вконтакте" %>
+      <%= f_user.text_field :vk, autofocus: true, autocomplete: "vk", placeholder: "Вконтакте" %>
+    </div>
+    <div class="field">
+      <%= f_user.label "Facebook" %>
+      <%= f_user.text_field :facebook, autofocus: true, autocomplete: "facebook", placeholder: "Facebook" %>
+    </div>
+    <div class="field">
+      <%= f_user.label "Instagram" %>
+      <%= f_user.text_field :instagram, autofocus: true, autocomplete: "instagram", placeholder: "Instagram" %>
+    </div>
+    <div class="field">
+      <%= f_user.label "Тип занятости" %>
+      <%= f_user.text_field :emptype, autofocus: true, autocomplete: "emptype", placeholder: "Тип занятости"  %>
+    </div>
+    <div class="field">
+      <%= f_user.label "Место работы" %>
+      <%= f_user.text_field :workplace, autofocus: true, autocomplete: "workplace", placeholder: "Место работы"  %>
+    </div>
+    <div class="field">
+      <%= f_user.label "Должность" %>
+      <%= f_user.text_field :position, autofocus: true, autocomplete: "position", placeholder: "Должность"  %>
+    </div>
+  </div>
+</div>
+<div class="join">
+
+  <div class="forward">
+    <button>Присоединиться</button>
   </div>
 
-  <div class="field">
-    <%= f_user.label "Пароль" %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f_user.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f_user.label "Повторить пароль" %><br />
-    <%= f_user.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <h1>Введите код из СМС</h1>
-
-    <div class="field">
-      <%= f_user.label "Проверочный код" %><br />
-      <%= f_user.text_field :regcode, autofocus: true, autocomplete: "regcode" %>
-    </div>
-
-  <h1>Введите самые важные данные</h1>
-
-    <div class="field">
-      <%= f_user.label "Имя" %><br />
-      <%= f_user.text_field :firstname, autofocus: true, autocomplete: "firstname" %>
-    </div>
-
-    <div class="field">
-      <%= f_user.label "Фамилия" %><br />
-      <%= f_user.text_field :lastname, autofocus: true, autocomplete: "lastname" %>
-    </div>
-
-    <div class="field">
-      <%= f_user.label "E-mail" %><br />
-      <%= f_user.email_field :email, autofocus: true, autocomplete: "email" %>
-    </div>
-
-    <div class="field">
-      <%= f_user.label "Страна" %><br />
-      <%= f_user.text_field :country, autofocus: true, autocomplete: "country" %>
-    </div>
-
-    <div class="field">
-      <%= f_user.label "Город" %><br />
-      <%= f_user.text_field :city, autofocus: true, autocomplete: "city" %>
-    </div>
-
-  <h1>Интересы в волонтерстве</h1>
-
-    <div class="field">
-      <%= f_user.label "Выберите хотя бы один вид волонтерства, который вам интересен" %><br />
-      <%= f_user.text_field :volinterests, autofocus: true, autocomplete: "volinterests" %>
-    </div>
-
-  <h1>Немного подробнее о вас</h1>
-
-    <div class="field">
-      <%= f_user.label "Волонтерский опыт" %><br />
-      <%= f_user.text_field :volexperience, autofocus: true, autocomplete: "volexperience" %>
-    </div>
-
-    <div class="field">
-      <%= f_user.label "Образование" %><br />
-      <%= f_user.text_field :education, autofocus: true, autocomplete: "education" %>
-    </div>
-
-    <div class="field">
-      <%= f_user.label "Интересы" %><br />
-      <%= f_user.text_field :interests, autofocus: true, autocomplete: "interests" %>
-    </div>
-
-    <div class="field">
-      <%= f_user.label "Вконтакте" %><br />
-      <%= f_user.text_field :vk, autofocus: true, autocomplete: "vk" %>
-    </div>
-
-    <div class="field">
-      <%= f_user.label "Facebook" %><br />
-      <%= f_user.text_field :facebook, autofocus: true, autocomplete: "facebook" %>
-    </div>
-
-    <div class="field">
-      <%= f_user.label "Instagram" %><br />
-      <%= f_user.text_field :instagram, autofocus: true, autocomplete: "instagram" %>
-    </div>
-
-    <div class="field">
-      <%= f_user.label "Тип занятости" %><br />
-      <%= f_user.text_field :emptype, autofocus: true, autocomplete: "emptype" %>
-    </div>
-
-    <div class="field">
-      <%= f_user.label "Место работы" %><br />
-      <%= f_user.text_field :workplace, autofocus: true, autocomplete: "workplace" %>
-    </div>
-
-    <div class="field">
-      <%= f_user.label "Должность" %><br />
-      <%= f_user.text_field :position, autofocus: true, autocomplete: "position" %>
-    </div>
-
-  <button>Присоедениться</button>
+</div>
 <% end %>
 
 
-<div class="">
-  <h5><%= link_to "Продолжить", user_reg_steps_path %></h5>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
 <div>
       <%= react_component 'S_Footer' %>
   </div>
