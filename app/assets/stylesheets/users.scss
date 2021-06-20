@@ -138,10 +138,104 @@
   margin-bottom: 10px;
 }
 
-.volreg2, .volreg3, .volreg4 {
+.volreg2, .volreg3, .volreg4, .volreg5 {
   display: none;
 }
 
 .volreg4 .accountlogin {
+  margin-bottom: 30px;
+}
+
+.accountlogin textarea {
+  olor:  var(--KindBlue);
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  background: none;
+  width: 302px;
+  height: 274px;
+  border: 1px solid rgba(35, 51, 99, 0.2);
+  padding: 13px 29px;
+}
+
+.accountlogin textarea:focus {
+  outline-color: var(--MidBlue);
+}
+
+.accountlogin textarea::placeholder {
+  color: var(--LightBlue);
+}
+
+.orgreg5 label {
+  display: block;
+  font-family: Basis Grotesque Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 16px;
+display: flex;
+align-items: center;
+color: var(--KindBlue);
+margin-bottom: 20px;
+margin-top: 30px;
+}
+
+.orgreg5 input {
+  color:  var(--LightBlue);
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  padding: 0;
+  border: none;
+  width: 100%;
+}
+
+.orgreg5 input::-webkit-file-upload-button {
+  border: 1px solid rgba(35, 51, 99, 0.2);
+  border-radius: 10px;
+  padding: 13px 29px;
+  background: none;
+  color:  var(--LightBlue);
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+}
+
+.orgreg5 input::-webkit-file-upload-button:hover {
+  color:  var(--MidBlue);
+  background: var(--LightBlue);
+  cursor: pointer;
+}
+
+.orgreg5 input:active::before {
+  outline-color: var(--MidBlue);
+}
+
+.orgreg5 input::placeholder {
+  color: var(--LightBlue);
+}
+
+.orgreg5 .orgdocuments {
+  background-color: var(--LightBlue);
+  border-radius: 10px;
+  padding: 40px;
+  padding-right: 80px;
+  padding-top: 0;
+}
+
+.orgreg2, .orgreg3, .orgreg4, .orgreg5 {
+  display: none;
+}
+
+.orgreg5 .accountlogin {
   margin-bottom: 30px;
 }

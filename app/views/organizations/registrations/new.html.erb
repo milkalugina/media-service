@@ -1,166 +1,160 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div>
-    <%= react_component 'O_RegistrationsOrgReg1' %>
+<div class="registration">
+<img src="/images/sign_in.png" alt="">
 </div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f_org| %>
   <%= render "organizations/shared/error_messages", resource: resource %>
-  
-  <h1>Регистрация главного лица</h1>
-
-  <div class="field">
-  <%= f_org.label "Имя" %><br />
-  <%= f_org.text_field :firstname, autofocus: true, autocomplete: "firstname" %>
+<div class="orgreg1">
+  <div class="accountlogin">
+    <h2>Регистрация главного лица</h2>
+    <div class="field">
+    <%= f_org.label "Имя" %>
+    <%= f_org.text_field :firstname, autofocus: true, autocomplete: "firstname", placeholder: "Имя" %>
+    </div>
+    <div class="field">
+      <%= f_org.label "Фамилия" %>
+      <%= f_org.text_field :lastname, autofocus: true, autocomplete: "lastname", placeholder: "Фамилия"  %>
+    </div>
+    <div class="field">
+      <%= f_org.label "Отчество" %>
+      <%= f_org.text_field :middlename, autofocus: true, autocomplete: "middlename", placeholder: "Отчество"  %>
+    </div>
+    <div class="field">
+      <%= f_org.label "E-mail организации" %>
+      <%= f_org.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail организации"  %>
+    </div>
+    <div class="field">
+      <%= f_org.label "Номер телефона для связи" %>
+      <%= f_org.text_field :phonenumb, autofocus: true, autocomplete: "phonenumb", placeholder: "Номер телефона для связи"  %>
+    </div>
+    <div class="field">
+      <%= f_org.label "Пароль" %>
+      <%= f_org.password_field :password, autocomplete: "new-password", placeholder: "Пароль"   %>
+    </div>
+    <div class="field">
+      <%= f_org.label "Выбрать страну" %>
+      <%= f_org.text_field :country, autofocus: true, autocomplete: "country", placeholder: "Страна"  %>
+    </div>
+    <div class="field">
+      <%= f_org.label "Город" %>
+      <%= f_org.text_field :city, autofocus: true, autocomplete: "city", placeholder: "Город"  %>
+    </div>
+    <div class="forward">
+      <button type="button" name="button" onclick="document.querySelector('.orgreg1').style.display = 'none';document.querySelector('.orgreg2').style.display = 'block';">Продолжить</button>
+    </div>
   </div>
+</div>
 
-  <div class="field">
-    <%= f_org.label "Фамилия" %><br />
-    <%= f_org.text_field :lastname, autofocus: true, autocomplete: "lastname" %>
+<div class="orgreg2">
+  <div class="accountlogin">
+    <h2>Регистрация организации</h2>
+    <div class="field">
+      <%= f_org.label "Название организации" %>
+      <%= f_org.text_field :orgname, autofocus: true, autocomplete: "orgname", placeholder: "Название организации" %>
+    </div>
+    <div class="field">
+      <%= f_org.label "Вид организации" %>
+      <%= f_org.text_field :orgtype, autofocus: true, autocomplete: "orgtype", placeholder: "Вид организации" %>
+    </div>
+    <div class="field">
+      <%= f_org.label "Дата создания организации" %>
+      <%= f_org.date_field :datecreation, autofocus: true, autocomplete: "datecreation", placeholder: "Дата создания организации"  %>
+    </div>
+    <div class="field">
+      <%= f_org.label "Номер телефона" %>
+      <%= f_org.text_field :phonenumber, autofocus: true, autocomplete: "phonenumber", placeholder: "Номер телефона"   %>
+    </div>
+    <div class="field">
+      <%= f_org.label "Website" %>
+      <%= f_org.text_field :website, autofocus: true, autocomplete: "website", placeholder: "Website"  %>
+    </div>
+    <div class="field">
+      <%= f_org.label "Вконтакте" %>
+      <%= f_org.text_field :vk, autofocus: true, autocomplete: "vk", placeholder: "Вконтакте"  %>
+    </div>
+    <div class="field">
+      <%= f_org.label "Facebook" %>
+      <%= f_org.text_field :facebook, autofocus: true, autocomplete: "facebook", placeholder: "Facebook"  %>
+    </div>
+    <div class="field">
+      <%= f_org.label "Instagram" %>
+      <%= f_org.text_field :instagram, autofocus: true, autocomplete: "instagram", placeholder: "Instagram" %>
+    </div>
+    <div class="field">
+      <%= f_org.label "Youtube" %>
+      <%= f_org.text_field :youtube, autofocus: true, autocomplete: "youtube", placeholder: "Youtube" %>
+    </div>
+    <div class="field">
+      <%= f_org.label "Одноклассники" %>
+      <%= f_org.text_field :ok, autofocus: true, autocomplete: "ok", placeholder: "Одноклассники"  %>
+    </div>
+    <div class="forward">
+      <button type="button" name="button" onclick="document.querySelector('.orgreg2').style.display = 'none';document.querySelector('.orgreg3').style.display = 'block';">Продолжить</button>
+    </div>
   </div>
+</div>
 
-  <div class="field">
-    <%= f_org.label "Отчество" %><br />
-    <%= f_org.text_field :middlename, autofocus: true, autocomplete: "middlename" %>
+<div class="orgreg3">
+  <div class="accountlogin">
+    <h2>Роли и приоритеты</h2>
+    <div class="subtitle">
+      <h3>Напишите хотя бы одну тему волонтерства, которая вам интересна👇</h3>
+    </div>
+    <div class="field">
+      <%= f_org.label "Выберите хотя бы одну тему волонтерства, которая вам интересна👇" %><br />
+      <%= f_org.text_field :role, autofocus: true, autocomplete: "role", placeholder: "Тема волонтерства"   %>
+    </div>
+    <div class="forward">
+      <button type="button" name="button" onclick="document.querySelector('.orgreg3').style.display = 'none';document.querySelector('.orgreg4').style.display = 'block';">Продолжить</button>
+    </div>
   </div>
+</div>
 
-  <div class="field">
-    <%= f_org.label "E-mail организации" %><br />
-    <%= f_org.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="orgreg4">
+  <div class="accountlogin">
+    <h2>Цели и миссия</h2>
+    <div class="field">
+      <%= f_org.label "Цели и миссия" %><br />
+      <%= f_org.text_area :mission, autofocus: true, autocomplete: "mission", placeholder: "Цели и миссия" %>
+    </div>
+    <div class="forward">
+      <button type="button" name="button" onclick="document.querySelector('.orgreg4').style.display = 'none';document.querySelector('.orgreg5').style.display = 'block';; document.querySelector('.join').style.display = 'flex';">Продолжить</button>
+    </div>
   </div>
+</div>
 
-  <div class="field">
-    <%= f_org.label "Номер телефона для связи" %><br />
-    <%= f_org.text_field :phonenumb, autofocus: true, autocomplete: "phonenumb" %>
+<div class="orgreg5">
+  <div class="accountlogin">
+    <h2>Официальные документы</h2>
+    <div class="subtitle">
+      <h3>Подтвердите свою организацию документами. Эта информация видна только модераторам</h3>
+    </div>
+    <div class="orgdocuments">
+      <div class="field">
+        <%= f_org.label "Документ о регистрации НКО" %>
+        <%= f_org.file_field :registrationdoc, autofocus: true, autocomplete: "registrationdoc" %>
+      </div>
+      <div class="field">
+        <%= f_org.label "Сведения об учредителях — копии паспортов и ИНН" %>
+        <%= f_org.file_field :foundersdoc, autofocus: true, autocomplete: "foundersdoc" %>
+      </div>
+      <div class="field">
+        <%= f_org.label "Учредительные документы некоммерческой организации" %>
+        <%= f_org.file_field :nonprofdoc, autofocus: true, autocomplete: "nonprofdoc" %>
+      </div>
+    </div>
   </div>
+</div>
 
-  <div class="field">
-    <%= f_org.label "Пароль" %>
-    <% if @minimum_password_length %>
-    <em>(минимум <%= @minimum_password_length %> цифр)</em>
-    <% end %><br />
-    <%= f_org.password_field :password, autocomplete: "new-password" %>
+<div class="join">
+  <div class="forward">
+    <button>Присоединиться</button>
   </div>
+</div>
 
-  <div class="field">
-    <%= f_org.label "Повторить пароль" %><br />
-    <%= f_org.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f_org.label "Выбрать страну" %><br />
-    <%= f_org.text_field :country, autofocus: true, autocomplete: "country" %>
-  </div>
-
-  <div class="field">
-    <%= f_org.label "Город" %><br />
-    <%= f_org.text_field :city, autofocus: true, autocomplete: "city" %>
-  </div>
-
-
-  <p>Регистрация организации</p>
-
-  <div class="field">
-    <%= f_org.label "Название организации" %><br />
-    <%= f_org.text_field :orgname, autofocus: true, autocomplete: "orgname" %>
-  </div>
-
-  <div class="field">
-    <%= f_org.label "Вид организации" %><br />
-    <%= f_org.text_field :orgtype, autofocus: true, autocomplete: "orgtype" %>
-  </div>
-
-  <div class="field">
-    <%= f_org.label "Дата создания организации" %><br />
-    <%= f_org.date_field :datecreation, autofocus: true, autocomplete: "datecreation" %>
-  </div>
-
-  <div class="field">
-    <%= f_org.label "Номер телефона" %><br />
-    <%= f_org.text_field :phonenumber, autofocus: true, autocomplete: "phonenumber" %>
-  </div>
-
-  <div class="field">
-    <%= f_org.label "Website" %><br />
-    <%= f_org.text_field :website, autofocus: true, autocomplete: "website" %>
-  </div>
-
-  <div class="field">
-    <%= f_org.label "Вконтакте" %><br />
-    <%= f_org.text_field :vk, autofocus: true, autocomplete: "vk" %>
-  </div>
-
-  <div class="field">
-    <%= f_org.label "Facebook" %><br />
-    <%= f_org.text_field :facebook, autofocus: true, autocomplete: "facebook" %>
-  </div>
-
-  <div class="field">
-    <%= f_org.label "Instagram" %><br />
-    <%= f_org.text_field :instagram, autofocus: true, autocomplete: "instagram" %>
-  </div>
-
-  <div class="field">
-    <%= f_org.label "Youtube" %><br />
-    <%= f_org.text_field :youtube, autofocus: true, autocomplete: "youtube" %>
-  </div>
-
-  <div class="field">
-    <%= f_org.label "Одноклассники" %><br />
-    <%= f_org.text_field :ok, autofocus: true, autocomplete: "ok" %>
-  </div>
-
-  <p>Роли и приоритеты</p>
-
-  <div class="field">
-    <%= f_org.label "Выберите хотя бы одну тему волонтерства, которая вам интересна👇" %><br />
-    <%= f_org.text_field :role, autofocus: true, autocomplete: "role" %>
-  </div>
-
-  <p>Цели и миссия</p>
-
-  <div class="field">
-    <%= f_org.label "Цели и миссия" %><br />
-    <%= f_org.text_field :mission, autofocus: true, autocomplete: "mission" %>
-  </div>
-
-  <p>Официальные документы</p>
-
-  <div class="field">
-    <%= f_org.label "Документ о регистрации НКО" %><br />
-    <%= f_org.file_field :registrationdoc, autofocus: true, autocomplete: "registrationdoc" %>
-  </div>
-
-  <div class="field">
-    <%= f_org.label "Сведения об учредителях — копии паспортов и ИНН" %><br />
-    <%= f_org.file_field :foundersdoc, autofocus: true, autocomplete: "foundersdoc" %>
-  </div>
-
-  <div class="field">
-    <%= f_org.label "Учредительные документы некоммерческой организации" %><br />
-    <%= f_org.file_field :nonprofdoc, autofocus: true, autocomplete: "nonprofdoc" %>
-  </div>
-
-  <button>Присоединиться</button>
 <% end %>
 
-<div class="">
-  <h5><%= link_to "Продолжить", org_reg_steps_path %></h5>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <div>
-      <%= react_component 'S_Footer' %>
-  </div>
+    <%= react_component 'S_Footer' %>
+</div>
