@@ -39,6 +39,7 @@
         <h2><%= event.title %></h2>
       </div>
       <p><%= event.name %></p>
+      <p><%= Organization.find(event.organization_id).orgname %></p>
     </div>
     <div class="type">
       <div class="typetext">

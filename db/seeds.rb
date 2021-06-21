@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Event.destroy_all
+Post.destroy_all
 
 puts "Destroyed everything you touch"
 
