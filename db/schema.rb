@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_16_082444) do
+ActiveRecord::Schema.define(version: 2021_06_16_172824) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 2021_06_16_082444) do
     t.integer "skill_id", null: false
     t.integer "type_id", null: false
     t.string "name"
+    t.integer "organization_id", null: false
+    t.index ["organization_id"], name: "index_events_on_organization_id"
     t.index ["skill_id"], name: "index_events_on_skill_id"
     t.index ["sphere_id"], name: "index_events_on_sphere_id"
     t.index ["type_id"], name: "index_events_on_type_id"
@@ -96,6 +98,7 @@ ActiveRecord::Schema.define(version: 2021_06_16_082444) do
     t.string "orgtype"
     t.string "orgname"
     t.string "registrationdoc"
+    t.string "avatar"
     t.string "image"
     t.index ["email"], name: "index_organizations_on_email", unique: true
     t.index ["reset_password_token"], name: "index_organizations_on_reset_password_token", unique: true
@@ -111,7 +114,9 @@ ActiveRecord::Schema.define(version: 2021_06_16_082444) do
     t.string "date"
     t.integer "user_id", null: false
     t.integer "category_id", null: false
+    t.integer "organization_id", null: false
     t.index ["category_id"], name: "index_posts_on_category_id"
+    t.index ["organization_id"], name: "index_posts_on_organization_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -167,16 +172,19 @@ ActiveRecord::Schema.define(version: 2021_06_16_082444) do
     t.string "emptype"
     t.string "workplace"
     t.string "position"
+    t.string "avatar"
     t.string "image"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "events", "organizations"
   add_foreign_key "events", "skills"
   add_foreign_key "events", "spheres"
   add_foreign_key "events", "types"
   add_foreign_key "favorites", "events"
   add_foreign_key "favorites", "users"
   add_foreign_key "posts", "categories"
+  add_foreign_key "posts", "organizations"
   add_foreign_key "posts", "users"
 end
