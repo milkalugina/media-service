@@ -56,7 +56,7 @@ end
   # POST /events
   # POST /events.json
   def create
-    @event = Event.new(event_params)
+    @event = Event.new(event_params.merge(organization_id: current_organization.id))
 
     respond_to do |format|
       if @event.save

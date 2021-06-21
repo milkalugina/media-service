@@ -23,6 +23,10 @@
 <br>
 <h2>Дела от организатора</h2>
 <%= link_to 'Разместить дело', new_event_path %>
+<%= @organization.events.count %> <%= (@organization.events.count) == 1 ? 'Дело' : 'Дел'%>
+<% @events.each do |event| %>
+  <br><%= link_to event.title, event %>
+<% end %>
 <br>
 <br>
 <% if organization_signed_in? && @organization.id == current_organization.id %>
