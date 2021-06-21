@@ -31,11 +31,7 @@ end
   # POST /posts
   # POST /posts.json
   def create
-<<<<<<< Updated upstream
     @post = Post.new(post_params.merge(organization_id: current_organization.id))
-=======
-    @post = Post.new(post_params.merge(organization_id: current_user.id))
->>>>>>> Stashed changes
 
     respond_to do |format|
       if @post.save
