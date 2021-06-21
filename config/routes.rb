@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :subscriptions
   get 'aboutorg/index'
   devise_for :users, path: 'users'
   devise_for :organizations, path: 'organizations'

@@ -11,8 +11,10 @@
   </div>
 
   <div class="">
-    <p><%= Organization.find(event.organization_id).orgname %></p>
+    <p><%= Organization.find(@event.organization_id).orgname %></p>
   </div>
+
+  <%= link_to Organization.find(@event.organization_id).orgname, Organization.find(@event.organization_id) %>
 
   <div class="cardview">
     <div class="case">

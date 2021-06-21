@@ -5,4 +5,8 @@ class Organization < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   mount_uploader :image, ImageUploader
+  has_many :events, dependent: :destroy
+  has_many :posts, dependent: :destroy
+  has_many :sub_users, foreign_key: :organization_id, class_name: 'Subscription'
+  has_many :subscribers, through: :sub_users
 end
