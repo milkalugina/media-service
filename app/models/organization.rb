@@ -9,6 +9,6 @@ class Organization < ApplicationRecord
   has_many :posts, dependent: :destroy
 
   has_many :subscriptions, foreign_key: :organization_id, class_name: 'Subscription'
-  has_many :subscribers, through: :subscriptions
+  has_many :users, through: :subscriptions
 
 end

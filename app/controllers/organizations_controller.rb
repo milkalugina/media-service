@@ -23,7 +23,7 @@ class OrganizationsController < ApplicationController
 
   def subscribe
     @organization = Organization.find(params[:id])
-    current_user.org_suscriptions << @organization
+    current_user.organizations << @organization
     redirect_back(fallback_location: organization_path(@organization))
   end
 

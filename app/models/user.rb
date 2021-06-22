@@ -12,8 +12,8 @@ class User < ApplicationRecord
   has_many :following_users, foreign_key: :followee_id, class_name: 'Follow'
   has_many :followers, through: :following_users
 
-  has_many :subscriptions , foreign_key: :user_id, class_name: 'Subscription'
-  has_many :org_suscriptions, through: :subscriptions
+  has_many :subscriptions, foreign_key: :user_id, class_name: 'Subscription'
+  has_many :organizations, through: :subscriptions
 
   mount_uploader :image, ImageUploader
 end
