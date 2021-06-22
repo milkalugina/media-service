@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_21_203239) do
+ActiveRecord::Schema.define(version: 2021_06_22_194251) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -112,12 +112,10 @@ ActiveRecord::Schema.define(version: 2021_06_21_203239) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "image"
     t.string "date"
-    t.integer "user_id", null: false
     t.integer "category_id", null: false
     t.integer "organization_id", null: false
     t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["organization_id"], name: "index_posts_on_organization_id"
-    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "skills", force: :cascade do |t|
@@ -193,5 +191,4 @@ ActiveRecord::Schema.define(version: 2021_06_21_203239) do
   add_foreign_key "favorites", "users"
   add_foreign_key "posts", "categories"
   add_foreign_key "posts", "organizations"
-  add_foreign_key "posts", "users"
 end

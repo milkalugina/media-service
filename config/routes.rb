@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   get 'organizations', to: 'organizations#index'
   get 'organizations/:id' => 'organizations#show', :as => :organization
   delete 'organizations/:id', to: 'organizations#destroy'
+  post 'organizations/:id/subscribe', to: "organizations#subscribe", as: "subscribe_to_organization"
 
 
   get 'new', to: 'welcome#create_acc'

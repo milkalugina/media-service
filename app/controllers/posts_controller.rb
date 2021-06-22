@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 end
   end
 
-  before_action :authenticate_user!, except: [:index, :show]
+before_action :authenticate_organization!, except: [:index, :show]
 
   # GET /posts/1
   # GET /posts/1.json

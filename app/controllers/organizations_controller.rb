@@ -21,6 +21,19 @@ class OrganizationsController < ApplicationController
     @organization = Organization.find(params[:id])
   end
 
+  def subscribe
+    @organization = Organization.find(params[:id])
+    current_user.org_suscriptions << @organization
+    redirect_back(fallback_location: organization_path(@organization))
+  end
+
+  #
+  # def unsubscribe
+  #   @user = User.find(params[:id])
+  #   current_user.followed_users.find_by(followee_id: @user.id).destroy
+  #   redirect_back(fallback_location: user_path(@user))
+  # end
+
   def destroy
     @organization = Organization.find(params[:id])
     @organization.destroy
