@@ -469,6 +469,23 @@ input:checked + .slider:before {
   }
 }
 
+.menureg {
+  position: relative;
+
+}
+
+.menureg .avatar {
+  position: absolute;
+  right: 60px;
+  top: 20px;
+}
+
+
+
+
+
+
+
 // .events {
 //   margin-top: 100px;
 // }

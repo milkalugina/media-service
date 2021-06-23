@@ -545,3 +545,204 @@ margin-bottom: 30px;
 margin-top: 80px;
 text-align: center;
 }
+
+.formnews {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.formnews form {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 70vw;
+}
+
+.formnews h2 {
+  font-family: Steinbeck;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0.1px;
+  color: #03195A;
+}
+
+.formnews p {
+  font-family: Basis Grotesque Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 21px;
+letter-spacing: 0.2px;
+color: #03195A;
+}
+
+.formnews .name, .formnews .date {
+  display: none;
+}
+
+.formnews label {
+  font-family: Basis Grotesque Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 16px;
+color: #03195A;
+margin-right: 30px;
+}
+
+.formnews input {
+  color:  var(--KindBlue);
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  background: none;
+  width: 52vw;
+  border: 1px solid rgba(35, 51, 99, 0.2);
+  padding: 13px 29px;
+}
+
+.formnews input:focus {
+  outline-color: var(--MidBlue);
+}
+
+.formnews input::placeholder {
+  color: var(--LightBlue);
+}
+
+.formnews input::-webkit-file-upload-button {
+  border: 1px solid rgba(35, 51, 99, 0.2);
+  border-radius: 10px;
+  padding: 13px 29px;
+  background: none;
+  color:  var(--LightBlue);
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+}
+
+.formnews input::-webkit-file-upload-button:hover {
+  color:  var(--MidBlue);
+  background: var(--LightBlue);
+  cursor: pointer;
+}
+
+.formnews input:active::before {
+  outline-color: var(--MidBlue);
+}
+
+.formnews input::placeholder {
+  color: var(--LightBlue);
+}
+
+
+.formnews .image input {
+  color:  var(--LightBlue);
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  padding: 0;
+  border: none;
+  width: 80%;
+}
+
+.formnews #cke_post_content, .formnews #cke_event_organizer, .formnews #cke_event_plan, .formnews #cke_event_details {
+  width: 56vw;
+}
+
+
+.formnews .content, .formnews .title, .formnews .image, .formnews .content1  {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formnews .sphere {
+  justify-content: space-around;
+}
+
+.formnews .actions input {
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: var(--White);
+  background: var(--KindBlue);
+  border: 1px solid #03195A;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 300px;
+
+}
+
+.formnews .actions input:hover {
+    background: var(--MidBlue);
+    cursor: pointer;
+  }
+
+.formnews .actions input:disabled {
+    background: var(--LightBlue);
+    border: none;
+    cursor: not-allowed;
+  }
+
+
+.formnews select  {
+ display: inline;
+ background-color: var(--LightBlue);
+ color: var(--KindBlue);
+ border-radius: 8px;
+ transition: all .2s;
+ padding: 10px 20px;
+ cursor: pointer;
+ font-size: 16px;
+ line-height: 24px;
+ text-align: center;
+ font-family: Basis Grotesque Pro;
+ font-style: normal;
+ font-weight: normal;
+ -webkit-font-smoothing: antialiased;
+ text-decoration: none;
+ border: none;
+    -webkit-appearance: none;
+}
+ .formnews select::-ms-expand { display: none; }
+ .formnews select:hover { border-color: #888; cursor: pointer; }
+ .formnews select:focus { border-color: #aaa;
+ box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+ box-shadow: 0 0 0 3px -moz-mac-focusring;
+color: #222;
+ outline: none;
+}
+ .formnews select option { font-weight:normal; }
+ *[dir="rtl"] .formnews select, :root:lang(ar) .formnews select, :root:lang(iw) .formnews select {
+background-position: left .7em top 50%, 0 0;
+padding: .6em .8em .5em 1.4em;
+}
+
+.postform h1 {
+  font-family: Steinbeck;
+font-style: normal;
+font-weight: normal;
+font-size: 42px;
+line-height: 120%;
+text-align: center;
+letter-spacing: 0.1px;
+color: #03195A;
+margin-top: -50px;
+}

@@ -10,7 +10,7 @@ const DIV = styled.div`
 `;
 
 const ITEM = styled.div`
-  margin-right: 20px;
+  margin-right: 70px;
 `;
 
 const A = styled.a`
@@ -22,7 +22,6 @@ class M_MenuItemAccount extends React.Component {
     return (
       <DIV>
         <ITEM><A_IconsNotifications></A_IconsNotifications></ITEM>
-        <A href="/users"><A_IconsAvatar></A_IconsAvatar></A>
       </DIV>
     );
   }

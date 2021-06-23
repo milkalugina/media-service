@@ -76,6 +76,7 @@
       </div>
     </div>
 
+
     <% if user_signed_in? && current_user.isadmin == true %>
     <%= link_to 'Показать', event %>
     <%= link_to 'Редактировать', edit_event_path(event) %>
@@ -86,7 +87,6 @@
   </div>
   <% end %>
 </div>
-
 
 
 

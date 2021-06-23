@@ -1,76 +1,73 @@
-<%= form_with(model: event, local: true) do |form| %>
-  <% if event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+<div class="formnews">
+  <%= form_with(model: event, local: true) do |form| %>
+    <% if event.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
 
-      <ul>
-        <% event.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% event.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <h2>Доброе дело</h2>
+    <p>Заполните форму доброго дела внимательно и аккуратно.</p>
+
+    <div class="title">
+      <%= form.label "Заголовок" %>
+      <%= form.text_field :title %>
+    </div>
+
+    <div class="sphere">
+      <%= form.label "Сфера волонтерства"%>
+      <%= form.select :sphere_id, Sphere.pluck(:name, :id) %>
+    </div>
+
+    <div class="sphere">
+        <%= form.label "Навыки" %>
+        <%= form.select :skill_id, Skill.pluck(:name, :id) %>
+    </div>
+
+    <div class="sphere">
+        <%= form.label "Тип дела" %>
+        <%= form.select :type_id, Type.pluck(:name, :id) %>
+    </div>
+
+    <div class="title">
+      <%= form.label "Длительность" %>
+      <%= form.text_field :duration %>
+    </div>
+
+    <div class="title">
+      <%= form.label "Краткое описание" %>
+      <%= form.text_field :description %>
+    </div>
+
+    <div class="content1">
+      <%= form.label "Детали" %>
+      <%= form.cktext_area :details %>
+    </div>
+
+    <div class="content1">
+      <%= form.label "План" %>
+      <%= form.cktext_area :plan %>
+    </div>
+
+    <div class="content1">
+      <%= form.label "Об организаторе" %>
+      <%= form.cktext_area :organizer %>
+    </div>
+
+    <div class="image">
+      <%= form.label "Фотография" %>
+      <%= form.file_field :image %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "Разместить"%>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= current_organization.orgname %>
-  </div>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :sphere_id %>
-    <%= form.select :sphere_id, Sphere.pluck(:name, :id) %>
-  </div>
-
-  <div class="field">
-      <%= form.label :skill_id %>
-      <%= form.select :skill_id, Skill.pluck(:name, :id) %>
-  </div>
-
-  <div class="field">
-      <%= form.label :type_id %>
-      <%= form.select :type_id, Type.pluck(:name, :id) %>
-  </div>
-
-  <div class="field">
-    <%= form.label :duration %>
-    <%= form.text_field :duration %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :details %>
-    <%= form.cktext_area :details %>
-  </div>
-
-  <div class="field">
-    <%= form.label :plan %>
-    <%= form.cktext_area :plan %>
-  </div>
-
-  <div class="field">
-    <%= form.label :organizer %>
-    <%= form.cktext_area :organizer %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

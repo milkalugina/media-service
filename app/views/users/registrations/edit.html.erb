@@ -1,134 +1,147 @@
-<%= link_to "Back", :back %>
-<h1>Настройки профиля</h1>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
-
-  <h2>Редактирование профиля волонтера</h2>
-
-  <div class="field">
-    <%= f.label "Аватар" %>
-    <%= f.file_field :image, class: "form-control border_color rounded" %>
+<div class="postform">
+  <div class="navigationlink">
+    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 1L1 7.5L8 14" stroke="#03195A" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <%= link_to 'Назад', current_user %>
   </div>
 
-  <div class="field">
-    <%= f.label "Имя" %><br />
-    <%= f.text_field :firstname, autofocus: true, autocomplete: "firstname" %>
-  </div>
+  <h1>Настройки профиля</h1>
 
-  <div class="field">
-    <%= f.label "Фамилия" %><br />
-    <%= f.text_field :lastname, autofocus: true, autocomplete: "lastname" %>
-  </div>
+</div>
 
-  <div class="field">
-    <%= f.label "E-mail" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<div class="usersettings">
+  <div class="formnews">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= render "users/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+      <h2>Редактирование профиля волонтера</h2>
+      <p>Ваш аватар — одна из определяющих частей вашего профиля. <br> Это поможет организаторам составить впечатление о вас.</p>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label "Новый пароль" %> <i></i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <div class="image">
+        <%= f.label "Аватар" %>
+        <%= f.file_field :image, class: "form-control border_color rounded" %>
+      </div>
+
+      <div class="title">
+        <%= f.label "Имя" %><br />
+        <%= f.text_field :firstname, autofocus: true, autocomplete: "firstname" %>
+      </div>
+
+      <div class="title">
+        <%= f.label "Фамилия" %><br />
+        <%= f.text_field :lastname, autofocus: true, autocomplete: "lastname" %>
+      </div>
+
+      <div class="title">
+        <%= f.label "E-mail" %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <div class="title">
+        <%= f.label "Новый пароль" %> <i></i><br />
+        <%= f.password_field :password, autocomplete: "new-password" %>
+        <% if @minimum_password_length %>
+
+        <% end %>
+      </div>
+
+      <div class="title">
+            <%= f.label "Повторите новый пароль" %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+          </div>
+
+      <div class="title">
+        <%= f.label "Номер телефона" %><br />
+        <%= f.text_field :phonenumber, autofocus: true, autocomplete: "phonenumber" %>
+      </div>
+
+      <div class="title">
+        <%= f.label "Страна" %><br />
+        <%= f.text_field :country, autofocus: true, autocomplete: "country" %>
+      </div>
+
+      <div class="title">
+        <%= f.label "Город" %><br />
+        <%= f.text_field :city, autofocus: true, autocomplete: "city" %>
+      </div>
+
+      <h2>Интересы в волонтерстве</h2>
+
+      <div class="title">
+        <%= f.label "Сфера волонтерства" %><br />
+        <%= f.text_field :volinterests, autofocus: true, autocomplete: "volinterests" %>
+      </div>
+
+      <h2>Подробная информация</h2>
+
+      <div class="title">
+        <%= f.label "Волонтерский опыт" %><br />
+        <%= f.text_field :volexperience, autofocus: true, autocomplete: "volexperience" %>
+      </div>
+
+      <div class="title">
+        <%= f.label "Образование" %><br />
+        <%= f.text_field :education, autofocus: true, autocomplete: "education" %>
+      </div>
+
+      <div class="title">
+        <%= f.label "Интересы" %><br />
+        <%= f.text_field :interests, autofocus: true, autocomplete: "interests" %>
+      </div>
+
+      <div class="title">
+        <%= f.label "Вконтакте" %><br />
+        <%= f.text_field :vk, autofocus: true, autocomplete: "vk" %>
+      </div>
+
+      <div class="title">
+        <%= f.label "Facebook" %><br />
+        <%= f.text_field :facebook, autofocus: true, autocomplete: "facebook" %>
+      </div>
+
+      <div class="title">
+        <%= f.label "Instagram" %><br />
+        <%= f.text_field :instagram, autofocus: true, autocomplete: "instagram" %>
+      </div>
+
+      <div class="title">
+        <%= f.label "Тип занятости" %><br />
+        <%= f.text_field :emptype, autofocus: true, autocomplete: "emptype" %>
+      </div>
+
+      <div class="title">
+        <%= f.label "Место работы" %><br />
+        <%= f.text_field :workplace, autofocus: true, autocomplete: "workplace" %>
+      </div>
+
+      <div class="title">
+        <%= f.label "Должность" %><br />
+        <%= f.text_field :position, autofocus: true, autocomplete: "position" %>
+      </div>
+
+      <h2>Подтвердите изменения, используя пароль</h2>
+
+      <div class="title">
+        <%= f.label "Текущий пароль" %> <br />
+        <%= f.password_field :current_password, autocomplete: "current-password" %>
+      </div>
+
+
+      <div class="actions">
+        <%= f.submit "Изменить" %>
+      </div>
     <% end %>
+
   </div>
 
-  <div class="field">
-    <%= f.label "Номер телефона" %><br />
-    <%= f.text_field :phonenumber, autofocus: true, autocomplete: "phonenumber" %>
-  </div>
+</div>
 
-  <div class="field">
-    <%= f.label "Повторите новый пароль" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Страна" %><br />
-    <%= f.text_field :country, autofocus: true, autocomplete: "country" %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Город" %><br />
-    <%= f.text_field :city, autofocus: true, autocomplete: "city" %>
-  </div>
-
-  <h2>Интересы в волонтерстве</h2>
-
-  <div class="field">
-    <%= f.label " " %><br />
-    <%= f.text_field :volinterests, autofocus: true, autocomplete: "volinterests" %>
-  </div>
-
-  <h2>Подробная информация</h2>
-
-  <div class="field">
-    <%= f.label "Волонтерский опыт" %><br />
-    <%= f.text_field :volexperience, autofocus: true, autocomplete: "volexperience" %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Образование" %><br />
-    <%= f.text_field :education, autofocus: true, autocomplete: "education" %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Интересы" %><br />
-    <%= f.text_field :interests, autofocus: true, autocomplete: "interests" %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Вконтакте" %><br />
-    <%= f.text_field :vk, autofocus: true, autocomplete: "vk" %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Facebook" %><br />
-    <%= f.text_field :facebook, autofocus: true, autocomplete: "facebook" %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Instagram" %><br />
-    <%= f.text_field :instagram, autofocus: true, autocomplete: "instagram" %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Тип занятости" %><br />
-    <%= f.text_field :emptype, autofocus: true, autocomplete: "emptype" %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Место работы" %><br />
-    <%= f.text_field :workplace, autofocus: true, autocomplete: "workplace" %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Должность" %><br />
-    <%= f.text_field :position, autofocus: true, autocomplete: "position" %>
-  </div>
-
-  <h2>Подтвердите изменения, используя пароль</h2>
-
-  <div class="field">
-    <%= f.label :current_password %> <br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-
-  <div class="actions">
-    <%= f.submit "Изменить" %>
-  </div>
-<% end %>
-
-<h2>Управление уведомлениями</h2>
+<div>
+    <%= react_component 'S_Footer' %>
+</div>

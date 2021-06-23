@@ -239,3 +239,21 @@ margin-top: 30px;
 .orgreg5 .accountlogin {
   margin-bottom: 30px;
 }
+
+.usersettings .title input {
+    width: 30vw;
+    margin-right: 20vw;
+}
+
+.usersettings input::-webkit-file-upload-button {
+  margin-left: 2vw;
+}
+
+.usersettings .orgreg5 {
+  display: block;
+}
+
+.usersettings .orgreg5 .accountlogin {
+  margin: 0;
+  align-items: baseline;
+}

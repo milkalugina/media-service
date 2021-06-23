@@ -1,4 +1,5 @@
 
+<div class="formnews">
   <%= form_with(model: post, local: true) do |form| %>
     <% if post.errors.any? %>
       <div id="error_explanation">
@@ -12,37 +13,41 @@
       </div>
     <% end %>
 
-    <div>
-      <%= form.label :image %>
-      <%= form.file_field :image %>
-    </div>
+    <h2>Новость</h2>
+    <p>Заполните форму новости внимательно и аккуратно.</p>
 
-    <div class="field">
-      <%= form.label :name %>
-      <%= form.text_field :name %>
-    </div>
-
-    <div class="field">
-      <%= form.label :title %>
+    <div class="title">
+      <%= form.label "Заголовок" %>
       <%= form.text_field :title %>
     </div>
 
-    <div class="field">
-      <%= form.label :category_id %>
-      <%= form.select :category_id, Category.pluck(:name, :id) %>
+    <div class="sphere">
+      <%= form.label "Сфера волонтерства" %>
+      <%= form.select :category_id, Category.pluck(:name, :id)%>
     </div>
 
-    <div class="field">
-        <%= form.label :content %>
+    <div class="content">
+        <%= form.label "Контент" %>
         <%= form.cktext_area :content %>
       </div>
 
-    <div class="field">
+      <div class="image">
+        <%= form.label "Фотография" %>
+        <%= form.file_field :image %>
+      </div>
+
+    <div class="date">
   	<%= form.label :date %>
   	<%= form.text_field :date %>
   </div>
 
+  <div class="name">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
     <div class="actions">
-      <%= form.submit %>
+      <%= form.submit "Разместить" %>
     </div>
   <% end %>
+</div>

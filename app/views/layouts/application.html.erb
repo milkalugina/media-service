@@ -9,13 +9,26 @@
 
   <body>
 
-
     <div>
     <% if user_signed_in? %>
-    <%= react_component 'O_MenuReg' %>
+    <div class="menureg">
+      <%= react_component 'O_MenuReg'%>
+      <%= link_to current_user do %>
+      <div class="avatar">
+        <%= react_component 'A_IconsAvatar'%>
+      </div>
+      <% end %>
+    </div>
     <% else %>
       <% if organization_signed_in? %>
-      <%= react_component 'O_MenuRegOrg' %>
+      <div class="menureg">
+        <%= react_component 'O_MenuReg' %>
+        <%= link_to current_organization do %>
+        <div class="avatar">
+          <%= react_component 'A_IconsAvatar'%>
+        </div>
+        <% end %>
+      </div>
       <% else %>
       <%= react_component 'O_Menu' %>
       <% end %>
