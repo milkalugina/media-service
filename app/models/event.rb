@@ -12,7 +12,6 @@ class Event < ApplicationRecord
   mount_uploader :image, ImageUploader, :presence => true
 
   validates :title, :presence => true
-  validates :name, :presence => true
   validates :duration, :presence => true
   validates :description, :presence => true
   validates :plan, :presence => true

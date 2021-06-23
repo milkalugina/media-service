@@ -391,6 +391,15 @@ h1 {
   margin-left: -50vw;
 }
 
+#aboutorgregistration {
+  width: auto;
+  position: static;
+  z-index: auto;
+  transform: scale(0.8);
+  margin-left: 5vw;
+
+}
+
 /* Членство */
 
 .membership {
@@ -707,6 +716,7 @@ footer .footer_data p {
 
 
 @media (max-width: 1450px) {
+
 
   .org_objects img:nth-child(1) {
     height: 500px;
