@@ -469,9 +469,35 @@ body {
   box-sizing: border-box;
   border-radius: 20px;
   padding: 20px;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
 }
+
+.postshow .postview .card .org .cardorg input {
+  border: 1px solid rgba(35, 51, 99, 0.2);
+box-sizing: border-box;
+border-radius: 10px;
+text-align: center;
+padding: 13px 29px;
+text-decoration: none;
+font-family: Basis Grotesque Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 16px;
+color: var(--KindBlue);
+background-color: var(--White);
+
+}
+
+.postshow .postview .card .org .cardorg input:hover {
+  cursor: pointer;
+  background-color: var(--LightBlue);
+}
+
+
 .postshow .postview .card .org .cardorg p {
   font-family: Basis Grotesque Pro;
   font-style: normal;

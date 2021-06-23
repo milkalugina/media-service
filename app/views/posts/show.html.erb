@@ -14,7 +14,16 @@
       <div class="img"><%= image_tag(@post.image.url, alt: 'Image') if @post.image? %></div>
       <div class="org">
         <div class="cardorg">
-          <p><%= @post.name if @post.name? %></p>
+          <p><%= link_to Organization.find(@post.organization_id).orgname, Organization.find(@post.organization_id) %></p>
+
+          <% if user_signed_in? && current_user.organizations.include?(@organization)%>
+          <h5><%= button_to "Отписаться", unsubscribe_organization_path, method: "POST" %></h5>
+          <% elsif user_signed_in? %>
+          <h5><%= button_to "Подписаться", subscribe_to_organization_path, method: "POST" %></h5>
+          <% else %>
+          <%# можно добавить кнопку для регистрации или что-нибудь ещё %>
+          <% end%>
+
         </div>
         <div class="groupnewsdata">
           <div class="FILTER">
