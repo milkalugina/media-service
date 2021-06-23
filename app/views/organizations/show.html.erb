@@ -18,15 +18,52 @@
 </div>
 <br>
 
-<%= button_to "Subsribe", subscribe_to_organization_path, method: "POST" %>
+
+<% if user_signed_in? && current_user.subscriptions.include?(@organization) %>
+    <h5><%= button_to "Unfollow", unsubscribe_organization_path, method: "POST" %></h5>
+<% elsif user_signed_in? %>
+    <h5><%= button_to "Follow", subscribe_to_organization_path, method: "POST"  %></h5>
+<% else %>
+<%# можно добавить кнопку для регистрации или что-нибудь ещё  %>
+<% end%>
+
+
 
 <h2>Новости от организатора</h2>
+<% if organization_signed_in? && @organization.id == current_organization.id %>
 <%= link_to 'Разместить новость', new_post_path %>
+<% end %>
+
+<div class="allnews">
+<% @organization.posts.each do |post| %>
+  <div class="NewsL">
+    <div class="IMAGE"><%= image_tag post.image.url if post.image?%></div>
+    <div class="TEXT">
+    <h2><%= link_to post.title, post, class: "postlink" %></h2>
+    <div>
+      <div class="FILTER">
+        <span class="catlink"><%= post.category.name %></span>
+      </div>
+    <span class="data"><%= post.created_at.strftime("%d/%m/%Y") %></span>
+    </div>
+    </div>
+
+    <% if organization_signed_in? && current_user %>
+    <div><%= link_to 'Редактировать', edit_post_path(post) %></div>
+    <div><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены?' } %></div>
+    <% end %>
+
+    <div class="line"></div>
+  </div>
+  <% end %>
+</div>
 
 <br>
 <br>
 <h2>Дела от организатора</h2>
+<% if organization_signed_in? && @organization.id == current_organization.id %>
 <%= link_to 'Разместить дело', new_event_path %>
+<% end %>
 
 <div class="allcases">
 <% @organization.events.each do |event| %>
