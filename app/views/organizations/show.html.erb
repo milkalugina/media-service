@@ -19,7 +19,7 @@
 <br>
 
 
-<% if user_signed_in? && current_user.subscriptions.include?(@organization) %>
+<% if user_signed_in? && current_user.organizations.include?(@organization) %>
     <h5><%= button_to "Unfollow", unsubscribe_organization_path, method: "POST" %></h5>
 <% elsif user_signed_in? %>
     <h5><%= button_to "Follow", subscribe_to_organization_path, method: "POST"  %></h5>
