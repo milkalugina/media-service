@@ -19,10 +19,7 @@ Rails.application.routes.draw do
   get 'posts/index'
 
   get 'users/:id/following', :to => "users#following", :as => :following
-
-  post 'users/:id/follow', to: "users#follow", as: "follow_user"
-	post 'users/:id/unfollow', to: "users#unfollow", as: "unfollow_user"
-
+  
   get 'promo', to: 'promo#index'
   get 'welcome', to: 'welcome#index'
   get 'about', to: 'about#index'
@@ -36,6 +33,7 @@ Rails.application.routes.draw do
   get 'organizations/:id' => 'organizations#show', :as => :organization
   delete 'organizations/:id', to: 'organizations#destroy'
   post 'organizations/:id/subscribe', to: "organizations#subscribe", as: "subscribe_to_organization"
+  post 'organizations/:id/unsubscribe', to: "organizations#unsubscribe", as: "unsubscribe_organization"
 
 
   get 'new', to: 'welcome#create_acc'
