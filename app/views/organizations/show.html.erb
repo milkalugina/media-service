@@ -59,7 +59,9 @@
 
   <div class="orgnews">
     <h2>Новости от организатора</h2>
+    <% if organization_signed_in? && @organization.id == current_organization.id  %>
     <%= link_to 'Разместить новость', new_post_path %>
+    <% end %>
   </div>
 
   <div class="allnews">
@@ -99,7 +101,9 @@
 
   <div class="orgevents">
     <h2>Дела от организатора</h2>
+    <% if organization_signed_in? && @organization.id == current_organization.id  %>
     <%= link_to 'Разместить дело', new_event_path %>
+    <% end %>
   </div>
 
   <div class="allcases">

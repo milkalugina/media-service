@@ -1,45 +1,163 @@
-<% if user_signed_in? == true && current_user.isadmin == false && current_user.ismoderator == false  %>
-<div class="account">
-  <div class="image me-3">
-     <%= image_tag(@user.image.url, alt: 'Image', :class=> "img-circular") if @user.image? %>
+<div class="orgaccountpage">
+
+  <div class="importantinfo">
+    <div class="image me-3">
+       <%= image_tag(@user.image.url, alt: 'Image', :class=> "img-circular") if @user.image? %>
+    </div>
+    <div class="textinfo">
+      <div class="heading">
+        <h1><%= @user.firstname %> <%= @user.lastname %></h1>
+        <p><%= @user.volinterests %></p>
+      </div>
+      <p><%= @user.email %></p>
+      <p><%= @user.phonenumber %></p>
+      <p><%= @user.country %>, г. <%= @user.city %></p>
+
+      <% if @user.volexperience? %>
+      <p>Волонтерский опыт: <%= @user.volexperience %></p>
+      <% end %>
+
+      <% if @user.education? %>
+      <p>Образование: <%= @user.education %></p>
+      <% end %>
+
+      <% if @user.interests? %>
+      <p>Интересы: <%= @user.interests %></p>
+      <% end %>
+
+      <% if @user.vk? %>
+      <a><%= @user.vk %></a>
+      <% end %>
+
+      <% if @user.facebook? %>
+      <a><%= @user.facebook %></a>
+      <% end %>
+
+      <% if @user.instagram? %>
+      <a><%= @user.instagram %></a>
+      <% end %>
+
+      <% if @user.emptype? %>
+      <p>Тип занятости: <%= @user.emptype %></p>
+      <% end %>
+
+      <% if @user.workplace? %>
+      <p>Место работы: <%= @user.workplace %></p>
+      <% end %>
+
+      <% if @user.position? %>
+      <p>Должность: <%= @user.position %></p>
+      <% end %>
+
+    </div>
+    <div class="buttons">
+      <% if user_signed_in? && @user.id == current_user.id %>
+          <%= link_to 'Настройки профиля', edit_user_registration_path %>
+
+    <%= button_to "Удалить аккаунт", registration_path("user"), data: { confirm: "Вы уверены, что хотите удалить аккаунт? Вы больше не сможете пользоваться всеми возможностями «Добрых дел».?" }, method: :delete %>
+    <%= button_to 'Выйти', destroy_organization_session_path, :method => :delete %>
+    <% end %>
+
+    </div>
+</div>
+
+<div class="line"></div>
+
+<div class="orgevents">
+  <h2>Заявки на добрые дела</h2>
+</div>
+
+<div class="orgevents">
+  <h2>Избранное</h2>
+</div>
+
+<div class="allcases">
+<% @events.each do |event| %>
+
+<div class="editdeletecardcase">
+
+<div class="cardcase">
+  <%= link_to event do %>
+  <div class="image">
+    <%= image_tag event.image.url if event.image?%>
   </div>
-  <h1><%= @user.firstname %> <%= @user.lastname %></h1>
-  <br>
+  <div class="name">
+    <div class="casename">
+      <h2><%= event.title %></h2>
+    </div>
+    <p><%= event.name %></p>
+    <div class="">
+      <p><%= Organization.find(event.organization_id).orgname %></p>
+    </div>
 
-  <br>
-  <h2>Анкета волонтера</h2>
-  <br>
-  <h2>Мои добрые дела</h2>
-  <br>
-  <h2>Мои заявки</h2>
-  <br>
-  <h2>Избранное</h2>
-  <br>
-  <br>
-  <h2>Избранное</h2>
-  <br>
-  <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Дело' : 'Дел'%>
-  <% @events.each do |event| %>
-    <br><%= link_to event.title, event %>
+  </div>
+  <div class="type">
+    <div class="typetext">
+      <div class="filter">
+        <span><%= event.sphere.name %></span>
+      </div>
+      <div class="timetype">
+        <p><%= event.type.name %>&nbsp;&nbsp;·&nbsp;&nbsp; </p>
+        <p><%= event.duration %></p>
+      </div>
+    </div>
+    <div class="icon">
+
+      <% if user_signed_in? == true %>
+
+      <% pre_favorite = event.favorites.find { |favorite| favorite.user_id == current_user.id} %>
+      <% if pre_favorite %>
+      <%= link_to 'Rem', event_favorite_path(event, pre_favorite), method: :delete, class: "favouriteremove" %>
+      <svg width="21" height="27" viewBox="0 0 21 27" fill="#03195A" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 0.999999L20 1V24.8998L11.7607 18.2093C11.0261 17.6127 9.9739 17.6127 9.23925 18.2093L1 24.8998L1 0.999999Z" stroke="#03195A" stroke-width="2"/></svg>
+
+
+      <% else %>
+      <%= link_to 'Add', event_favorites_path(event), method: :event, class: "favouriteadd" %>
+
+      <svg width="21" height="27" viewBox="0 0 21 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 0.999999L20 1V24.8998L11.7607 18.2093C11.0261 17.6127 9.9739 17.6127 9.23925 18.2093L1 24.8998L1 0.999999Z" stroke="#03195A" stroke-width="2"/></svg>
+
+      <% end %>
+
+      <% end %>
+
+
+    </div>
+  </div>
+
+  <% if user_signed_in? && current_user.isadmin == true %>
+  <%= link_to 'Показать', event %>
+  <%= link_to 'Редактировать', edit_event_path(event) %>
+  <%= link_to 'Удалить', event, method: :delete, data: { confirm: 'Вы уверены?' } %>
   <% end %>
 
-  <br>
-  <h2>Подписки</h2>
-  <br>
+<% end %>
+</div>
 
-  <br>
-
-  <br>
-  <br>
-  <% if user_signed_in? && @user.id == current_user.id %>
-      <%= link_to 'Настройки профиля', edit_user_registration_path %>
-      <% end%>
+<div class="editdeletelinks">
+  <% if organization_signed_in? && @organization.id == current_organization.id %>
+  <%= link_to 'Редактировать', edit_event_path(event) %>
+  <%= link_to 'Удалить', event, method: :delete, data: { confirm: 'Вы уверены?' } %>
   <% end %>
-
-<p> <%= button_to "Удалить аккаунт", registration_path("user"), data: { confirm: "Вы уверены, что хотите удалить аккаунт? Вы больше не сможете пользоваться всеми возможностями «Добрых дел».?" }, method: :delete %></p>
-<p><%= button_to 'Выйти', destroy_organization_session_path, :method => :delete %></p>
+</div>
 
 </div>
+
+<% end %>
+</div>
+
+<div class="orgevents">
+  <h2>Подписки</h2>
+</div>
+
+</div>
+
+
+
+
+
+
 
 
 <%# Это проверка модераторов %>
@@ -76,5 +194,7 @@
 
 <% end %>
 
-<br>
-<br>
+
+<div>
+    <%= react_component 'S_Footer' %>
+</div>
