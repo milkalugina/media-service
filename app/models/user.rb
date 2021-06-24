@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :favorites, dependent: :destroy
   has_many :favorited_events, :through => :favorites, :source => :event
-
+  has_many :requests, dependent: :destroy
 
   has_many :subscriptions, foreign_key: :user_id, class_name: 'Subscription'
   has_many :organizations, through: :subscriptions

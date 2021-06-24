@@ -9,6 +9,7 @@ class Event < ApplicationRecord
   belongs_to :type
 
   has_many :favorites, dependent: :destroy
+  has_many :requests, dependent: :destroy
   mount_uploader :image, ImageUploader, :presence => true
 
   validates :title, :presence => true

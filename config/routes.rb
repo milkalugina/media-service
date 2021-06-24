@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :spheres
   resources :events do
     resources :favorites
+    resources :requests
   end
   resources :follows
   resources :categories
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
   get 'posts/index'
 
   get 'users/:id/following', :to => "users#following", :as => :following
-  
+
   get 'promo', to: 'promo#index'
   get 'welcome', to: 'welcome#index'
   get 'about', to: 'about#index'

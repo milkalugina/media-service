@@ -1,5 +1,16 @@
 <% set_meta_tags title: @event.title %>
 
+<p id="notice"><%= notice %></p>
+
+<% if user_signed_in? %>
+    <% pre_request = @event.requests.find { |request| request.user_id == current_user.id} %>
+  <% if pre_request %>
+    <%= button_to 'Отменить заявку', event_request_path(@event, pre_request), method: :delete %>
+  <% else %>
+    <%= button_to 'Подать заявку', event_requests_path(@event), method: :post %>
+  <% end %>
+<% end %>
+
 <div class="eventshow">
   <div class="navigationlink">
     <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -7,7 +18,6 @@
     </svg>
     <a href="./">Назад к делам</a>
   </div>
-
 
 
   <div class="cardview">
@@ -47,11 +57,9 @@
           <p><%= link_to Organization.find(@event.organization_id).orgname, Organization.find(@event.organization_id) %></p>
 
           <% if user_signed_in? && current_user.organizations.include?(@organization) %>
-          <h5><%= button_to "Отписаться", unsubscribe_organization_path, method: "POST" %></h5>
+            <h5><%= button_to "Отписаться", unsubscribe_organization_path(@organization), method: "POST" %></h5>
           <% elsif user_signed_in? %>
-          <h5><%= button_to "Подписаться", subscribe_to_organization_path, method: "POST" %></h5>
-          <% else %>
-          <%# можно добавить кнопку для регистрации или что-нибудь ещё %>
+            <h5><%= button_to "Подписаться", subscribe_to_organization_path(@event), method: "POST" %></h5>
           <% end%>
 
         </div>
