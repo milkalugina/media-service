@@ -1,15 +1,7 @@
 <% set_meta_tags title: @event.title %>
 
-<p id="notice"><%= notice %></p>
 
-<% if user_signed_in? %>
-    <% pre_request = @event.requests.find { |request| request.user_id == current_user.id} %>
-  <% if pre_request %>
-    <%= button_to 'Отменить заявку', event_request_path(@event, pre_request), method: :delete %>
-  <% else %>
-    <%= button_to 'Подать заявку', event_requests_path(@event), method: :post %>
-  <% end %>
-<% end %>
+
 
 <div class="eventshow">
   <div class="navigationlink">
@@ -73,7 +65,16 @@
           <p><%= @event.type.name %>&nbsp;&nbsp;·&nbsp;&nbsp; <%= @event.duration %></p>
           <span class="data"><%= @event.created_at.strftime("%d/%m/%Y") %></span>
           </div>
-        <button>Подать заявку</button>
+
+          <% if user_signed_in? %>
+              <% pre_request = @event.requests.find { |request| request.user_id == current_user.id} %>
+            <% if pre_request %>
+              <%= button_to 'Отменить заявку', event_request_path(@event, pre_request), method: :delete, class: "requestuser" %>
+            <% else %>
+              <%= button_to 'Подать заявку', event_requests_path(@event), method: :post, class: "requestuser" %>
+            <% end %>
+          <% end %>
+
       </div>
     </div>
   </div>

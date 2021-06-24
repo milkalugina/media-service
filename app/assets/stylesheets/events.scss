@@ -441,6 +441,33 @@ color: var(--KindBlue);
   cursor: not-allowed;
 }
 
+
+.requestuser {
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: var(--White);
+  background: var(--KindBlue);
+  border: 1px solid #03195A;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.requestuser:hover {
+  background: var(--MidBlue);
+  cursor: pointer;
+}
+
+.requestuser:disabled {
+  background: var(--LightBlue);
+  border: none;
+  cursor: not-allowed;
+}
+
 .groupnewsdata p, .groupnewsdata span {
   font-family: Basis Grotesque Pro;
   font-style: normal;

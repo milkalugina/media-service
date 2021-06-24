@@ -65,14 +65,62 @@
 
 <div class="orgevents">
   <h2>Заявки на добрые дела</h2>
-  <%= @user.requests.count %> <%= (@user.requests.count) == 1 ? 'Заявка' : 'Заявок'%>
-  <% @events.each do |post| %>
-    <br><%= link_to post.title, post %>
-  <% end %>
+
+  <!-- <%= @user.requests.count %> <%= (@user.requests.count) == 1 ? 'Заявка' : 'Заявок'%> -->
+
+</div>
+
+
+<div class="allcases">
+<% @user.requests.each do |request| %>
+
+<div class="editdeletecardcase">
+
+<div class="cardcase">
+  <%= link_to request.event do %>
+  <div class="image">
+    <%= image_tag request.event.image.url if request.event.image?%>
+  </div>
+  <div class="name">
+    <div class="casename">
+      <h2><%= request.event.title %></h2>
+    </div>
+    <p><%= request.event.name %></p>
+    <div class="">
+      <p><%= Organization.find(request.event.organization_id).orgname %></p>
+</div>
+
+  </div>
+  <div class="type">
+    <div class="typetext">
+      <div class="filter">
+        <span><%= request.event.sphere.name %></span>
+      </div>
+      <div class="timetype">
+        <p><%= request.event.type.name %>&nbsp;&nbsp;·&nbsp;&nbsp; </p>
+        <p><%= request.event.duration %></p>
+      </div>
+    </div>
+    <div class="icon">
+
+
+
+    </div>
+  </div>
+
+
+<% end %>
+</div>
+
+
+</div>
+
+<% end %>
 </div>
 
 <div class="orgevents">
   <h2>Избранное</h2>
+<!-- <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Дело' : 'Дела'%> -->
 </div>
 
 <div class="allcases">
@@ -92,7 +140,7 @@
     <p><%= event.name %></p>
     <div class="">
       <p><%= Organization.find(event.organization_id).orgname %></p>
-></div>
+</div>
 
   </div>
   <div class="type">
