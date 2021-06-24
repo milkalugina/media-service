@@ -37,13 +37,11 @@
     </div>
     <div class="buttons">
 
-<% if user_signed_in? && current_user.organizations.include?(@organization) %>
-<h5><%= button_to "Отписаться", unsubscribe_organization_path, method: "POST" %></h5>
-<% elsif user_signed_in? %>
-<h5><%= button_to "Подписаться", subscribe_to_organization_path, method: "POST" %></h5>
-<% else %>
-<%# можно добавить кнопку для регистрации или что-нибудь ещё %>
-<% end%>
+    <% if user_signed_in? && current_user.organizations.include?(@organization) %>
+      <h5><%= button_to "Отписаться", unsubscribe_organization_path, method: "POST" %></h5>
+    <% elsif user_signed_in? %>
+      <h5><%= button_to "Подписаться", subscribe_to_organization_path, method: "POST" %></h5>
+    <% end%>
 
 
       <% if organization_signed_in? && @organization.id == current_organization.id %>

@@ -33,11 +33,24 @@ class OrganizationsController < ApplicationController
     redirect_back(fallback_location: organization_path(@organization))
   end
 
-  def unfollow
-    @user = User.find(params[:id])
-    current_user.followed_users.find_by(followee_id: @user.id).destroy
-    redirect_back(fallback_location: user_path(@user))
+  # def subscribing
+  #   @organization = Organization.find(params[:id])
+  #   if @organization
+  #     @subscribe = @user.subscriptions
+  #     render actions: :show
+  #     @subscribing = @user.users.all
+  #   end
+  # end
+
+  def following
+  @user = User.find(params[:id])
+  if @user
+    @follow = @user.followed_users
+    render actions: :show
+    @following = @user.followees.all
   end
+end
+
   #
   # def unsubscribe
   #   @user = User.find(params[:id])

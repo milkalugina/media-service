@@ -65,6 +65,10 @@
 
 <div class="orgevents">
   <h2>Заявки на добрые дела</h2>
+  <%= @user.requests.count %> <%= (@user.requests.count) == 1 ? 'Заявка' : 'Заявок'%>
+  <% @events.each do |post| %>
+    <br><%= link_to post.title, post %>
+  <% end %>
 </div>
 
 <div class="orgevents">
@@ -88,7 +92,7 @@
     <p><%= event.name %></p>
     <div class="">
       <p><%= Organization.find(event.organization_id).orgname %></p>
-    </div>
+></div>
 
   </div>
   <div class="type">
@@ -149,6 +153,8 @@
 
 <div class="orgevents">
   <h2>Подписки</h2>
+  <br>
+  Following <%= link_to @user.organizations.count, following_path %>
 </div>
 
 </div>

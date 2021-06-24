@@ -40,6 +40,10 @@ class UsersController < ApplicationController
     favorites.find_by(event_id: event.id).present?
   end
 
+  def requested?(event)
+    requests.find_by(event_id: event.id).present?
+  end
+
 
   def destroy
     @user = User.find(params[:id])
