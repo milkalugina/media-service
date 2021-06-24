@@ -201,7 +201,7 @@ text-align: center;
     display: flex;
     flex-direction: column;
     margin-top: 40px;
-    border-right: 1px solid var(--LightBlue);
+    border-right: none;
     margin-right: 20px;
     border-bottom: none;
   }
@@ -252,7 +252,7 @@ text-align: center;
   }
 
   .NewsL:nth-child(4), .NewsL:nth-child(7), .NewsL:nth-child(14) {
-    border-right: 1px solid var(--LightBlue);
+    border-right: none;
   }
 
   .NewsL:nth-child(8), .NewsL:nth-child(9), .NewsL:nth-child(10), .NewsL:nth-child(11) {
