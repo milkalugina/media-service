@@ -130,6 +130,7 @@ GEM
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.2.3)
     public_suffix (4.0.6)
     puma (4.3.8)
       nio4r (~> 2.0)
@@ -206,7 +207,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     ssrf_filter (1.0.7)
     tel_to_helper (0.1.0)
       rails
@@ -255,6 +255,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.2)
   meta-tags
+  pg (~> 1.2.3)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.3)
   react-rails (~> 2.6)
@@ -262,7 +263,6 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3 (~> 1.4)
   tel_to_helper
   turbolinks (~> 5)
   tzinfo-data
