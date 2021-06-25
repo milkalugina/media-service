@@ -27,6 +27,10 @@
       <%= f_org.text_field :phonenumb, autofocus: true, autocomplete: "phonenumb", placeholder: "Номер телефона для связи*"  %>
     </div>
     <div class="field">
+      <%= f_org.label "E-mail организации" %>
+      <%= f_org.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail организации*"  %>
+    </div>
+    <div class="field">
       <%= f_org.label "Пароль" %>
       <%= f_org.password_field :password, autocomplete: "new-password", placeholder: "Пароль*"   %>
     </div>
@@ -58,10 +62,6 @@
     <div class="field">
       <%= f_org.label "Вид организации" %>
       <%= f_org.text_field :orgtype, autofocus: true, autocomplete: "orgtype", placeholder: "Вид организации" %>
-    </div>
-    <div class="field">
-      <%= f_org.label "E-mail организации" %>
-      <%= f_org.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail организации*"  %>
     </div>
     <div class="field">
       <%= f_org.label "Дата создания организации" %>
