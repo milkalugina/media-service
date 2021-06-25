@@ -656,3 +656,13 @@ width: 800px;
 .cardorg a:hover {
   cursor: pointer;
 }
+
+.adminlinks {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.adminlinks a {
+  color: var(--CivilianRed);
+  text-decoration: none;
+}
