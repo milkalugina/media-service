@@ -70,11 +70,11 @@
 
 </div>
 
+<% if @user.requests.count == 0  %>
 <div class="emptyaccount">
-  <% if @user.requests.count == 0  %>
   <p>Здесь пока ничего нет — скорее откликнитесь на интересное дело 😊</p>
-  <% end %>
 </div>
+<% end %>
 
 
 <div class="allcases">
@@ -129,11 +129,11 @@
 <!-- <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Дело' : 'Дела'%> -->
 </div>
 
+<% if @user.favorites.count == 0  %>
 <div class="emptyaccount">
-  <% if @user.favorites.count == 0  %>
   <p>Здесь пока ничего нет — скорее заберите себе интересное дело в избранное 😊</p>
-  <% end %>
 </div>
+<% end %>
 
 <div class="allcases">
 <% @events.each do |event| %>
