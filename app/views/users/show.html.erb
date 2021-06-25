@@ -200,7 +200,7 @@
 </div>
 
 <div class="editdeletelinks">
-  <% if organization_signed_in? && @organization.id == current_organization.id %>
+  <% if organization_signed_in?  %>
   <%= link_to 'Редактировать', edit_event_path(event) %>
   <%= link_to 'Удалить', event, method: :delete, data: { confirm: 'Вы уверены?' } %>
   <% end %>
@@ -214,7 +214,6 @@
 <div class="orgevents">
   <br>
   <h2>Подписки</h2>
-  <%= @user.organizations.count %>
   <br>
   <%= render "subscribing" %>
 </div>

@@ -10,6 +10,7 @@ class Event < ApplicationRecord
 
   has_many :favorites, dependent: :destroy
   has_many :requests, dependent: :destroy
+  has_many :users, through: :requests
   mount_uploader :image, ImageUploader, :presence => true
 
   validates :title, :presence => true

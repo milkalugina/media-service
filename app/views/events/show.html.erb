@@ -114,7 +114,18 @@
   <div class="line"></div>
 
 </div>
-
+<% if organization_signed_in? %>
+<h2>Заявки от волонтеров</h2>
+  <ul>
+    <% @event.requests.each do |request| %>
+      <li> <%= link_to(request.user.firstname, request.user) %> <%= link_to(request.user.lastname, request.user) %></li>
+      <li> Связаться  <%= mail_to(request.user.email) %></li>
+      <div id="avatarimg">
+        <%= image_tag(request.user.image.url, alt: 'Image', :class=> "img-circular") %>
+      </div>
+    <% end %>
+  </ul>
+<% end %>
 
 
 <% if user_signed_in? && current_user.ismoderator == true %>
