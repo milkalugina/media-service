@@ -29,6 +29,8 @@ gem 'devise', '~> 4.2'
 
 gem 'wicked'
 
+gem 'tel_to_helper'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

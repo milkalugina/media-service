@@ -119,7 +119,8 @@
   <ul>
     <% @event.requests.each do |request| %>
       <li> <%= link_to(request.user.firstname, request.user) %> <%= link_to(request.user.lastname, request.user) %></li>
-      <li> Связаться  <%= mail_to(request.user.email) %></li>
+      <li> Связаться по почте <%= mail_to(request.user.email) %></li>
+      <li>       <%= link_to request.user.phonenumber, "tel:#{request.user.phonenumber}" %></li>
       <div id="avatarimg">
         <%= image_tag(request.user.image.url, alt: 'Image', :class=> "img-circular") %>
       </div>
