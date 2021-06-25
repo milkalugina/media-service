@@ -17,6 +17,9 @@ class OrganizationsController < ApplicationController
     @organizations = Organization.all
   end
 
+  def volunteers_requests
+  end
+
   def show
     @organization = Organization.find(params[:id])
   end
