@@ -12,11 +12,11 @@
     </div>
     <div class="field">
       <%= f_user.label "Номер телефона" %>
-      <%= f_user.text_field :phonenumber, autofocus: true, autocomplete: "phonenumber", placeholder: "Номер телефона" %>
+      <%= f_user.text_field :phonenumber, autofocus: true, autocomplete: "phonenumber", placeholder: "Номер телефона*" %>
     </div>
     <div class="field">
       <%= f_user.label "Пароль" %>
-      <%= f_user.password_field :password, autocomplete: "new-password", placeholder: "Пароль" %>
+      <%= f_user.password_field :password, autocomplete: "new-password", placeholder: "Пароль*" %>
     </div>
     <div class="forward">
       <button type="button" name="button" onclick="document.querySelector('.volreg1').style.display = 'none';document.querySelector('.volreg2').style.display = 'block';">Продолжить</button>
@@ -32,23 +32,23 @@
     </div>
     <div class="field">
       <%= f_user.label "Имя" %>
-      <%= f_user.text_field :firstname, autofocus: true, autocomplete: "firstname", placeholder: "Имя" %>
+      <%= f_user.text_field :firstname, autofocus: true, autocomplete: "firstname", placeholder: "Имя*" %>
     </div>
     <div class="field">
       <%= f_user.label "Фамилия" %>
-      <%= f_user.text_field :lastname, autofocus: true, autocomplete: "lastname", placeholder: "Фамилия"  %>
+      <%= f_user.text_field :lastname, autofocus: true, autocomplete: "lastname", placeholder: "Фамилия*"  %>
     </div>
     <div class="field">
       <%= f_user.label "E-mail" %>
-      <%= f_user.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail" %>
+      <%= f_user.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail*" %>
     </div>
     <div class="field">
       <%= f_user.label "Страна" %>
-      <%= f_user.text_field :country, autofocus: true, autocomplete: "country", placeholder: "Страна"  %>
+      <%= f_user.text_field :country, autofocus: true, autocomplete: "country", placeholder: "Страна*"  %>
     </div>
     <div class="field">
       <%= f_user.label "Город" %>
-      <%= f_user.text_field :city, autofocus: true, autocomplete: "city", placeholder: "Город"  %>
+      <%= f_user.text_field :city, autofocus: true, autocomplete: "city", placeholder: "Город*"  %>
     </div>
     <div class="forward">
       <button type="button" name="button" onclick="document.querySelector('.volreg2').style.display = 'none';document.querySelector('.volreg3').style.display = 'block';">Продолжить</button>
@@ -64,7 +64,7 @@
     </div>
     <div class="field">
       <%= f_user.label "Напишите хотя бы один вид волонтерства, который вам интересен" %><br />
-      <%= f_user.text_field :volinterests, autofocus: true, autocomplete: "volinterests", placeholder: "Интерес в волонтерстве"  %>
+      <%= f_user.text_field :volinterests, autofocus: true, autocomplete: "volinterests", placeholder: "Интерес в волонтерстве*"  %>
     </div>
     <div class="forward">
       <button type="button" name="button" onclick="document.querySelector('.volreg3').style.display = 'none';document.querySelector('.volreg4').style.display = 'block'; document.querySelector('.join').style.display = 'flex';">Продолжить</button>
