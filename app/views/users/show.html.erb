@@ -212,9 +212,11 @@
 </div>
 
 <div class="orgevents">
-  <h2>Подписки</h2>
   <br>
-  Following <%= link_to @user.organizations.count, following_path %>
+  <h2>Подписки</h2>
+  <%= @user.organizations.count %>
+  <br>
+  <%= render "subscribing" %>
 </div>
 
 

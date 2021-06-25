@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+
   def show
     @user = User.find(params[:id])
 
@@ -35,6 +36,10 @@ class UsersController < ApplicationController
         render file: 'public/404', status: 404, formats: [:html]
     end
   end
+
+
+    def subscribing
+    end
 
   def favorited?(event)
     favorites.find_by(event_id: event.id).present?

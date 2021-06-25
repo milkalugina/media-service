@@ -46,12 +46,15 @@
       <div class="img"><%= image_tag(@event.image.url, alt: 'Image') if @event.image? %></div>
       <div class="application">
         <div class="cardorg">
+          <div class="image me-3">
+            <%= image_tag(Organization.find(@event.organization_id).image.url, alt: 'Image', :size => "10x10", :crop => :fill) %>
+          </div>
           <p><%= link_to Organization.find(@event.organization_id).orgname, Organization.find(@event.organization_id) %></p>
 
-          <% if user_signed_in? && current_user.organizations.include?(@organization) %>
-            <h5><%= button_to "Отписаться", unsubscribe_organization_path(@organization), method: "POST" %></h5>
+          <% if user_signed_in? && current_user.organizations.include?(Organization.find(@event.organization_id)) %>
+            <h5><%= button_to "Отписаться", unsubscribe_organization_path(@event.organization_id), method: "POST" %></h5>
           <% elsif user_signed_in? %>
-            <h5><%= button_to "Подписаться", subscribe_to_organization_path(@event), method: "POST" %></h5>
+            <h5><%= button_to "Подписаться", subscribe_to_organization_path(@event.organization_id), method: "POST" %></h5>
           <% end%>
 
         </div>

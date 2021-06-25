@@ -1,0 +1,6 @@
+<% @user.organizations.each do |organization| %>
+  <br>
+  <%= link_to organization.orgname, organization_path(organization) %>
+  <br>
+
+<% end %>

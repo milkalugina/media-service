@@ -36,14 +36,14 @@ class OrganizationsController < ApplicationController
     redirect_back(fallback_location: organization_path(@organization))
   end
 
-  # def subscribing
-  #   @organization = Organization.find(params[:id])
-  #   if @organization
-  #     @subscribe = @user.subscriptions
-  #     render actions: :show
-  #     @subscribing = @user.users.all
-  #   end
-  # end
+  def subscribing
+    @organization = Organization.find(params[:id])
+    if @organization
+      @subscribe = @user.subscriptions
+      render actions: :show
+      @subscribing = @user.users.all
+    end
+  end
 
   def following
   @user = User.find(params[:id])

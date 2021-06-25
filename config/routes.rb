@@ -19,7 +19,6 @@ Rails.application.routes.draw do
   resources :subscribers
   get 'posts/index'
 
-  get 'users/:id/following', :to => "users#following", :as => :following
 
   get 'organizations/volunteers_requests'
 
