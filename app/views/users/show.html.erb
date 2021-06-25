@@ -212,10 +212,14 @@
 </div>
 
 <div class="orgevents">
-  <br>
   <h2>Подписки</h2>
-  <br>
-  <%= render "subscribing" %>
+
+  <% @user.organizations.each do |organization| %>
+    <%= link_to organization.orgname, organization_path(organization) %>
+    <%= image_tag(organization.image.url, alt: 'Image', :size => "180x180", :crop => :fill) if organization.image? %>
+
+  <% end %>
+
 </div>
 
 
