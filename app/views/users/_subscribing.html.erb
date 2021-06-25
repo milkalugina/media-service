@@ -3,5 +3,4 @@
   <%= link_to organization.orgname, organization_path(organization) %>
   <%= image_tag(organization.image.url, alt: 'Image', :size => "180x180", :crop => :fill) if organization.image? %>
   <br>
-
 <% end %>
