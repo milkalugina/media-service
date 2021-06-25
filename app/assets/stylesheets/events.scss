@@ -387,6 +387,81 @@ width: 100px;
 
 }
 
+.requestsevent .cardorg {
+  width: 413px;
+  display: flex;
+  background: var(--White);
+  border: 1px solid rgba(35, 51, 99, 0.2);
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 20px;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.requestsevent .cardorg p {
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--KindBlue);
+}
+
+.requestsevent .cardorg a {
+}
+
+.requestsusersconnect .buttonsconnect {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+
+  button {
+    border: 1px solid rgba(35, 51, 99, 0.2);
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: center;
+  padding: 13px 29px;
+  text-decoration: none;
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--KindBlue);
+  background-color: var(--White);
+  }
+
+    button:hover {
+      cursor: pointer;
+      background-color: var(--LightBlue);
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--MidBlue);
+    }
+}
+
+.requestsevent .cardorg p:nth-child(1) {
+  font-family: Basis Grotesque Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--KindBlue);
+}
+
+.requestseventall {
+  display: flex;
+  padding: 0px 60px;
+  gap: 40px;
+}
+
+
+
 .cardview .cardorg input {
   border: 1px solid rgba(35, 51, 99, 0.2);
 box-sizing: border-box;

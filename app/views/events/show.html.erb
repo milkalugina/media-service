@@ -114,18 +114,48 @@
   <div class="line"></div>
 
 </div>
+
 <% if organization_signed_in? %>
-<h2>Заявки от волонтеров</h2>
-  <ul>
+<div class="requestsevent">
+  <h2 class="another">Заявки от волонтеров</h2>
+
+  <div class="requestseventall">
+
+    <% if @event.requests.count == 0  %>
+    <div class="emptyaccount">
+      <p>Пока нет заявок от волонтеров :(</p>
+    </div>
+   <% end %>
+
     <% @event.requests.each do |request| %>
-      <li> <%= link_to(request.user.firstname, request.user) %> <%= link_to(request.user.lastname, request.user) %></li>
-      <li> Связаться по почте <%= mail_to(request.user.email) %></li>
-      <li>       <%= link_to request.user.phonenumber, "tel:#{request.user.phonenumber}" %></li>
-      <div id="avatarimg">
-        <%= image_tag(request.user.image.url, alt: 'Image', :class=> "img-circular") %>
+
+    <div class="requestsusersconnect">
+
+      <div class="cardorg">
+        <div id="avatarimg">
+          <%= image_tag(request.user.image.url, alt: 'Image', :class=> "img-circular") %>
+        </div>
+
+        <div class="">
+          <%= link_to request.user do %>
+          <p><%= request.user.firstname %> <%= request.user.lastname %></p>
+          <% end %>
+        </div>
       </div>
+
+      <div class="buttonsconnect">
+        <button>Связаться по почте <%= mail_to(request.user.email) %></button>
+
+        <button>Позвонить <%= link_to request.user.phonenumber, "tel:#{request.user.phonenumber}" %></button>
+      </div>
+
+    </div>
+
+
     <% end %>
-  </ul>
+
+  </div>
+</div>
 <% end %>
 
 
