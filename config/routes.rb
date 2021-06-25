@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   get 'users/:id/following', :to => "users#following", :as => :following
 
+  get 'organizations/volunteers_requests'
+
   get 'promo', to: 'promo#index'
   get 'welcome', to: 'welcome#index'
   get 'about', to: 'about#index'
