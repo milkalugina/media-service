@@ -219,14 +219,20 @@
 
 <div class="orgevents">
   <h2>Подписки</h2>
-
-  <% @user.organizations.each do |organization| %>
-    <%= link_to organization.orgname, organization_path(organization) %>
-    <%= image_tag(organization.image.url, alt: 'Image', :size => "180x180", :crop => :fill) if organization.image? %>
-
-  <% end %>
-
 </div>
+
+  <div class="userorgsubscribesall">
+    <% @user.organizations.each do |organization| %>
+
+    <div class="cardorg">
+      <div id="avatarimg">
+        <%= image_tag(organization.image.url, alt: 'Image', :size => "180x180", :crop => :fill) if organization.image? %>
+      </div>
+      <p><%= link_to organization.orgname, organization_path(organization) %></p>
+    </div>
+    <% end %>
+  </div>
+
 
 
 </div>

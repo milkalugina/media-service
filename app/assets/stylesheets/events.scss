@@ -387,7 +387,7 @@ width: 100px;
 
 }
 
-.requestsevent .cardorg {
+.requestsevent .cardorg, .userorgsubscribesall .cardorg {
   width: 413px;
   display: flex;
   background: var(--White);
@@ -400,13 +400,35 @@ width: 100px;
   position: relative;
 }
 
-.requestsevent .cardorg p {
+.requestsevent .cardorg p, .userorgsubscribesall .cardorg p {
   font-family: Basis Grotesque Pro;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
   color: var(--KindBlue);
+}
+
+.userorgsubscribesall .cardorg a {
+  text-decoration: none;
+  border: none;
+box-sizing: border-box;
+border-radius: none;
+text-align: left;
+padding: 0;
+text-decoration: none;
+font-family: Basis Grotesque Pro;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 24px;
+color: var(--KindBlue);
+background-color: var(--White);
+position: static;
+}
+
+.userorgsubscribesall .cardorg a:hover {
+  background-color: var(--White);
 }
 
 .requestsevent .cardorg a {
@@ -458,6 +480,12 @@ width: 100px;
   display: flex;
   padding: 0px 60px;
   gap: 40px;
+}
+
+.userorgsubscribesall {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
 }
 
 
