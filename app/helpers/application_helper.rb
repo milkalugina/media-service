@@ -19,7 +19,7 @@ module ApplicationHelper
       description: '«Добрые дела» — медиа-сервис, который помогает волонтерам и активистам найти для себя мероприятие или проект, в котором хотелось бы поучаствовать',
       type: 'website',
       url: request.original_url,
-      # image: image_url('login-page.png')
+      image: image_url('images/dobryedelaimage.png')
       }
     }
   end
