@@ -47,7 +47,7 @@
 
 
 
-<% if organization_signed_in? %>
+<% if user_signed_in? && current_user.isadmin == true %>
 <%= link_to 'Создать новость', new_post_path %>
 <br>
 <%= link_to 'Добавить категорию', new_category_path %>
