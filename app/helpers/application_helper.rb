@@ -19,7 +19,7 @@ module ApplicationHelper
       description: '«Добрые дела» — медиа-сервис, который помогает волонтерам и активистам найти для себя мероприятие или проект, в котором хотелось бы поучаствовать',
       type: 'website',
       url: request.original_url,
-      image: http://dobryedela.herokuapp.com/images/dobryedelaimage.png
+      # image: http://dobryedela.herokuapp.com/images/dobryedelaimage.png
       }
     }
   end
