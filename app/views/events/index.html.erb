@@ -90,7 +90,7 @@
 
 
 
-<% if user_signed_in? && current_user.isadmin == true %>
+<% if organization_signed_in? %>
     <%= link_to 'Новая сфера', new_sphere_path %>
     <br>
     <%= link_to 'Новый навык', new_skill_path %>
