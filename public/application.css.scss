@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Steinbeck Regular";
-  src: url("fonts/SteinbeckRegular.ttf") format("truetype");
+  src: font-url(asset-path("fonts/SteinbeckRegular.ttf")) format("truetype");
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Basis Grotesque Pro Regular";
-  src: url("fonts/BasisGrotesquePro-Regular.ttf") format("truetype");
+  src: font-url(asset-path("fonts/BasisGrotesquePro-Regular.ttf")) format("truetype");
   font-style: normal;
   font-weight: 400;
 }
