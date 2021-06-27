@@ -29,7 +29,7 @@ const TEXT = styled.div`
 `;
 
 const H2 = styled.h2`
-  font-family: Steinbeck;
+  font-family:'SteinbeckRegular';
   font-style: normal;
   font-weight: normal;
   font-size: 42px;
