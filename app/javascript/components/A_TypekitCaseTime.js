@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components";
 
 const P = styled.p`
-  font-family: Basis Grotesque Pro;
+font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

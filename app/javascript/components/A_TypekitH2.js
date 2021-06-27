@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components";
 
 const H2 = styled.h2`
-  font-family: Steinbeck;
+font-family: 'SteinbeckRegular';
   font-style: normal;
   font-weight: normal;
   font-size: 42px;
