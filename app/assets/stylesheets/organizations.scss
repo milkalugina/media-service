@@ -20,7 +20,7 @@
   display: flex;
   gap: 20px;
   flex-direction: column;
-  font-family: Basis Grotesque Pro;
+  font-family:'BasisGrotesquePro-Regular';
 font-style: normal;
 font-weight: normal;
 font-size: 20px;
@@ -34,7 +34,7 @@ a {
 
 
   p {
-  font-family: Basis Grotesque Pro;
+    font-family:'BasisGrotesquePro-Regular';
 font-style: normal;
 font-weight: normal;
 font-size: 20px;
@@ -49,7 +49,7 @@ color: var(--KindBlue);
     align-items: center;
 
     h1 {
-      font-family: Steinbeck;
+      font-family: 'SteinbeckRegular';
       font-style: normal;
       font-weight: normal;
       font-size: 42px;
@@ -69,7 +69,7 @@ color: var(--KindBlue);
       font-size: 16px;
       line-height: 24px;
       text-align: center;
-      font-family: Basis Grotesque Pro;
+      font-family:'BasisGrotesquePro-Regular';
       font-style: normal;
       font-weight: normal;
       -webkit-font-smoothing: antialiased;
@@ -92,7 +92,7 @@ border-radius: 10px;
 text-align: center;
 padding: 13px 29px;
 text-decoration: none;
-font-family: Basis Grotesque Pro;
+font-family:'BasisGrotesquePro-Regular';
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
@@ -120,7 +120,7 @@ background-color: var(--White);
 
 
   h2 {
-    font-family: Steinbeck;
+    font-family: 'SteinbeckRegular';
 font-style: normal;
 font-weight: normal;
 font-size: 42px;
@@ -138,7 +138,7 @@ text-align: center;
   text-align: center;
   padding: 13px 29px;
   text-decoration: none;
-  font-family: Basis Grotesque Pro;
+  font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -178,7 +178,7 @@ text-align: center;
   text-align: center;
   padding: 13px 29px;
   text-decoration: none;
-  font-family: Basis Grotesque Pro;
+  font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -227,7 +227,7 @@ text-align: center;
   }
 
   .NewsL:nth-child(1) h2 {
-    font-family: Steinbeck;
+    font-family: 'SteinbeckRegular';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -238,7 +238,7 @@ text-align: center;
 
 
   .NewsL:nth-child(1) .data {
-    font-family: Basis Grotesque Pro;
+    font-family:'BasisGrotesquePro-Regular';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

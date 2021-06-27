@@ -274,7 +274,7 @@ h1 {
   color: #03195A;
   width: 973px;
   align-self: center;
-  font-family: 'Steinbeck';
+  font-family: 'SteinbeckRegular';
   font-style: normal;
   font-weight: normal;
   font-size: 60px;
@@ -424,7 +424,7 @@ h1 {
 }
 
 .membership .price h1 {
-  font-family: 'Steinbeck';
+  font-family: 'SteinbeckRegular';
   font-style: normal;
   font-weight: normal;
   font-size: 70px;
@@ -465,7 +465,7 @@ h1 {
 
 
 .membership .what_get .what_get_about p {
-  font-family: Basis Grotesque Pro;
+  font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
@@ -484,7 +484,7 @@ h1 {
 }
 
 .membership .what_get .ready_btn a {
-  font-family: 'Steinbeck';
+  font-family: 'SteinbeckRegular';
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
@@ -515,7 +515,7 @@ h1 {
 
 .call_to_action p {
   color: #FAF19D;
-  font-family: 'Basis Grotesque Pro';
+  font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   margin-left: 10vw;
@@ -533,7 +533,7 @@ h1 {
 }
 
 .call_to_action .cta_button a {
-  font-family: 'Steinbeck';
+  font-family: 'SteinbeckRegular';
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
@@ -567,7 +567,7 @@ footer .write_us {
 
 footer .write_us p {
   color: #FAF19D;
-  font-family: 'Basis Grotesque Pro';
+  font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   width: 700px;
@@ -576,7 +576,7 @@ footer .write_us p {
 }
 
 footer .write_us a {
-  font-family: 'Steinbeck';
+  font-family: 'SteinbeckRegular';
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
@@ -607,7 +607,7 @@ footer .main_links .navigation .service_navigation, footer .main_links .navigati
 }
 
 footer .main_links .navigation p {
-  font-family: 'Basis Grotesque Pro';
+  font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -617,7 +617,7 @@ footer .main_links .navigation p {
 
 footer .main_links .navigation a {
   padding-top: 20px;
-  font-family: 'Basis Grotesque Pro';
+  font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -632,7 +632,7 @@ footer .main_links .contact_form {
 }
 
 footer .main_links .contact_form h3 {
-  font-family: 'Basis Grotesque Pro';
+  font-family:'BasisGrotesquePro-Regular';
   width: 427px;
   font-style: normal;
   font-weight: normal;
@@ -654,7 +654,7 @@ footer .main_links .contact_form .contact_form_email {
 
 footer .main_links .contact_form .contact_form_email p input {
   background: #FAF19D;
-  font-family: Steinbeck;
+  font-family: 'SteinbeckRegular';
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -675,7 +675,7 @@ footer .footer_data {
 }
 
 footer .footer_data p {
-  font-family: 'Basis Grotesque Pro';
+  font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -815,7 +815,7 @@ footer .footer_data p {
 
 @media (max-width: 768px) {
   h1, .org_capabilities h1, .what_to_do .registration .registration_about h1, .what_to_do .publish .publish_about h1, .what_to_do .candidates .candidates_about h1, .membership .price h1 {
-      font-family: 'Steinbeck';
+    font-family: 'SteinbeckRegular';
       font-style: normal;
       font-weight: normal;
       font-size: 40px;
