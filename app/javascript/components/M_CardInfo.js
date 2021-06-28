@@ -17,7 +17,7 @@ const LINK = styled.a`
 `;
 
 const H2 = styled.h2`
-  font-family: Steinbeck;
+font-family:'SteinbeckRegular';
   font-style: normal;
   font-weight: normal;
   font-size: 36px;

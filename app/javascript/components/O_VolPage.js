@@ -36,7 +36,7 @@ const BUTTONS = styled.div`
 `;
 
 const SECONDARYBUTTON = styled.button`
-  font-family: Basis Grotesque Pro;
+font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

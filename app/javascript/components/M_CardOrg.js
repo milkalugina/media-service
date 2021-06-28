@@ -8,7 +8,7 @@ import A_TypekitNumbAll from './A_TypekitNumbAll'
 import A_ButtonBlueMain from './A_ButtonBlueMain'
 
 const SECONDARYBUTTON = styled.button`
-  font-family: Basis Grotesque Pro;
+font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

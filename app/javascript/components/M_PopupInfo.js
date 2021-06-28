@@ -25,7 +25,7 @@ const OK = styled.div`
 `;
 
 const Subtitle = styled.p`
-  font-family: Basis Grotesque Pro;
+font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: bold;
   font-size: 25px;
@@ -35,7 +35,7 @@ const Subtitle = styled.p`
 `;
 
 const BLUEBUTTON = styled.button`
-  font-family: Basis Grotesque Pro;
+font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

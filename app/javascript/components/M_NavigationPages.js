@@ -4,7 +4,7 @@ import styled from "styled-components";
 import A_TypekitPage from './A_TypekitPage'
 
 const P = styled.a`
-  font-family: Basis Grotesque Pro;
+font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

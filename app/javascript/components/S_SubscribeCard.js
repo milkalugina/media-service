@@ -22,7 +22,7 @@ const DIV1 = styled.div`
 
 const H1 = styled.div`
   width: 427px;
-  font-family: Basis Grotesque Pro;
+  font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -32,7 +32,7 @@ const H1 = styled.div`
 
 const H1WHITE = styled.div`
   width: 427px;
-  font-family: Basis Grotesque Pro;
+  font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -69,7 +69,7 @@ const INPUT1 = styled.div`
 
 const INPUT = styled.input`
   color: var(--KindBlue);
-  font-family: Basis Grotesque Pro;
+  font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

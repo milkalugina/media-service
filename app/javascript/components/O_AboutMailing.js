@@ -12,7 +12,7 @@ const DIV = styled.div`
 
 const H1 = styled.div`
   width: 427px;
-  font-family: Basis Grotesque Pro;
+  font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   font-size: 30px;

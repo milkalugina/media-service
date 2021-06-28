@@ -14,8 +14,8 @@ const CARD = styled.div`
 `;
 
 const H2 = styled.h2`
-  font-family: Steinbeck;
-  font-style: normal;
+font-family:'SteinbeckRegular';
+font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 120%;

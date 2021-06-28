@@ -11,7 +11,7 @@ const DIV = styled.div`
 `;
 
 const REDBUTTON = styled.button`
-  font-family: Basis Grotesque Pro;
+font-family:'BasisGrotesquePro-Regular';
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
